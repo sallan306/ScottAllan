@@ -6,6 +6,7 @@
     "jquery": "^3.3.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-slideshow-image": "^1.0.10",
     "yarn": "^1.13.0"
   },
   "scripts": {

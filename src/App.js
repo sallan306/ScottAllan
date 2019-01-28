@@ -4,7 +4,7 @@ import Site from "./Components/Site"
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <Site/>
       </div>
     );

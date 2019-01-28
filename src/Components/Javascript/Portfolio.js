@@ -3,7 +3,7 @@ import Slideshow from "./Slideshow"
 
 function Portfolio(props) {
     return (
-        <div>
+        <div className="portfolioBox">
            <Slideshow/>
         </div>
     );
