@@ -1,0 +1,409 @@
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(197, 193, 218);
+  background-color:rgb(10, 10, 19, 0.5);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  text-align: center;
+  padding: 0 auto;
+}
+#contentWindow {
+  position: relative;
+  top:40%;
+  width: 25%;
+  height: 15%;
+  background-color: rgba(30, 85, 95, 0.9);
+  color: #9b8989;
+  box-shadow: -16px -10px 20px 0px black;
+  text-align: center;
+  margin: auto;
+  box-shadow: -20px -15px 20px 0px black;
+  border-radius: 20px;
+  transition: width 500ms ease-out, height 500ms ease-out;
+  
+}
+.customButton, #myName {
+  background: -webkit-linear-gradient(white, #38495a);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: none;
+}
+#buttonBox {
+  position: relative;
+  width: 50%;
+  top:10px;
+}
+.customButton {
+  cursor: pointer;
+  text-align: center;
+  padding: 0 auto;
+  opacity: .55;
+  transition: 1s;
+  font-size: 20px;
+}
+#myName {
+  position:relative;
+  width: 100%;
+  font-size: 50px;
+  font-stretch: expanded;
+}
+.aboutMe, .portfolio, .contact {
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  margin: 0px auto;
+  display: none;
+  height: 85%;  
+  font-size: 20px;
+  position: relative;
+  top: 0px;
+}
+#aboutMePic{
+  width:100px;
+  height:150px;
+  padding-left: 50px;
+  padding-top: 25px;
+  padding-right:20px;
+  float: left;
+}
+.paragraph1, .paragraph2 {
+  color: rgba(206, 206, 240, 0.9);
+  font-size: 20px;
+  text-align: center;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+.portfolio {
+  top: 25px;
+}
+.imageBox {
+  position: relative;
+  width: 75%;
+  float: left;
+  height: 50%;
+  left: 12.5%;
+  transition: 5.5s;
+}
+footer {
+  z-index: 100;
+  background: black;
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 30px;
+  font-size: 10px;
+  padding-top:10px;
+}
+/* --------------------------MEDIA QUERIES ----------------------------------------------------- */
+@media (hover: hover) {
+  .customButton:hover {
+    opacity: 1;
+  }
+}
+/* --------------------------END MEDIA QUERIES ------------------------------------------------- */
+
+/* --------------------------SCROLLBAR --------------------------------------------------------- */
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #43101087;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(31, 67, 78, 0.65);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+/* ---------------------------------------END SCROLLBAR ----------------------------------------- */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  /* border-top: 30%; */
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+  height: 35%;
+}
+.modal-image {
+  float: left;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  /* ------------------------------------SCREENS BELOW 1100PX ------------------------------------------- */
+  @media only screen and (max-width: 1100px) {
+    #myName {
+      font-size: 50px;
+    }
+    .customButton{
+      font-size: 16px;
+    }
+    #contentWindow {
+      width: 30%
+    }
+    .portfolio {
+      width: 100%;
+      overflow: initial;
+    }
+    .portBtn {
+      margin: 5px;
+    }
+}
+  /* ------------------------------------END SCREENS BELOW 1100PX ------------------------------------------- */
+
+  /* ------------------------------------SCREENS BELOW 1000PX ------------------------------------------- */
+  @media only screen and (max-width: 1000px) {
+    #myName {
+      font-size: 50px;
+    }
+    .customButton{
+      font-size: 16px;
+    }
+    #contentWindow {
+      width: 40%
+    }
+    .portfolio {
+      width: 70%;
+    }
+    .portfolioImage {
+      margin: 5px;
+      border: 10px;
+    }
+}
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  width: 80%;
+  height: 40%;;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: 0%;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+  /* ------------------------------------END SCREENS BELOW 1000PX ------------------------------------------- */
+
+  /* ------------------------------------SCREENS BELOW 780PX ------------------------------------------- */
+  @media only screen and (max-width: 780px) {
+    #myName {
+      font-size: 45px;
+    }
+    .customButton{
+      font-size: 16px;
+    }
+    #contentWindow {
+      overflow: none;
+      width: 50%;
+      height: 10%
+    }
+    .contentContainer {
+      height: 60%;
+    }
+    .imageBox {
+    width: 100%;
+    height: 50%
+    }
+    .portfolio {
+      overflow: hidden;
+    }
+}
+/* ------------------------------------END SCREENS BELOW 780PX ------------------------------------------- */
+
+/* ---------------------------------------SCREENS BELOW 450PX ------------------------------------------ */
+@media only screen and (max-width: 450px) {
+  #contentWindow {
+    position: absolute;
+    width: 80%;
+    height: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #FFF;
+    text-align: center;
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    letter-spacing: 10px;
+  }
+  #myName {
+    font-size: 30px; 
+    position: relative;
+    left: 2%;
+    font-stretch: expanded;
+  }
+  #buttonBox {
+    position: relative;
+    left: 0%;
+    width: 100%;
+    height: 30%;
+    padding: 0px;
+    top: 65%;
+  }
+  .customButton {
+    padding: 0 auto;
+    font-size: 12px;
+    width:33.33%;
+    float: left;
+    font-size: 18px;
+    top: 0%;
+    font-stretch: expanded;
+  }
+  #aboutMeButton {
+    text-align: left;
+  }
+  #portfolioButtion {
+    text-align: center;
+  }
+  #contactButton {
+    text-align: right;
+  }
+  .contentContainer {
+    height: 85%;
+  }
+  .mainContent {
+    height: 90%;
+    background: #43101087;
+  }
+  #aboutMePic {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 20px;
+    float: none;
+    height: 200px;
+    width: 150px;
+  }
+  .paragraph1, .paragraph2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    letter-spacing: 4px;
+  }
+  .imageBox {
+    width: 100%;
+  } 
+}
