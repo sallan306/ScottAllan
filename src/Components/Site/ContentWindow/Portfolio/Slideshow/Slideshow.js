@@ -1,8 +1,8 @@
 import React from 'react';
 import { Zoom } from 'react-slideshow-image';
-import picture1 from '../images/giraffe_negative.jpg';
-import picture2 from '../images/giraffe_pixel.jpg';
-import picture3 from '../images/giraffe_paint.jpg';
+import picture1 from '../../../../images/giraffe_negative.jpg';
+import picture2 from '../../../../images/giraffe_pixel.jpg';
+import picture3 from '../../../../images/giraffe_paint.jpg';
  
 const images = [
   picture1,
@@ -20,6 +20,7 @@ const zoomOutProperties = {
 }
  
 const Slideshow = () => {
+
     return (
 
       <Zoom {...zoomOutProperties}>

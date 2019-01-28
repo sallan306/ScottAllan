@@ -1,8 +1,8 @@
 import React from "react";
-import AboutMe from "../Javascript/AboutMe"
-import Portfolio from "../Javascript/Portfolio"
-import ContactMe from "../Javascript/ContactMe"
-import ButtonBox from "../Javascript/ButtonBox"
+import AboutMe from "./AboutMe/AboutMe"
+import Portfolio from "./Portfolio/Portfolio"
+import ContactMe from "./ContactMe/ContactMe"
+import ButtonBox from "./ButtonBox/ButtonBox"
 
 function LinksExtensions(props) {
     return (

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Stars from "./Javascript/Stars"
-import Footer from "./Javascript/Footer"
-import LinksExtensions from "./Javascript/LinksExtensions"
-import ContentWindow from "./Javascript/ContentWindow"
-import "./css/style.css"
+import Stars from "./Utilities/Stars/Stars"
+import Footer from "./Utilities/Footer"
+import LinksExtensions from "./Utilities/LinksExtensions"
+import ContentWindow from "./ContentWindow/ContentWindow"
+import "./style.css"
 
 
 
