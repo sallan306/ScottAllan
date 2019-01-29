@@ -11,7 +11,7 @@ function Portfolio(props) {
         visibility: "hidden"
     }
     return (
-        <div className="portfolioBox" style={portfolioStyle}>
+        <div className="portfolio mainContent" style={portfolioStyle}>
            <Slideshow/>
         </div>
     );

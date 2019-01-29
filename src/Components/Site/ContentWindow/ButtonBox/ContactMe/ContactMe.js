@@ -3,9 +3,8 @@ import React from "react";
 function ContactMe(props) {
     return (
         <div>
-            <div className="contentContainer">
-                <div className="aboutMe mainContent" data-visible="false">
-                    <img id="aboutMePic" src="images/me.jpg" data-visible="false" alt="" />
+                <div className="contactMe mainContent">
+                    <img id="aboutMePic" src="images/me.jpg" alt="" />
                     <p className="paragraph1">
                         I have always had an affinity towards computers. From 5 years old, sitting on my father's lap watching him play doom 3D to today, i have loved the content
                         behind a screen. I am familar with many development tools, and my love of game design first started with Game Maker Studio.  I used to make RPG games styled
@@ -18,7 +17,6 @@ function ContactMe(props) {
                         languages, so that I can round off my weaker programming skills and be able to design applications, games, and other unique corners of the internet.
                     </p>
                 </div>
-            </div>
         </div>
     );
 };
