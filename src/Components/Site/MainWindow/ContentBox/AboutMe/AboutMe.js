@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import classnames from 'classnames';
-
-         
-class ContactMe extends Component {
+import "./AboutMe.css"
+                
+class AboutMe extends Component {
 
     render(props) {
         return (
-                <div className={classnames("contactMe mainContent" , this.props.display)} >
-                    <img id="aboutMePic" src="images/me.jpg" alt="" />
+                <div className={classnames("aboutMe mainContent" , this.props.display)} >
+                    <img id="aboutMePic" src="../../../../../images/1-Sunny.png" alt="" />
                     <p className="paragraph1">
                         I have always had an affinity towards computers. From 5 years old, sitting on my father's lap watching him play doom 3D to today, i have loved the content
                         behind a screen. I am familar with many development tools, and my love of game design first started with Game Maker Studio.  I used to make RPG games styled
@@ -25,4 +25,4 @@ class ContactMe extends Component {
     }
 };
 
-export default ContactMe;
+export default AboutMe;

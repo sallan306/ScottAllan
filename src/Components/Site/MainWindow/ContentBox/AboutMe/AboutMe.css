@@ -1,0 +1,24 @@
+#aboutMePic{
+    width:100px;
+    height:150px;
+    padding-left: 50px;
+    padding-top: 25px;
+    padding-right:20px;
+    float: left;
+  }
+
+.paragraph1, .paragraph2 {
+    color: rgba(206, 206, 240, 0.9);
+    font-size: 20px;
+    text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.imageBox {
+    position: relative;
+    width: 75%;
+    float: left;
+    height: 50%;
+    left: 12.5%;
+    transition: 5.5s;
+}

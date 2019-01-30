@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Stars from "./Utilities/Stars/Stars"
-import Footer from "./Utilities/Footer"
-import ContentWindow from "./ContentWindow/ContentWindow"
-import "./style.css"
-import "./Utilities/Stars/stars.css"
+import Footer from "./Utilities/Footer/Footer"
+import MainWindow from "./MainWindow/MainWindow"
+import "./Site.css"
 
 
 
@@ -16,7 +15,7 @@ class Site extends Component {
       return (
           <div id="site">
             <Stars/>
-            <ContentWindow/>
+            <MainWindow/>
             <Footer/> 
         </div>  
       )
