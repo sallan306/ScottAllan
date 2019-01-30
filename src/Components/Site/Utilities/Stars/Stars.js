@@ -1,5 +1,5 @@
 import React from "react";
-import "./stars.css"
+import "../Stars/stars.css"
 import $ from "jquery"
 
 function Stars(props) {
@@ -41,7 +41,7 @@ function Stars(props) {
     });
   });
     return (
-        <div>
+        <div id="starsContainer">
             <div id="stars" />
             <div id="stars2" />
             <div id="stars3" />

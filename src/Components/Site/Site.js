@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Stars from "./Utilities/Stars/Stars"
 import Footer from "./Utilities/Footer"
-import LinksExtensions from "./Utilities/LinksExtensions"
 import ContentWindow from "./ContentWindow/ContentWindow"
 import "./style.css"
+import "./Utilities/Stars/stars.css"
 
 
 
@@ -14,9 +14,8 @@ class Site extends Component {
 
     render() {
       return (
-          <div>
+          <div id="site">
             <Stars/>
-            <LinksExtensions/>
             <ContentWindow/>
             <Footer/> 
         </div>  

@@ -2,18 +2,10 @@ import React, { Component } from "react";
 import classnames from 'classnames';
                 
 class AboutMe extends Component {
-    state = {
-        aboutMeStatus: this.props.state,
 
-    };
-    
-    componentDidMount(){
-
-    }
-
-    render() {
+    render(props) {
         return (
-                <div className={classnames('aboutMe', "mainContent" , this.state.aboutMeStatus)}>
+                <div className={classnames("aboutMe mainContent" , this.props.display)} >
                     <img id="aboutMePic" src="images/me.jpg" alt="" />
                     <p className="paragraph1">
                         I have always had an affinity towards computers. From 5 years old, sitting on my father's lap watching him play doom 3D to today, i have loved the content

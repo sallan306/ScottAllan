@@ -1,41 +1,41 @@
 import React, { Component } from "react";
-import AboutMe from "./AboutMe/AboutMe"
-import Portfolio from "./Portfolio/Portfolio"
-import ContactMe from "./ContactMe/ContactMe"
+import AboutMe from "./AboutMe/AboutMe.js"
+import Portfolio from "./Portfolio/Portfolio.js"
+import ContactMe from "./ContactMe/ContactMe.js"
 
                 
 class ButtonBox extends Component {
     state = {
-        aboutMeStatus: "hidden",
-        portfolioStatus: "hidden",
-        contactStatus: "hidden"
+        aboutMeStatus: "none",
+        portfolioStatus: "none",
+        contactStatus: "none"
     };
     aboutMeClick = () => {
         console.log('About is clicked!!');
-        if(this.state.aboutMeStatus === "visible"){
-            this.setState({aboutMeStatus: "hidden"})
+        if(this.state.aboutMeStatus === "initial"){
+            this.setState({aboutMeStatus: "none"})
         }
         else {
-            this.setState({aboutMeStatus: "visible"})
+            this.setState({aboutMeStatus: "initial"})
         }
       };
     portfolioClick = () => {
         console.log('port is clicked!!');
-        if(this.state.portfolioStatus === "visible"){
-            this.setState({portfolioStatus: "hidden"})
+        if(this.state.portfolioStatus === "initial"){
+            this.setState({portfolioStatus: "none"})
         }
         else {
-            this.setState({portfolioStatus: "visible"})
+            this.setState({portfolioStatus: "initial"})
         }
       };
 
     contactClick = () => {
         console.log('contact is clicked!!');
-        if(this.state.contactStatus === "visible"){
-            this.setState({contactStatus: "hidden"})
+        if(this.state.contactStatus === "initial"){
+            this.setState({contactStatus: "none"})
         }
         else {
-            this.setState({contactStatus: "visible"})
+            this.setState({contactStatus: "initial"})
         }
       };
 
@@ -48,14 +48,14 @@ class ButtonBox extends Component {
             <div className="contentAndButtons">
 
                 <span id="buttonBox">
-                    <button onClick={this.aboutMeClick} className="customButton" id="aboutMeButton">About Me</button>
-                    <button onClick={this.portfolioClick}className="customButton" id="portfolioButton">Portfolio</button>
-                    <button onClick={this.contactClick}className="customButton" id="contactButton">Contact</button>
+                    <button onClick={this.aboutMeClick}     className="customButton" id="aboutMeButton">About</button>
+                    <button onClick={this.portfolioClick}   className="customButton" id="portfolioButton">Portfolio</button>
+                    <button onClick={this.contactClick}     className="customButton" id="contactButton">Contact</button>
                 </span> 
                 <div className="contentBox">
-                    <AboutMe data={this.state.aboutMeStatus}/>
-                    <Portfolio data-visible={this.state.portfolioStatus}/>
-                    <ContactMe data-visible={this.state.contactStatus}/>
+                    <AboutMe    display={this.state.aboutMeStatus}/>
+                    <Portfolio  display={this.state.portfolioStatus}/>
+                    <ContactMe  display={this.state.contactStatus}/>
                 </div>
             </div>
 

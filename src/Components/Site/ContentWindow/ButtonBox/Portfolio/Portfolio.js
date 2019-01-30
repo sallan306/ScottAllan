@@ -1,21 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
+import classnames from 'classnames';
 import Slideshow from "./Slideshow/Slideshow"
+                
+class Portfolio extends Component {
 
-function Portfolio(props) {
 
+    render(props) {
+        return (
+                <div className={classnames("portfolio mainContent" , this.props.display)} >
+                    <Slideshow/>
+                </div>
 
-    const portfolioStyle = {
-        width: "40%",
-        marginLeft: "30%",
-        marginTop: "1%",
-        visibility: "hidden"
+        )
     }
-    return (
-        <div className="portfolio mainContent" style={portfolioStyle}>
-           <Slideshow/>
-        </div>
-    );
 };
 
 export default Portfolio;
-                

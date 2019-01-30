@@ -1,9 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
+import classnames from 'classnames';
 
-function ContactMe(props) {
-    return (
-        <div>
-                <div className="contactMe mainContent">
+         
+class ContactMe extends Component {
+
+    render(props) {
+        return (
+                <div className={classnames("contactMe mainContent" , this.props.display)} >
                     <img id="aboutMePic" src="images/me.jpg" alt="" />
                     <p className="paragraph1">
                         I have always had an affinity towards computers. From 5 years old, sitting on my father's lap watching him play doom 3D to today, i have loved the content
@@ -17,9 +20,9 @@ function ContactMe(props) {
                         languages, so that I can round off my weaker programming skills and be able to design applications, games, and other unique corners of the internet.
                     </p>
                 </div>
-        </div>
-    );
+
+        )
+    }
 };
 
 export default ContactMe;
-                
