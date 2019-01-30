@@ -69,8 +69,8 @@ class MainWindow extends Component {
     render(props) {
         return (
 
-            <div className="contentWindow">       
-            <span id="myName">Scott Allan</span>
+            <div className="mainWindow">       
+            <span className="myName">Scott Allan</span>
                 <ButtonBox
                 aboutMeClick={this.aboutMeClick}
                 portfolioClick={this.portfolioClick}

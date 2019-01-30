@@ -1,0 +1,15 @@
+.aboutMe, .portfolio, .contactMe {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    margin: 0px auto;
+    height: 85%;  
+    font-size: 20px;
+    position: relative;
+    top: 0px;
+    display: none;
+  }
+  
+  .portfolio {
+    top: 25px;
+  }

@@ -1,55 +1,28 @@
-.contentWindow {
-    margin-left: 35vw;
+.mainWindow {
+    margin-left: 30vw;
     position: relative;
     top: 10vh;
-    width: 25vw;
+    width: 40vw;
     height: 15vh;
     font-family: "lato", sans-serif;
     font-weight: 300;
     font-size: 40px;
     background: rgba(30, 85, 95, 0.9);
     border-radius: 20px;
- 
   }
 
-#myName {
-    background: -webkit-linear-gradient(white, #38495a);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border: none;
-    position:relative;
-    width: 100%;
+.myName {
+    color: #FFF;
+    opacity: .6;
+    letter-spacing: 10px;
     font-size: 50px;
-    font-stretch: expanded;
+    font-weight: 300;
+    font-family: "lato", sans-serif;
 }
-#buttonBox {
-    position: relative;
-    width: 50%;
-    top:10px;
-}
-
-.customButton {
-    background: -webkit-linear-gradient(white, #38495a);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    padding: 0 auto;
-    opacity: .55;
-    transition: 1s;
-    font-size: 20px;
-}
-
 
 @media only screen and (max-width: 1100px) {
 
-  /* .contentWindow {
-
-  } */
-  #myName {
+  .myName {
     font-size: 50px;
   }
 
@@ -57,58 +30,46 @@
 
 @media only screen and (max-width: 1000px) {
 
-    #myName {
-        font-size: 50px;
-      }
-    /* .contentWindow {
-
-    } */
+  .myName {
+      font-size: 50px;
+    }
 
 }
 @media only screen and (max-width: 780px) {
 
-  #myName {
+  .myName {
       font-size: 40px;
     }
-  .contentWindow {
+  .mainWindow {
     overflow: none;
     width: 60vw;
     height: 15vh
   }
 
-
 }
 @media only screen and (max-width: 600px) {
 
-
-  .contentWindow {
+  .mainWindow {
       width: 60vw;
       height: 17vh;
       margin-left: 20vw;
   }
-  #myName {
+  .myName {
       font-size: 50px
   }
 
 }
 @media only screen and (max-width: 450px) {
-  .contentWindow {
+
+  .mainWindow {
     width: 80vw;
     height: 12vh;
     margin-left: 10vw;
     margin-right: 10vw;
-    color: #FFF;
-    text-align: center;
-    font-family: "lato", sans-serif;
-    font-weight: 300;
-    font-size: 30px;
-    letter-spacing: 10px;
+
   }
-  #myName {
+  .myName {
     font-size: 30px; 
-    position: relative;
-    left: 2%;
-    font-stretch: expanded;
   }
 
 }

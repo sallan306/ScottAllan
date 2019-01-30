@@ -1,7 +1,6 @@
 .buttonsBox {
     position: relative;
-    width: 50%;
-    top:10px;
+
 }
 
 .customButton {
@@ -18,21 +17,7 @@
     font-size: 20px;
 }
 
-.aboutMe, .portfolio, .contactMe {
-  text-align: center;
-  overflow: hidden;
-  width: 100%;
-  margin: 0px auto;
-  height: 85%;  
-  font-size: 20px;
-  position: relative;
-  top: 0px;
-  display: none;
-}
 
-.portfolio {
-  top: 25px;
-}
 /* --------------------------MEDIA QUERIES ----------------------------------------------------- */
 @media (hover: hover) {
     .customButton:hover {

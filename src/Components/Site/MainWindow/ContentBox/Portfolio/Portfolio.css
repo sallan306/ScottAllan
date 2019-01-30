@@ -1,44 +1,15 @@
 @media only screen and (max-width: 1100px) {
 
-    .portfolio {
-      width: 100%;
-      overflow: initial;
-    }
 }
 
 @media only screen and (max-width: 1000px) {
-
-
-    .portfolio {
-      width: 70%;
-    }
 
 }
 
 @media only screen and (max-width: 780px) {
 
-    .portfolio {
-      overflow: hidden;
-    }
 }
 
 @media only screen and (max-width: 450px) {
       
-    #aboutMePic {
-      padding-left: 0px;
-      padding-right: 0px;
-      padding-top: 20px;
-      float: none;
-      height: 200px;
-      width: 150px;
-    }
-    .paragraph1, .paragraph2 {
-      padding-left: 5px;
-      padding-right: 5px;
-      font-size: 16px;
-      letter-spacing: 4px;
-    }
-    .imageBox {
-      width: 100%;
-    } 
-  }
+}
