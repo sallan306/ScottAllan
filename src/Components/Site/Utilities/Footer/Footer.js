@@ -8,6 +8,8 @@ function Footer(props) {
                 <footer className="myFooter">
                 Copyright Scott Allan 2018
                 <AwesomeButtonSocial   size="icon" href="https://github.com/sallan306" type="github" ></AwesomeButtonSocial>;
+
+                
                 <AwesomeButtonSocial   size="icon" href="http://www.linkedin.com/in/ScottAllanWebDesign" type="linkedin" ></AwesomeButtonSocial>;
                 </footer>
     );
