@@ -1,317 +1,48 @@
 import React, {Component} from "react";
 import './MainWindow.css';
-
+import Home from "./Home/Home"
+import About from "./About/About"
+import Services from "./Services/Services"
+import Portfolio from "./Portfolio/Portfolio"
+import Contact from "./Contact/Contact"
+import Footer from "../Utilities/Footer/Footer"
 
 
                 
 class MainWindow extends Component {
     state = {
-        aboutMeStatus: "none",
-        portfolioStatus: "none",
-        contactStatus: "none",
-        aboutMeOpacity: 0,
-        portfolioOpacity: 0,
-        contactOpacity: 0
+
     };
     
-    aboutMeClick = () => {
-
+    handleScroll = event => {
+        let x = document.getElementById("mainWindow").scrollTop;
+        if (x >= 0 && x < 880) {
+            this.props.scrollPastSection("Home")
+        }
+        else if (x >= 880 && x < 1600) {
+            this.props.scrollPastSection("About")
+        }
+        else if (x >= 1600 && x < 2100) {
+            this.props.scrollPastSection("Services")
+        }
+        else if (x >= 2100 && x < 3500) {
+            this.props.scrollPastSection("Portfolio")
+        }
+        else if (x >= 3500 && x < 4000) {
+            this.props.scrollPastSection("Contact")
+        }
     }
     render(props) {
         return (
 
-        <div className="mainWindow">   
-  
-        <h1 id="homeTitle">HOME</h1>
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            <h1 id="aboutTitle">ABOUT</h1>
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            <a name="services"></a>
-            <h1 id="servicesTitle">SERVICES</h1>
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            <a name="portfolio"></a>
-            <h1 id="portfolioTitle">PORTFOLIO</h1>
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
+        <div id="mainWindow" className="mainWindow" onScroll={this.handleScroll}>   
 
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            <a name="contact"></a>
-            <h1 id="contactTitle">CONTACT</h1>
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-            content goes here
-
+            <Home/>
+            <About/>
+            <Services/>
+            <Portfolio/>
+            <Contact/>
+            <Footer/>
 
         </div>
 

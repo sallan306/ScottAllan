@@ -1,13 +1,14 @@
 .navbar {
-    z-index: 100;
-    background: black;
     position: fixed;
+    background: black;
     top: 0px;
     width: 100%;
     height: 5vh;
     font-size: 10px;
     padding-top:10px;
     transition: 0.5s;
+    z-index: 9999;
+
 }
 .navButtonsContainer {
 
@@ -39,8 +40,24 @@
     opacity: 0;
     transition: 0.5s
 }
-
+.navbarReference {
+    visibility: "hidden";
+    width: 0;
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    margin-Top: 0
+}
 .navSelected {
     top: 5px;
     opacity: 1;
+}
+
+@media only screen and (max-width: 450px) {
+
+    .navButton {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
 }

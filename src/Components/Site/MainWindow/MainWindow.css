@@ -1,7 +1,7 @@
 .mainWindow {
-    margin-top:5vh;
+    margin-top: 5.5vh;
     width: 100vw;
-    height: 90vh;
+    height: 95vh;
     font-family: "lato", sans-serif;
     font-weight: 300;
     font-size: 40px;
@@ -23,39 +23,15 @@
 }
 @media only screen and (max-width: 780px) {
 
-  .myName {
-      font-size: 40px;
-    }
-  .mainWindow {
-    overflow: none;
-    width: 60vw;
-    height: 15vh
-  }
+
 
 }
 @media only screen and (max-width: 600px) {
 
-  .mainWindow {
-      width: 60vw;
-      height: 17vh;
-      margin-left: 20vw;
-  }
-  .myName {
-      font-size: 50px
-  }
+
 
 }
 @media only screen and (max-width: 450px) {
 
-  .mainWindow {
-    width: 80vw;
-    height: 12vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
-
-  }
-  .myName {
-    font-size: 30px; 
-  }
 
 }

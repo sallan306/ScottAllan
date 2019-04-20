@@ -1,47 +1,42 @@
 import React, { Component } from 'react';
 import "./Navbar.css"
 
-class Site extends Component {
+class Navbar extends Component {
     state = {
         navbarClass: "navbar",
         lastSelected: ""
     }
 
 
-  goToPage = value => {
 
-  this.state.lastSelected !== "" ? document.getElementById("underline"+this.state.lastSelected).classList.toggle("navSelected") : this.setState({})
-  document.getElementById("underline"+value).classList.toggle("navSelected");
 
-  this.setState({
-    lastSelected: value
-  })
-  document.getElementById(value.toLowerCase()+"Title").scrollIntoView({behavior: "smooth"})
-
-}
     render() {
       return (
         <div className={this.state.navbarClass}>
           <span className="navButtonsContainer">
-            <span className="navButton navHomeButton" onClick={() => {this.goToPage("Home")}}>
+            <span className="navButton navHomeButton" onClick={() => {this.props.goToPage("Home")}}>
               <div className="navName navNameHome">Home</div>
-              <div id="underlineHome" className="navUnderline"></div>
+              <div id="underlineHome" className={this.props.selectedNav === "Home" ? "navUnderline navSelected" : "navUnderline"}></div>
             </span>
-            <span className="navButton navAboutButton" onClick={() => {this.goToPage("About")}}>
+            <span className="navButton navAboutButton" onClick={() => {this.props.goToPage("About")}}>
               <div className="navName navNameAbout">About</div>
-              <div id="underlineAbout" className="navUnderline"></div>
+              <div id="underlineAbout" className={this.props.selectedNav === "About" ? "navUnderline navSelected" : "navUnderline"}></div>
             </span>
-            <span className="navButton navServicesButton" onClick={() => {this.goToPage("Services")}}>
+            <span className="navButton navServicesButton" onClick={() => {this.props.goToPage("Services")}}>
               <div className="navName navNameServices">Services</div>
-              <div id="underlineServices"className="navUnderline"></div>
+              <div id="underlineServices"className={this.props.selectedNav === "Services" ? "navUnderline navSelected" : "navUnderline"}></div>
             </span>
-            <span className="navButton navPortfolioButton" onClick={() => {this.goToPage("Portfolio")}}>
+            <span className="navButton navPortfolioButton" onClick={() => {this.props.goToPage("Portfolio")}}>
               <div className="navName navNamePortfolio">Portfolio</div>
-              <div id="underlinePortfolio"className="navUnderline"></div>
+              <div id="underlinePortfolio"className={this.props.selectedNav === "Portfolio" ? "navUnderline navSelected" : "navUnderline"}></div>
             </span>  
-            <span className="navButton navContactButton" onClick={() => {this.goToPage("Contact")}}>
+            <span className="navButton navContactButton" onClick={() => {this.props.goToPage("Contact")}}>
               <div className="navName navNameContact">Contact</div>
-              <div id="underlineContact"className="navUnderline"></div>
+              <div id="underlineContact"className={this.props.selectedNav === "Contact" ? "navUnderline navSelected" : "navUnderline"}></div>
+            </span>
+            <span className="navButton navColorButton" onClick={this.props.changeColor}>
+              <div className="navName navNameColor">Color</div>
+              <div id="underlineColor"className="navUnderline"></div>
             </span>
           </span>
         </div>  
@@ -49,5 +44,5 @@ class Site extends Component {
     }
   }
   
-export default Site;
+export default Navbar;
   

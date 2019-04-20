@@ -4,10 +4,13 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.0",
     "react": "^16.7.0",
+    "react-awesome-button": "^6.1.0",
     "react-dom": "^16.7.0",
-    "react-slideshow-image": "^1.1.5",
+    "react-gsap": "^1.2.0",
+    "react-particles-js": "^2.6.0",
+    "scrolltrigger-classes": "^0.3.6",
     "yarn": "^1.13.0"
   },
   "scripts": {
