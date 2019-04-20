@@ -1,0 +1,46 @@
+.navbar {
+    z-index: 100;
+    background: black;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 5vh;
+    font-size: 10px;
+    padding-top:10px;
+    transition: 0.5s;
+}
+.navButtonsContainer {
+
+    position: fixed;
+    right: 0;
+}
+.navButton {
+    width: 70px;
+    height: 35px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.navName {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.navUnderline {
+    position: relative;
+    top: 10px;
+    height: 2px;
+    width: 40px;
+    background: white;
+    margin: 0 auto;
+    opacity: 0;
+    transition: 0.5s
+}
+
+.navSelected {
+    top: 5px;
+    opacity: 1;
+}

@@ -4,6 +4,7 @@ html, body {
   color: rgb(197, 193, 218);
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 body {
   position: relative;
@@ -13,17 +14,16 @@ body {
   padding: 0 auto;
 }
 
-.visible {
-  visibility: visible
-}
-.hidden {
-  visibility: hidden;
-}
 .initial {
-  display: initial
+  display: initial;
+  opacity: 1;
+  transition: "1s"
 }
 .none {
-  display: none
+  display: none;
+  opacity: 0;
+  transition: "1s"
+
 }
 
 /* --------------------------SCROLLBAR --------------------------------------------------------- */
@@ -34,7 +34,7 @@ body {
     background: #43101087;
 }
 ::-webkit-scrollbar-thumb {
-    background: rgba(31, 67, 78, 0.65);
+    background: rgba(31, 67, 78, .4);
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 

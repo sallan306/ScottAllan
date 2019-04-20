@@ -8,6 +8,7 @@
     position: relative;
     top: 0px;
     display: none;
+    transition: 1s
   }
   
   .portfolio {
