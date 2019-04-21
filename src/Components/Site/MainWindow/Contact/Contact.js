@@ -8,7 +8,7 @@ class Contact extends Component {
         return (
             <div className="contact">
                 <h1 id="contactTitle" className="navbarReference1">CONTACT</h1>
-                Lorum Ipsum Nonsense whatever fuck balls? Lorum Ipsum Nonsense whatever fuck balls?Lorum Ipsum Nonsense whatever fuck balls?Lorum Ipsum Nonsense whatever fuck balls?Lorum Ipsum Nonsense whatever fuck balls?Lorum Ipsum Nonsense whatever fuck balls?
+                Email me at sallan306@gmail.com
             </div>
 
         )

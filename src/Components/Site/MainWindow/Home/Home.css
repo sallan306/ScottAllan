@@ -1,4 +1,5 @@
 #aboutMePic {
     width: 100%;
+    filter: grayscale(80%)
 
 }
