@@ -1,23 +1,54 @@
-.portfolioImage:hover {
-    /* background: black; */
-    /* opacity: 0.2; */
-    filter: saturate(10%)
+.portfolioImage {
+    transition: 0.5s;
+    margin: 5px;
+    width: 300px;
+    height: 300px;
+}
+.hiddenContainer {
+    position: relative;
+    display: inline-grid;
+    top: -314px;
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    transition: 0.5s
 }
 
-
-
-@media only screen and (max-width: 1100px) {
+.portfolioContainer {
+    width: 310px;
+    height: 310px;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: black;
+    display: inline-block;
+    margin: 20px;
+    background: white
+}
+.portfolioTitle {
+    transition: 0.5s;
+    color: black;
+    pointer-events: none;
+    position: relative;
+    top: 10px;
+    margin: 0;
 
 }
-
-@media only screen and (max-width: 1000px) {
-
+.portfolioTitle2 {
+    transition: 0.5s;
+    color: black;
+    pointer-events: none;
+    margin-bottom: 0;
 }
 
-@media only screen and (max-width: 780px) {
-
+.highlighted {
+    opacity: 1;
 }
-
-@media only screen and (max-width: 450px) {
-      
+.imgHighlighted {
+    filter: saturate(10%);
+    opacity: 0.2;
+}
+.aws-btn {
+    --button-default-font-size: 8px;
+    margin: 10px;
 }

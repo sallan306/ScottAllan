@@ -1,17 +1,26 @@
 import React, { Component } from "react";
-import "./Portfolio.css"
 import PortfolioItems from "./PortfolioItems"
-import BrewStashImage from "./Images/BrewStash.png"
+import {AwesomeButtonSocial, AwesomeButton} from 'react-awesome-button';
+import 'react-awesome-button/dist/themes/theme-blue.css';
+import "./Portfolio.css"
 
 
                 
 class Portfolio extends Component {
     state = {
-        
+        highlighted: ""
     }
 
-    hoverPortfolioItem = target => {
-
+    mouseEnter = value => {
+        this.setState({ highlighted: value })
+        console.log("enter")
+    }
+    mouseLeave = () => {
+        this.setState({ highlighted: "" })
+        console.log("exit")
+    }
+    mouseClicked = () => {
+        console.log("clicked")
     }
     render() {
         return (
@@ -19,17 +28,31 @@ class Portfolio extends Component {
                 <h1 id="portfolioTitle">PORTFOLIO</h1>
                 {PortfolioItems.map( item => {
                    { return (
-                    <div className="portfolioContainer">
+                    <div key={"container"+item.id}className="portfolioContainer">
                         <img 
-                            key={item.id} 
-                            className={"portfolioImage portfolioImage"+item.name} 
-                            src={BrewStashImage}
+                            key={"image"+item.id} 
+                            className={this.state.highlighted === item.id ? "imgHighlighted portfolioImage" :"portfolioImage"} 
+                            src={item.imgURL}
                             alt={item.name}
-                            style={{margin: 20, float: "left", display: "block",width: 200, height: 200, background: "red"}}
-                            onMouseEnter={() =>console.log("enter")}
-                            onMouseLeave={() =>console.log("exit")}
-                            onClick={() => console.log("clicked")}
+
                         />
+                        <div                             
+                            onMouseEnter={() => this.mouseEnter(item.id)}
+                            onMouseLeave={() => this.mouseLeave()} 
+                            className={this.state.highlighted === item.id ? "highlighted hiddenContainer" : "hiddenContainer"} >
+                            <p  
+                                key={"paragraph"+item.id}
+                                className={"portfolioTitle"}>{item.name}            
+                            </p>
+                            <div className="buttonBox">
+                                <AwesomeButtonSocial   size="icon" href={item.github} type="github" ></AwesomeButtonSocial>
+                                <AwesomeButton   size="icon" href={item.liveLink} >DEMO</AwesomeButton>
+                            </div>
+                            <h6  
+                                key={"paragraph"+item.id}
+                                className="portfolioTitle2">{item.shortDescription}
+                            </h6>
+                        </div>
                     </div>
                     )}
                 })}

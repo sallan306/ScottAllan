@@ -98,7 +98,7 @@ export function Particles(props) {
           detect_on: "window",
           events: {
             onhover: {
-              enable: false,
+              enable: true,
               mode: "repulse"
             },
             onclick: {
@@ -123,7 +123,7 @@ export function Particles(props) {
             },
             repulse: {
               distance: 100,
-              duration: 0.4
+              duration: 0.1
             },
             push: {
               particles_nb: 4

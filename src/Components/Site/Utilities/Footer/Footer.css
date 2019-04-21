@@ -1,7 +1,7 @@
 .myFooter {
     z-index: 100;
-    background: white;
+    background: gray;
     width: 100%;
     font-size: 10px;
-    padding-bottom:100px;
+    padding-bottom:10px;
   }
