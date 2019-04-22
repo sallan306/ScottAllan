@@ -74,6 +74,11 @@
     background: black;
     transition: 0.5s
 }
+.sideNavLinks {
+    position: fixed;
+    top: 100px;
+    transition: 0.5s
+}
 .menuItem {
     width: 30px;
     height: 4px;

@@ -21,7 +21,12 @@ class Navbar extends Component {
             <div className="menuItem menuItem2"></div>
             <div className="menuItem menuItem3"></div>
           </button>
-          <span className="sideNav" style={{visibility: this.state.sideNavVisible ? "visible" : "hidden", height: this.state.sideNavVisible ? "40vh" : "5vh"}}></span>
+          <span className="sideNav" style={{visibility: this.state.sideNavVisible ? "visible" : "hidden", height: this.state.sideNavVisible ? "40vh" : "5vh"}}>
+            <span className="sideNavLinks">
+            Resume<button>PDF</button><button>Word</button><button>Google Doc</button>
+            </span>
+
+          </span>
           <span className="navButtonsContainer">
             <span className="navButton navHomeButton" onClick={() => {this.props.goToPage("Home")}}>
               <div className="navName navNameHome">Home</div>
