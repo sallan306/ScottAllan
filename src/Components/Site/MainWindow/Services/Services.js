@@ -5,10 +5,9 @@ class Services extends Component {
 
     render(props) {
         return (
-            <div className="services" style={{position: this.props.servicesStatic ? "fixed" : "relative"}}>
+            <div id="services"className="services" style={{ opacity: this.props.selectedNav === "services" ? 1 : 0}}>
                 <h1 id="servicesTitle">SERVICES</h1>
             </div>
-
         )
     }
 };

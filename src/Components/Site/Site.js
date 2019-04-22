@@ -4,15 +4,28 @@ import MainWindow from "./MainWindow/MainWindow"
 import "./Site.css"
 
 
-
 class Site extends Component {
   state = {
-      slideIndex: 1,
-      selectedNav: "Home",
-      scrollPercent: 0
+      selectedNav: "home",
+      scrollPercent: 0,
   }
   goToPage = value => {
-    document.getElementById(value.toLowerCase()+"Title").scrollIntoView({behavior: "smooth"})
+
+    if (value === "home") {
+      document.getElementById("homeRef").scrollIntoView()
+    }
+    else if (value === "about") {
+      document.getElementById("aboutRef").scrollIntoView()
+    }
+    else if (value === "services") {
+      document.getElementById("servicesRef").scrollIntoView()
+    }
+    else if (value === "portfolio") {
+      document.getElementById("portfolioRef").scrollIntoView()
+    }
+    else if (value === "contact") {
+      document.getElementById("contactRef").scrollIntoView()
+    }
 
   }
   getPercentage = () => {
@@ -24,20 +37,20 @@ class Site extends Component {
     this.setState({scrollPercent: percent})
 
 
-    if (this.state.scrollPercent > 94) {
-      this.setState({selectedNav: "Contact"})
+    if (this.state.scrollPercent > 75) {
+      this.setState({selectedNav: "contact"})
     }
-    else if (this.state.scrollPercent > 70) {
-      this.setState({selectedNav: "Portfolio"})
+    else if (this.state.scrollPercent > 55) {
+      this.setState({selectedNav: "portfolio"})
     }
-    else if (this.state.scrollPercent > 46) {
-      this.setState({selectedNav: "Services"})
+    else if (this.state.scrollPercent > 35) {
+      this.setState({selectedNav: "services"})
     }
-    else if (this.state.scrollPercent > 22) {
-      this.setState({selectedNav: "About"})
+    else if (this.state.scrollPercent > 15) {
+      this.setState({selectedNav: "about"})
     }
     else if (this.state.scrollPercent > 0) {
-      this.setState({selectedNav: "Home"})
+      this.setState({selectedNav: "home"})
     }
   }
 
@@ -51,7 +64,7 @@ class Site extends Component {
               changeColor={this.changeColor}/>
             <MainWindow scrollPercent={this.state.scrollPercent}
                         getPercentage={this.getPercentage}
-                        scrollPastSection={this.scrollPastSection}/>
+                        selectedNav={this.state.selectedNav}/>
         </div>  
       )
     }

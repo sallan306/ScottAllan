@@ -6,8 +6,8 @@ class Contact extends Component {
 
     render() {
         return (
-            <div className="contact">
-                <h1 id="contactTitle" className="navbarReference1">CONTACT</h1>
+            <div id="contact" className="contact" style={{ opacity: this.props.selectedNav === "contact" ? 1 : 0}}>
+                <h1 id="contactTitle" className="navbarReference1" >CONTACT</h1>
                 Email me at sallan306@gmail.com
             </div>
 

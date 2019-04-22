@@ -4,17 +4,12 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "classnames": "^2.2.6",
-    "jquery": "^3.4.0",
     "react": "^16.7.0",
     "react-awesome-button": "^6.1.0",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.7.0",
     "react-gsap": "^1.2.0",
     "react-inview-monitor": "^2.2.1",
-    "react-particles-js": "^2.6.0",
-    "react-scroll-parallax": "^2.1.2",
-    "scrolltrigger-classes": "^0.3.6",
     "waypoints": "^4.0.1",
     "yarn": "^1.13.0"
   },

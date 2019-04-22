@@ -8,30 +8,30 @@ import Contact from "./Contact/Contact"
 import Footer from "../Utilities/Footer/Footer"
 
 
-
                 
 class MainWindow extends Component {
-    state = {
-        scrollPercent: 0,
-        aboutStatic: false,
-        servicesStatic: false,
-        portfolioStatic: false,
-    };
-    
-
-
 
     render() {
         return (
             
         <div id="mainWindow" className="mainWindow" onScroll={ ()=> this.props.getPercentage()}>   
-            {<div className="testVar">{this.props.scrollPercent}</div>}
+            {<div className="testVar">{this.props.selectedNav}</div>}
+            {<div className="testVar2">{this.props.scrollPercent}</div>}
+            
             <Home scrollPercent={this.props.scrollPercent}/>
-            <About scrollPercent={this.props.scrollPercent}/>
-            <Services scrollPercent={this.props.scrollPercent}/>
-            <Portfolio scrollPercent={this.props.scrollPercent}/>
-            <Contact scrollPercent={this.props.scrollPercent}/>
-            <Footer scrollPercent={this.props.scrollPercent}/>
+            <div className="dummyBox">
+                <div id="demoRef"></div>
+                <div id="homeRef"></div>
+                <div id="aboutRef"></div>
+                <div id="servicesRef"></div>
+                <div id="portfolioRef"></div>
+                <div id="contactRef"></div>
+            </div>
+            <About selectedNav={this.props.selectedNav}/>
+            <Services selectedNav={this.props.selectedNav}/>
+            <Portfolio selectedNav={this.props.selectedNav}/>
+            <Contact selectedNav={this.props.selectedNav}/>
+            <Footer/>
         </div>
 
         )

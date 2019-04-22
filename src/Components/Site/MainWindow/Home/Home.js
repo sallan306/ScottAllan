@@ -10,7 +10,7 @@ class Home extends Component {
 
     render() {
         return (
-                <div className="home" >
+                <div id="home"className="home" >
                     <h1 id="homeTitle" className="navbarReference">HOME</h1>
                     <img id="homePic" src={myPicuture} alt="Scott Allan" style={{top:(-4*this.props.scrollPercent)}} />
 

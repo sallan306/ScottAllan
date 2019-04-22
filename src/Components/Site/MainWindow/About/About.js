@@ -5,7 +5,7 @@ class About extends Component {
 
     render() {
         return (
-                <div className={this.props.scrollPercent >= 22 ? "about movesFaster" : "about"}>
+                <div id="about"className="about" style={{ opacity: this.props.selectedNav === "about" ? 1 : 0}}>
                     <h1 id="aboutTitle" className="navbarReference">ABOUT</h1>
                     <div className="container aboutContainer">
                         <div className="row">

@@ -12,7 +12,7 @@
     float: left;
     height: 50%;
     left: 12.5%;
-    transition: 5.5s;
+    box-shadow: 5px
 }
 
 #aboutMeCard {
@@ -25,9 +25,6 @@
     background: gray;
 }
 
-.about {
-    transition: 1s
-}
 
 .paragraph1, .paragraph2 {
     padding-left: 0;

@@ -24,9 +24,9 @@ class Portfolio extends Component {
     }
     render() {
         return (
-            <div className="portfolio" >
+            <div id="portfolio"className="portfolio" style={{ opacity: this.props.selectedNav === "portfolio" ? 1 : 0}}>
                 <h1 id="portfolioTitle">PORTFOLIO</h1>
-                {PortfolioItems.map( item => {
+                {PortfolioItems.map( item => 
                    { return (
                     <div key={"container"+item.id}className="portfolioContainer">
                         <img 
@@ -55,7 +55,7 @@ class Portfolio extends Component {
                         </div>
                     </div>
                     )}
-                })}
+                )}
             </div>
 
         )
