@@ -16,9 +16,20 @@
 }
 
 #aboutMeCard {
-    width: 40vw;
+    height: 500px;
+    margin: auto;
+}
+
+.aboutContainer {
+    width: 100%;
+    background: gray;
 }
 
 .about {
-    
+    transition: 1s
+}
+
+.paragraph1, .paragraph2 {
+    padding-left: 0;
+    padding-right: 0;
 }

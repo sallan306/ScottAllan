@@ -8,42 +8,30 @@ import Contact from "./Contact/Contact"
 import Footer from "../Utilities/Footer/Footer"
 
 
+
                 
 class MainWindow extends Component {
     state = {
-
+        scrollPercent: 0,
+        aboutStatic: false,
+        servicesStatic: false,
+        portfolioStatic: false,
     };
     
-    handleScroll = event => {
-        let x = document.getElementById("mainWindow").scrollTop;
-        if (x >= 0 && x < 880) {
-            this.props.scrollPastSection("Home")
-        }
-        else if (x >= 880 && x < 1600) {
-            this.props.scrollPastSection("About")
-        }
-        else if (x >= 1600 && x < 2100) {
-            this.props.scrollPastSection("Services")
-        }
-        else if (x >= 2100 && x < 3500) {
-            this.props.scrollPastSection("Portfolio")
-        }
-        else if (x >= 3500 && x < 4000) {
-            this.props.scrollPastSection("Contact")
-        }
-    }
-    render(props) {
+
+
+
+    render() {
         return (
-
-        <div id="mainWindow" className="mainWindow" onScroll={this.handleScroll}>   
-
-            <Home/>
-            <About/>
-            <Services/>
-            <Portfolio/>
-            <Contact/>
-            <Footer/>
-
+            
+        <div id="mainWindow" className="mainWindow" onScroll={ ()=> this.props.getPercentage()}>   
+            {<div className="testVar">{this.props.scrollPercent}</div>}
+            <Home scrollPercent={this.props.scrollPercent}/>
+            <About scrollPercent={this.props.scrollPercent}/>
+            <Services scrollPercent={this.props.scrollPercent}/>
+            <Portfolio scrollPercent={this.props.scrollPercent}/>
+            <Contact scrollPercent={this.props.scrollPercent}/>
+            <Footer scrollPercent={this.props.scrollPercent}/>
         </div>
 
         )

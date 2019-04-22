@@ -41,7 +41,7 @@ class Portfolio extends Component {
                             onMouseLeave={() => this.mouseLeave()} 
                             className={this.state.highlighted === item.id ? "highlighted hiddenContainer" : "hiddenContainer"} >
                             <p  
-                                key={"paragraph"+item.id}
+                                key={"title"+item.id}
                                 className={"portfolioTitle"}>{item.name}            
                             </p>
                             <div className="buttonBox">

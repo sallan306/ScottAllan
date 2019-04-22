@@ -1,8 +1,8 @@
 .portfolioImage {
     transition: 0.5s;
     margin: 5px;
-    width: 300px;
-    height: 300px;
+    width: 290px;
+    height: 290px;
 }
 .hiddenContainer {
     position: relative;
@@ -23,7 +23,9 @@
     border-color: black;
     display: inline-block;
     margin: 20px;
-    background: white
+    background: white;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .portfolioTitle {
     transition: 0.5s;

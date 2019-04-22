@@ -1,5 +1,10 @@
-#aboutMePic {
+#homePic {
     width: 100%;
-    filter: grayscale(80%)
+    filter: grayscale(80%);
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    top: 0;
+    left: 0;
 
 }

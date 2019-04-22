@@ -4,15 +4,24 @@ import "./Navbar.css"
 class Navbar extends Component {
     state = {
         navbarClass: "navbar",
-        lastSelected: ""
+        lastSelected: "",
+        sideNavVisible: false
     }
 
 
-
+    openSideNav = () => {
+      this.setState({sideNavVisible: this.state.sideNavVisible ? false : true})
+    }
 
     render() {
       return (
         <div className={this.state.navbarClass}>
+          <button className="sideNavButton" onClick={()=> this.openSideNav()}>
+            <div className="menuItem menuItem1"></div>
+            <div className="menuItem menuItem2"></div>
+            <div className="menuItem menuItem3"></div>
+          </button>
+          <span className="sideNav" style={{visibility: this.state.sideNavVisible ? "visible" : "hidden", height: this.state.sideNavVisible ? "40vh" : "5vh"}}></span>
           <span className="navButtonsContainer">
             <span className="navButton navHomeButton" onClick={() => {this.props.goToPage("Home")}}>
               <div className="navName navNameHome">Home</div>
@@ -33,10 +42,6 @@ class Navbar extends Component {
             <span className="navButton navContactButton" onClick={() => {this.props.goToPage("Contact")}}>
               <div className="navName navNameContact">Contact</div>
               <div id="underlineContact"className={this.props.selectedNav === "Contact" ? "navUnderline navSelected" : "navUnderline"}></div>
-            </span>
-            <span className="navButton navColorButton" onClick={this.props.changeColor}>
-              <div className="navName navNameColor">Color</div>
-              <div id="underlineColor"className="navUnderline"></div>
             </span>
           </span>
         </div>  
