@@ -12,17 +12,22 @@
     float: left;
     height: 50%;
     left: 12.5%;
-    box-shadow: 5px
+    box-shadow: 5px;
+    
 }
 
 #aboutMeCard {
     height: 500px;
     margin: auto;
+    border-style: solid;
+    padding-left: 0;
+    padding-right: 0;
+    border-color: black;
+    border-width: 10px;
 }
 
 .aboutContainer {
     width: 100%;
-    background: gray;
 }
 
 

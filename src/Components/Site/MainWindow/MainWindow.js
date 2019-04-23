@@ -15,7 +15,6 @@ class MainWindow extends Component {
         return (
             
         <div id="mainWindow" className="mainWindow" onScroll={ ()=> this.props.getPercentage()}>   
-            {<div className="testVar">{this.props.selectedNav}</div>}
             {<div className="testVar2">{this.props.scrollPercent}</div>}
             
             <Home scrollPercent={this.props.scrollPercent}/>

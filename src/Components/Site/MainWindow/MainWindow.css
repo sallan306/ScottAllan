@@ -27,27 +27,39 @@
   margin-top: 3%;
   margin-left: 5%;
   margin-right: 5%;
+  border-style: solid;
+  border-width: 1.5px;
+  border-color: black;
+  -webkit-box-shadow: 79px 54px 45px 16px rgba(0,0,0,0.53);
+  -moz-box-shadow: 79px 54px 45px 16px rgba(0,0,0,0.53);
+  box-shadow: 79px 54px 45px 16px rgba(0,0,0,0.53);
+  border-radius: 50px;
 }
 .home {
-  z-index: 10
+  z-index: 10;
+  padding-top: 40vh;
 }
 .about {
   z-index: 14;
-  background: gray;
+  background: rgb(70, 80, 107,0.95);
   padding: 10vh;
 
 }
 .services {
   z-index: 13;
-  background: blue;
+  background: rgb(70, 80, 107, 0.95);
 }
 .portfolio {
   z-index: 22;
-  background: red;
+  background: rgb(70, 80, 107, 0.95);
+  padding: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 .contact {
   z-index: 11;
-  background: cyan;
+  background: rgb(70, 80, 107, 0.95);
+  padding: 13vw;
 }
 
 .dummyBox {
