@@ -20,11 +20,11 @@
 }
 
 .about,.contact,.portfolio,.services {
-  position: fixed;
-  top: 4%;
+  position: relative;
+  top: 5%;
   width: 90%;
-  height: 85%;
-  margin-top: 3%;
+  height: 90%;
+  margin-top: 5%;
   margin-left: 5%;
   margin-right: 5%;
   border-style: solid;
@@ -33,11 +33,9 @@
   -webkit-box-shadow: 79px 54px 45px 16px rgba(0,0,0,0.53);
   -moz-box-shadow: 79px 54px 45px 16px rgba(0,0,0,0.53);
   box-shadow: 79px 54px 45px 16px rgba(0,0,0,0.53);
-  border-radius: 50px;
 }
 .home {
   z-index: 10;
-  padding-top: 40vh;
 }
 .about {
   z-index: 14;
@@ -76,36 +74,13 @@
   color: red;
   z-index: 999;
 }
-#homeRef, #aboutRef, #servicesRef, #portfolioRef, #contactRef {
-  position: relative;
-  width: 90%;
-  height: 1000px;
-  display: block;
-}
-#demoRef {
-  position: relative;
-  width: 100%;
-  height: 0px;
-  display: block;
-}
-#homeRef {
-  top: 0;
-}
-#aboutRef {
-  top: 1000;
-}
-#servicesRef {
-  top: 2000;
-}
-#portfolioRef {
-  top: 3000;
-}
-#contactRef {
-  top: 4000;
+.windowRef {
+    width: 100%;
+    height: 100%;
 }
 
 
-#mainWindow::-webkit-scrollbar { width: 0 !important }
+/* #mainWindow::-webkit-scrollbar { width: 0 !important } */
 #mainWindow {
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;

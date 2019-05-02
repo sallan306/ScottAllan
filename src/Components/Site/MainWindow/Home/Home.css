@@ -1,10 +1,42 @@
 #homePic {
     width: 100%;
-    filter: grayscale(80%);
     position: fixed;
     z-index: -1;
     pointer-events: none;
-    top: 0;
     left: 0;
 
 }
+#myName {
+    font-size: 40px;
+    color: black;
+    position: relative;
+    top: 35vh;
+    width: 65%;
+    margin-left: 35%;
+    text-align: left;
+    float: left;
+    transition: 0.2s
+}
+
+#myJob {
+    transition: 0.2s
+}
+
+@media only screen and (max-width: 1000px) {
+    #myName {
+        font-size: 30px;
+        margin-left: 40%
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    #myName {
+        font-size: 22px;
+        margin-left: 45%;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    #myName {
+        font-size: 20px;
+        margin-left: 45%;
+    }
+  }

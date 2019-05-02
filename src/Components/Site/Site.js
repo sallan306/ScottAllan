@@ -5,6 +5,14 @@ import "./Site.css"
 
 
 class Site extends Component {
+  constructor(props) {
+    super(props)
+    this.homeRef = React.createRef()
+    this.aboutRef = React.createRef()
+    this.servicesRef = React.createRef()
+    this.portfolioRef = React.createRef()
+    this.contactRef = React.createRef()
+  }
   state = {
       selectedNav: "home",
       scrollPercent: 0,
@@ -12,19 +20,21 @@ class Site extends Component {
   goToPage = value => {
 
     if (value === "home") {
-      document.getElementById("homeRef").scrollIntoView()
+      console.log(this.homeRef.current)
+      this.homeRef.current.scrollIntoView()
     }
     else if (value === "about") {
-      document.getElementById("aboutRef").scrollIntoView()
+      console.log(this.aboutRef.current)
+      this.aboutRef.current.scrollIntoView()
     }
     else if (value === "services") {
-      document.getElementById("servicesRef").scrollIntoView()
+      this.servicesRef.current.scrollIntoView()
     }
     else if (value === "portfolio") {
-      document.getElementById("portfolioRef").scrollIntoView()
+      this.portfolioRef.current.scrollIntoView()
     }
     else if (value === "contact") {
-      document.getElementById("contactRef").scrollIntoView()
+      this.contactRef.current.scrollIntoView()
     }
 
   }
@@ -37,16 +47,16 @@ class Site extends Component {
     this.setState({scrollPercent: percent})
 
 
-    if (this.state.scrollPercent > 75) {
+    if (this.state.scrollPercent > 80) {
       this.setState({selectedNav: "contact"})
     }
-    else if (this.state.scrollPercent > 55) {
+    else if (this.state.scrollPercent > 60) {
       this.setState({selectedNav: "portfolio"})
     }
-    else if (this.state.scrollPercent > 35) {
+    else if (this.state.scrollPercent > 40) {
       this.setState({selectedNav: "services"})
     }
-    else if (this.state.scrollPercent > 15) {
+    else if (this.state.scrollPercent > 20) {
       this.setState({selectedNav: "about"})
     }
     else if (this.state.scrollPercent > 0) {
@@ -62,9 +72,16 @@ class Site extends Component {
               goToPage={this.goToPage}
               selectedNav={this.state.selectedNav}
               changeColor={this.changeColor}/>
-            <MainWindow scrollPercent={this.state.scrollPercent}
-                        getPercentage={this.getPercentage}
-                        selectedNav={this.state.selectedNav}/>
+            <MainWindow 
+              scrollPercent={this.state.scrollPercent}
+              getPercentage={this.getPercentage}
+              selectedNav={this.state.selectedNav}
+              homeRef={this.homeRef}
+              aboutRef={this.aboutRef}
+              servicesRef={this.servicesRef}
+              portfolioRef={this.portfolioRef}
+              contactRef={this.contactRef}
+            />
         </div>  
       )
     }

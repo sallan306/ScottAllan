@@ -5,12 +5,19 @@ class Navbar extends Component {
     state = {
         navbarClass: "navbar",
         lastSelected: "",
-        sideNavVisible: false
+        sideNavVisible: false,
+        navLinksVisible: false,
     }
 
 
     openSideNav = () => {
       this.setState({sideNavVisible: this.state.sideNavVisible ? false : true})
+      setTimeout(this.showNavLinks, 2000);
+
+    }
+    showNavLinks = () => {
+      console.log("hi")
+      this.setState({navLinksVisible: this.state.navLinksVisible ? false : true})    
     }
 
     render() {
@@ -22,8 +29,11 @@ class Navbar extends Component {
             <div className="menuItem menuItem3"></div>
           </button>
           <span className="sideNav" style={{visibility: this.state.sideNavVisible ? "visible" : "hidden", height: this.state.sideNavVisible ? "40vh" : "5vh"}}>
-            <span className="sideNavLinks">
-            Resume<button>PDF</button><button>Word</button><button>Google Doc</button>
+            <span className="sideNavLinks" style={{visibility: this.state.sideNavVisible ? "visible" : "hidden", opacity: this.state.sideNavVisible ? 1 : 0, top: this.state.sideNavVisible ? 100 : 0}}>
+            Resume - 
+              <button className="resumeButton">PDF</button> / 
+              <button className="resumeButton">Word</button> / 
+              <button className="resumeButton">Google Doc</button>
             </span>
 
           </span>

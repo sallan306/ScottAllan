@@ -7,9 +7,9 @@ const portfolioItems = [
         "github": "https://github.com/sallan306/Brew-stash",
         "liveLink": "https://brew-stash.herokuapp.com/",
         "imgURL": require('./Images/BrewStash.png'),
-        "description": "description here",
+        "description": "A fun, lightweight website that helps brewers list their drink items and helps drinkers find them!",
         "shortDescription" : "Make drinking even more fun",
-        "technologiesUsed": ["react","node.js","photoshop"]
+        "technologies": ["react","node.js","photoshop"]
         
         },
         {
@@ -21,7 +21,7 @@ const portfolioItems = [
         "imgURL": require('./Images/IDo.png'),
         "description": "description here",
         "shortDescription" : "Event planning just got easier",
-        "technologiesUsed": ["react","node.js","photoshop"]
+        "technologies": ["react","node.js","photoshop"]
         },
         {
         "id":"3",
@@ -32,7 +32,7 @@ const portfolioItems = [
         "imgURL": require('./Images/SunnyWeekend.png'),
         "description": "description here",
         "shortDescription" : "Step out of the shade!",
-        "technologiesUsed": ["react","node.js","photoshop"]
+        "technologies": ["react","node.js","photoshop"]
         },
         {
         "id":"4",
@@ -43,7 +43,7 @@ const portfolioItems = [
         "imgURL": require('./Images/kindling.png'),
         "description": "description here",
         "shortDescription" : "Find your superhero soulmate!",
-        "technologiesUsed": ["react","node.js","photoshop"]
+        "technologies": ["react","node.js","photoshop"]
         },
         {
         "id":"5",
@@ -54,7 +54,7 @@ const portfolioItems = [
         "imgURL": require('./Images/CrystalCollectors.png'),
         "description": "description here",
         "shortDescription" : "Crystals everywhere!!",
-        "technologiesUsed": ["react","node.js","photoshop"]
+        "technologies": ["react","node.js","photoshop"]
         },
         {
         "id":"6",
@@ -64,7 +64,7 @@ const portfolioItems = [
         "liveLink": "https://brew-stash.herokuapp.com/",
         "imgURL": require('./Images/BrewStash.png'),
         "description": "description here",
-        "technologiesUsed": ["react","node.js","photoshop"]
+        "technologies": ["react","node.js","photoshop"]
         }
 ]
 

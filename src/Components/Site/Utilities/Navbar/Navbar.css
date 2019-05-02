@@ -57,7 +57,7 @@
     background: transparent;
     border: none;
     position: relative;
-    bottom: 10px;
+    bottom: 2.6vh;
     right: 10px;
     outline: none
 }
@@ -87,11 +87,40 @@
     border-radius: 10px;
 }
 
+.resumeButton {
+    background: transparent;
+    border: 0;
+    color: white
+}
+
 @media only screen and (max-width: 450px) {
 
     .navButton {
         margin-left: 0px;
         margin-right: 0px;
     }
+    .sideNavButton {
+        bottom: 2.6vh;
+    }
 
+}
+
+@media only screen and (max-width: 420px) {
+
+    .navButton {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 70px;
+        height: 35px;
+        float: left;
+    }
+    .sideNavButton {
+        bottom: 1vh;
+    }
+    .navButtonsContainer {
+
+        position: fixed;
+        right: 10px;
+        top: 3px;
+    }
 }
