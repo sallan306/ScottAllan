@@ -14,6 +14,9 @@ class Contact extends Component {
         formInformation: [["firstName",""],["lastName",""],["email",""],["otherInfo",""]]
         
     }
+    submitForm = () => {
+
+    }
 
     render() {
         return (
@@ -35,9 +38,9 @@ class Contact extends Component {
                         I am currently accepting freelance commissions or projects! 
                     </p>
                     <form onSubmit={()=> this.submitForm()}>
-                        <input type="text">First Name</input>
+                        {/* <input type="text">First Name</input>
                         <input type="text">Last Name</input>
-                        <input type="text">Email</input>
+                        <input type="text">Email</input> */}
                         <button>Sumit</button>
                     </form>
 
