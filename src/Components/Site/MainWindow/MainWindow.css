@@ -16,7 +16,8 @@
 .home, .about, .contact, .portfolio, .services {
 
   height: 100vh;
-  transition: 0.5s
+  transition: 0.5s;
+  overflow-y: scroll;
 }
 
 .about,.contact,.portfolio,.services {

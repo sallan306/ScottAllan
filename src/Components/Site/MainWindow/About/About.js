@@ -12,7 +12,7 @@ class About extends Component {
                         className="about" 
                         style={{ 
                             opacity: this.props.selectedNav === "about" ? 1 : 0, 
-                            visibility: this.props.selectedNav === "about" ? "visible" : "invisible"}}
+                            visibility: this.props.selectedNav === "about" ? "visible" : "hidden"}}
                     >
                         <h1 
                             id="aboutTitle" 

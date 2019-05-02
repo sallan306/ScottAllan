@@ -7,19 +7,60 @@ class Home extends Component {
         IamA: ["A Web Designer", "A Software Engineer", "A UI/UX Enthusiast","A SEO Optimizer","A Dinosaur", "100 Percent Geek"],
         selected: "A Web Designer",
         jobRandomColor: ["blue","red","yellow","orange", "teal"],
-        jobColor: "black"
+        jobText: "",
+        oldWord: "A Web Designer",
+        jobColor: "black",
+        oldColor: "black"
+    }
+
+    addLetters = () => {
+        var addLettersInterval =setInterval(()=> {
+            if(this.state.selected.length > 0) {
+                this.setState({
+                    jobText: (this.state.jobText +this.state.selected[0]),
+                    selected: this.state.selected.slice(1),
+                })
+            }
+            else {
+                this.setState({
+                    oldWord: this.state.jobText,
+                    oldColor: this.state.jobColor
+                })
+                setTimeout(() => this.eraseLetters(), 500)
+                clearInterval(addLettersInterval)
+            }
+        },75)
+
+    }
+    eraseLetters = () => {
+        var eraseLettersInterval = setInterval(()=> {
+            if(this.state.jobText.length > 0) {
+                this.setState({
+                    jobText: this.state.jobText.slice(0,this.state.jobText.lastIndexOf())
+                })
+            }
+            else {
+                setTimeout(()=> this.newWord(), 500)
+                clearInterval(eraseLettersInterval)
+            }
+        },25)
+
     }
     newWord = () => {
-        setInterval(() => {
-            this.setState({
-                selected: this.state.IamA[Math.floor(Math.random()*this.state.IamA.length)],
-                jobColor: this.state.jobRandomColor[Math.floor(Math.random()*this.state.jobRandomColor.length)]}) 
-        }, 1000)
-
-
+        this.setState({
+            selected: this.state.IamA[Math.floor(Math.random()*this.state.IamA.length)],
+            jobColor: this.state.jobRandomColor[Math.floor(Math.random()*this.state.jobRandomColor.length)]
+        })
+        if (this.state.selected === this.state.oldWord || this.state.oldColor === this.state.jobColor) {
+            this.newWord()
+        }
+        else (
+            this.addLetters()
+        )
     }
+
     componentDidMount() {
-        this.newWord()
+        this.addLetters()
     }
 
     render() {
@@ -27,7 +68,6 @@ class Home extends Component {
             <div 
                 ref={this.props.homeRef} 
                 id="home"
-                className="home" 
             >
                 <img 
                     id="homePic" 
@@ -40,8 +80,8 @@ class Home extends Component {
                     className="myName">Hello, I'm Scott. 
                     <span   
                         id="myJob" 
-                        style={{color: this.state.jobColor}}> 
-                        {" "+this.state.selected} 
+                        style={{color: this.state.jobColor, transition: "0.1s"}}> 
+                        {" "+this.state.jobText} 
                     </span>
                 </span>
                 {/* {console.log(this.props.homeRef.current)} */}
