@@ -7,8 +7,6 @@ import Portfolio from "./Portfolio/Portfolio"
 import Contact from "./Contact/Contact"       
 class MainWindow extends Component {
     state = {
-        backgroundColor: this.props.backgroundColor,
-        fontColor: this.props.fontColor
 
     }
     render() {
@@ -29,22 +27,26 @@ class MainWindow extends Component {
             <About 
                 selectedNav={this.props.selectedNav}
                 aboutRef={this.props.aboutRef}
-                backgroundColor={this.state.backgroundColor}
+                backgroundColor={this.props.backgroundColor}
+                fontColor={this.props.fontColor}
             />
             <Services 
                 servicesRef={this.props.servicesRef}
                 selectedNav={this.props.selectedNav}
-                backgroundColor={this.state.backgroundColor}
+                backgroundColor={this.props.backgroundColor}
+                fontColor={this.props.fontColor}
             />
             <Portfolio 
                 selectedNav={this.props.selectedNav}
                 portfolioRef={this.props.portfolioRef}
-                backgroundColor={this.state.backgroundColor}
+                backgroundColor={this.props.backgroundColor}
+                fontColor={this.props.fontColor}
             />
             <Contact
                 selectedNav={this.props.selectedNav}
                 contactRef={this.props.contactRef}
-                backgroundColor={this.state.backgroundColor}
+                backgroundColor={this.props.backgroundColor}
+                fontColor={this.props.fontColor}
             />
             {/* <Footer/> */}
         </div>

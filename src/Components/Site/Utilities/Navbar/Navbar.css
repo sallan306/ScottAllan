@@ -14,11 +14,12 @@
     border-bottom: black;
     border-style: solid;   
     border-width: 0.5px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
 
 }
 .navButtonsContainer {
-
-    position: fixed;
     right: 0;
     top: 7px;
 }

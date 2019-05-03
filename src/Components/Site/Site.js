@@ -16,9 +16,10 @@ class Site extends Component {
   state = {
       selectedNav: "home",
       scrollPercent: 0,
-      backgroundColor: "rgb(23,62,67, .8)",
-      navBackgroundColor: "gray",
-      fontColor: "black"
+      backgroundColor: "#7F8688",
+      navBackgroundColor: "#7F8688",
+      navFontColor: "white",
+      fontColor: "white"
   }
   goToPage = value => {
 
@@ -65,17 +66,28 @@ class Site extends Component {
     else if (this.state.scrollPercent > 0) {
       this.setState({selectedNav: "home"})
     }
+
+    if (this.state.scrollPercent >= 5) {
+      this.setState({navbarVisible: true})
+      console.log("true")
+    }
+    else {
+      this.setState({navbarVisible: false})
+      console.log("false")
+    }
   }
 
     render() {
       return (
           <div id="site">
+
             <Navbar 
+              navbarVisible={this.state.navbarVisible}
               goToPage={this.goToPage}
               selectedNav={this.state.selectedNav}
               changeColor={this.changeColor}
               navBackgroundColor={this.state.navBackgroundColor}
-              fontColor={this.state.fontColor}
+              fontColor={this.state.navFontColor}
             />
             <MainWindow 
               scrollPercent={this.state.scrollPercent}

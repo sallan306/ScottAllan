@@ -40,9 +40,41 @@
     animation-duration: 200ms;
     animation-delay: 300ms
 }
+
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.arrowContainer {
+    right: 45vw;
+    position: relative;
+    top: 85vh;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-duration: 1000ms;
+    animation-delay: 0ms
+}
+.arrow1 {
+    position: relative;
+    top: 5px;
+    left: 0px;
+}
+.arrow2 {
+    position: relative;
+    top: 5px;
+    left: 0px;
+}
 @keyframes blink {
-    /* from { opacity: 1; }
-    to { opacity: 0; } */
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
 @media only screen and (max-width: 1000px) {
     #myName {
