@@ -22,12 +22,12 @@
 
 .about,.contact,.portfolio,.services {
   position: relative;
-  top: 5%;
-  width: 90%;
-  height: 90%;
+  top: 1.5%;
+  width: 95%;
+  height: 97%;
   margin-top: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
   border-style: solid;
   border-width: 1.5px;
   border-color: black;
@@ -41,12 +41,14 @@
 .about {
   z-index: 14;
   background: rgb(70, 80, 107,0.95);
-  padding: 10vh;
+  padding: 5vh;
+  overflow: hidden;
 
 }
 .services {
   z-index: 13;
   background: rgb(70, 80, 107, 0.95);
+  overflow: hidden;
 }
 .portfolio {
   z-index: 22;
@@ -58,7 +60,8 @@
 .contact {
   z-index: 11;
   background: rgb(70, 80, 107, 0.95);
-  padding: 13vw;
+  padding: 5vw;
+  overflow: hidden;
 }
 
 .dummyBox {

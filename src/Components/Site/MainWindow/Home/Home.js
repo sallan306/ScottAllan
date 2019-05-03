@@ -6,14 +6,15 @@ class Home extends Component {
     state = {
         IamA: ["A Web Designer", "A Software Engineer", "A UI/UX Enthusiast","A SEO Optimizer","A Dinosaur", "100 Percent Geek"],
         selected: "A Web Designer",
-        jobRandomColor: ["blue","red","yellow","orange", "teal"],
+        jobRandomColor: ["#000080","maroon","orange", "teal"],
         jobText: "",
         oldWord: "A Web Designer",
-        jobColor: "black",
+        jobColor: "#000080",
         oldColor: "black"
     }
 
     addLetters = () => {
+        this.setState({cursorStatus: "active"})
         var addLettersInterval =setInterval(()=> {
             if(this.state.selected.length > 0) {
                 this.setState({
@@ -26,13 +27,14 @@ class Home extends Component {
                     oldWord: this.state.jobText,
                     oldColor: this.state.jobColor
                 })
-                setTimeout(() => this.eraseLetters(), 500)
+                this.blinkingCursorBefore()
                 clearInterval(addLettersInterval)
             }
         },75)
 
     }
     eraseLetters = () => {
+        this.setState({cursorStatus: "active"})
         var eraseLettersInterval = setInterval(()=> {
             if(this.state.jobText.length > 0) {
                 this.setState({
@@ -40,11 +42,20 @@ class Home extends Component {
                 })
             }
             else {
-                setTimeout(()=> this.newWord(), 500)
+                this.blinkingCursorAfter()
                 clearInterval(eraseLettersInterval)
             }
         },25)
 
+    }
+    blinkingCursorBefore = () => {
+        this.setState({cursorStatus: "inactiveCursor"})
+        setTimeout(() => this.eraseLetters(), 1000)
+    }
+    blinkingCursorAfter = () => {
+        this.setState({cursorStatus: "inactiveCursor"})
+        setTimeout(()=> this.newWord(), 1000)
+        
     }
     newWord = () => {
         this.setState({
@@ -68,6 +79,7 @@ class Home extends Component {
             <div 
                 ref={this.props.homeRef} 
                 id="home"
+
             >
                 <img 
                     id="homePic" 
@@ -80,9 +92,10 @@ class Home extends Component {
                     className="myName">Hello, I'm Scott. 
                     <span   
                         id="myJob" 
-                        style={{color: this.state.jobColor, transition: "0.1s"}}> 
+                        style={{color: this.state.jobColor, transition: "0.1s", cursor: "auto"}}> 
                         {" "+this.state.jobText} 
                     </span>
+                    <span className={this.state.cursorStatus} >|</span>
                 </span>
                 {/* {console.log(this.props.homeRef.current)} */}
             </div>

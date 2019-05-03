@@ -4,7 +4,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons' 
-var email 	= require("emailjs");
 
 library.add(fab, faEnvelope)
 
@@ -43,6 +42,7 @@ class Contact extends Component {
                     id="contact" 
                     className="contact" 
                     style={{ 
+                        background: this.props.backgroundColor,
                         opacity: this.props.selectedNav === "contact" ? 1 : 0}}
                 >
                     <p className="paragraph1" >
@@ -89,7 +89,7 @@ class Contact extends Component {
                         <a className="btn" href="https://www.linkedin.com/in/scott-allan-360a1289/">
                         <FontAwesomeIcon size="3x" icon={faEnvelope}/>
                         </a>
-                    
+                        
                 </div>
             </div>
         )

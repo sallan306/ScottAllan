@@ -1,19 +1,26 @@
 .navbar {
     position: fixed;
-    background: black;
     top: 0px;
     width: 100%;
-    height: 5vh;
+    height: 6vh;
     font-size: 10px;
     padding-top:10px;
     transition: 0.5s;
     z-index: 9999;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */   
+    border-bottom: black;
+    border-style: solid;   
+    border-width: 0.5px;
 
 }
 .navButtonsContainer {
 
     position: fixed;
     right: 0;
+    top: 7px;
 }
 .navButton {
     width: 70px;
@@ -25,7 +32,7 @@
     cursor: pointer;
 }
 .navName {
-    color: white;
+    color: #3fb0ac;
     text-align: center;
     margin: 0 auto;
 }
@@ -35,7 +42,7 @@
     top: 10px;
     height: 2px;
     width: 40px;
-    background: white;
+    background: #3fb0ac;
     margin: 0 auto;
     opacity: 0;
     transition: 0.5s
@@ -57,10 +64,13 @@
     background: transparent;
     border: none;
     position: relative;
-    bottom: 2.6vh;
+    bottom: 2vh;
     right: 10px;
-    outline: none
+    outline: none;
+
 }
+
+
 
 .sideNavButton:focus {
     border: none;
@@ -71,26 +81,42 @@
     left: 0;
     width: 100%;
     height: 15vh;
-    background: black;
-    transition: 0.5s
+    transition: 0.5s;
+    border-bottom: black;
+    border-style: solid;   
+    border-width: 0.5px;
+    
 }
 .sideNavLinks {
     position: fixed;
     top: 100px;
-    transition: 0.5s
+    transition: 0.5s;
+    left: 45vw;
 }
 .menuItem {
     width: 30px;
     height: 4px;
-    background-color: white;
+    background-color: #3fb0ac;
     margin: 5px 0;
     border-radius: 10px;
+    transition: 0.5s
+}
+.open1 {
+    transform:  rotate(-45deg)
+                translate(-13px,12px);
+}
+.open2 {
+    opacity: 0;
 }
 
+.open3 {
+    transform:  rotate(45deg);
+                /* translateY(10px); */
+}
 .resumeButton {
     background: transparent;
     border: 0;
-    color: white
+    color: #3fb0ac
 }
 
 @media only screen and (max-width: 450px) {

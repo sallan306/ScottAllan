@@ -42,6 +42,7 @@ class Portfolio extends Component {
                     id="portfolio"
                     className="portfolio" 
                     style={{ 
+                        background: this.props.backgroundColor,
                         opacity: this.props.selectedNav === "portfolio" ? 1 : 0
                     }}
                 >

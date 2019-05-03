@@ -1,7 +1,7 @@
 
 .paragraph1, .paragraph2 {
     color: rgba(206, 206, 240, 0.9);
-    font-size: 20px;
+    font-size: 12px;
     text-align: center;
     padding-right: 50px;
     padding-left: 50px;
@@ -17,13 +17,16 @@
 }
 
 #aboutMeCard {
-    height: 500px;
+    max-width: 100%;
+    max-height: 100%;
     margin: auto;
     border-style: solid;
     padding-left: 0;
     padding-right: 0;
     border-color: black;
-    border-width: 10px;
+    border-width: 1px;
+    width: 20%;
+    height: 20%;
 }
 
 .aboutContainer {

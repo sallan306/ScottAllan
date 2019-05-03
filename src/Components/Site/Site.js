@@ -16,6 +16,9 @@ class Site extends Component {
   state = {
       selectedNav: "home",
       scrollPercent: 0,
+      backgroundColor: "rgb(23,62,67, .8)",
+      navBackgroundColor: "gray",
+      fontColor: "black"
   }
   goToPage = value => {
 
@@ -64,14 +67,16 @@ class Site extends Component {
     }
   }
 
-
     render() {
       return (
           <div id="site">
             <Navbar 
               goToPage={this.goToPage}
               selectedNav={this.state.selectedNav}
-              changeColor={this.changeColor}/>
+              changeColor={this.changeColor}
+              navBackgroundColor={this.state.navBackgroundColor}
+              fontColor={this.state.fontColor}
+            />
             <MainWindow 
               scrollPercent={this.state.scrollPercent}
               getPercentage={this.getPercentage}
@@ -81,6 +86,8 @@ class Site extends Component {
               servicesRef={this.servicesRef}
               portfolioRef={this.portfolioRef}
               contactRef={this.contactRef}
+              fontColor={this.state.fontColor}
+              backgroundColor={this.state.backgroundColor}
             />
         </div>  
       )

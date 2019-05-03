@@ -4,18 +4,27 @@
     z-index: -1;
     pointer-events: none;
     left: 0;
+    filter: grayscale(75%);
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */      
 
 }
 #myName {
-    font-size: 40px;
     color: black;
     position: relative;
-    top: 35vh;
+    top: 40vh;
     width: 65%;
-    margin-left: 35%;
+    margin-left: 30%;
     text-align: left;
     float: left;
-    transition: 0.2s
+    transition: 0.2s;
+    font: 40px Georgia, serif;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */      
 }
 
 #myJob {
@@ -24,6 +33,16 @@
 
 #home {
     height: 90vh;
+}
+.inactiveCursor {
+    animation-name: blink;
+    animation-iteration-count: 1;
+    animation-duration: 200ms;
+    animation-delay: 300ms
+}
+@keyframes blink {
+    /* from { opacity: 1; }
+    to { opacity: 0; } */
 }
 @media only screen and (max-width: 1000px) {
     #myName {

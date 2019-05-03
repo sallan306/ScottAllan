@@ -13,7 +13,10 @@ componentDidMount() {
                 <div 
                     id="services"
                     className="services" 
-                    style={{ opacity: this.props.selectedNav === "services" ? 1 : 0}}>
+                    style={{ 
+                        background: this.props.backgroundColor,
+                        opacity: this.props.selectedNav === "services" ? 1 : 0
+                        }}>
                 </div>
             </div>
         )
