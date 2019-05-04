@@ -3,55 +3,32 @@ import "./Navbar.css"
 
 class Navbar extends Component {
     state = {
-        sideNavVisible: false,
-        navButton1Name: "menuItem menuItem1",
-        navButton2Name: "menuItem menuItem2",
-        navButton3Name: "menuItem menuItem3",
-    }
-
-
-    openSideNav = () => {
-      this.setState({
-
-        sideNavVisible: this.state.sideNavVisible ? false : true,
-        navButton1Name: this.state.navButton1Name === "menuItem menuItem1" ? "menuItem menuItem1 open1" : "menuItem menuItem1",
-        navButton2Name: this.state.navButton2Name === "menuItem menuItem2" ? "menuItem menuItem2 open2" : "menuItem menuItem2",
-        navButton3Name: this.state.navButton3Name === "menuItem menuItem3" ? "menuItem menuItem3 open3" : "menuItem menuItem3"
-      
-      })
 
     }
-    closeSideNav = () => {
-      this.setState({
-        sideNavVisible: false,
-        navButton1Name: "menuItem menuItem1",
-        navButton2Name: "menuItem menuItem2",
-        navButton3Name: "menuItem menuItem3"
-      })
-    }
+
 
     render() {
       return (
         <div className="navbar" style={{background: this.props.navBackgroundColor, top: this.props.navbarVisible ? 0 : -100}}>
-          <button className="sideNavButton" onClick={()=> this.openSideNav()}>
-            <div className={this.state.navButton1Name} style={{background: this.props.fontColor}}></div>
-            <div className={this.state.navButton2Name} style={{background: this.props.fontColor}}></div>
-            <div className={this.state.navButton3Name} style={{background: this.props.fontColor}}></div>
+          <button className="sideNavButton" onClick={()=> this.props.toggleSideNav()}>
+            <div className={this.props.sideNavVisible ? "menuItem menuItem1 open1" : "menuItem menuItem1"} style={{background: this.props.fontColor}}></div>
+            <div className={this.props.sideNavVisible ? "menuItem menuItem2 open2" : "menuItem menuItem2"} style={{background: this.props.fontColor}}></div>
+            <div className={this.props.sideNavVisible ? "menuItem menuItem3 open3" : "menuItem menuItem3"} style={{background: this.props.fontColor}}></div>
           </button>
           <span 
             className="sideNav" 
             style={{
-              visibility: this.state.sideNavVisible ? "visible" : "hidden", 
-              height: this.state.sideNavVisible ? "40vh" : "6vh",
+              visibility: this.props.sideNavVisible ? "visible" : "hidden", 
+              height: this.props.sideNavVisible ? "40vh" : "6vh",
               background: this.props.navBackgroundColor
               }}
             >
             <span 
               className="sideNavLinks" 
               style={{
-                visibility: this.state.sideNavVisible ? "visible" : "hidden", 
-                opacity: this.state.sideNavVisible ? 1 : 0, 
-                top: this.state.sideNavVisible ? 100 : 25,
+                visibility: this.props.sideNavVisible ? "visible" : "hidden", 
+                opacity: this.props.sideNavVisible ? 1 : 0, 
+                top: this.props.sideNavVisible ? 100 : 25,
                 color: this.props.fontColor
                 }}
             >

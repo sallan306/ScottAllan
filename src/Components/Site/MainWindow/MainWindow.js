@@ -15,14 +15,17 @@ class MainWindow extends Component {
         <div 
             id="mainWindow" 
             className="mainWindow" 
+            style={{marginTop: this.props.sideNavVisible ? "15vh" : 0}}
             onScroll={ ()=> this.props.getPercentage()}
         >   
-            {/* {<div className="testVar2">{this.props.scrollPercent}</div>}
-            {<div className="testVar">{this.props.selectedNav}</div>} */}
+            {<div className="testVar2">{this.props.scrollPercent}</div>}
+            {/* {<div className="testVar">{this.props.selectedNav}</div>}  */}
+            {/* {<div className="testVar">{this.props.navbarVisible ? "true" : "false"}</div>} */}
             <Home 
                 homeRef={this.props.homeRef}
                 scrollPercent={this.props.scrollPercent}
                 goToPage={this.props.goToPage}
+                navbarVisible={this.props.navbarVisible}
                 
             />
             <About 

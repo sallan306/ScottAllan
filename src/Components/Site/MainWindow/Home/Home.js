@@ -81,6 +81,7 @@ class Home extends Component {
                 id="home"
 
             >
+            {/* <div className="debugger">{this.props.navbarVisible ? "true" : "false"}</div> */}
                 <img 
                     id="homePic" 
                     src={myPicuture} 
@@ -97,8 +98,8 @@ class Home extends Component {
                     </span>
                     <span className={this.state.cursorStatus} >|</span>
                 </span>
-                    <span className="homeArrowContainer" onClick={() => this.props.goToPage("about")}>
-                        <i class="homeArrow down"></i>
+                    <span style={{visibility: this.props.navbarVisible ? "hidden":"visible"}}className="homeArrowContainer" onClick={() => this.props.goToPage("about")}>
+                        <i className="homeArrow down"></i>
                      </span>
 
                 {/* {console.log(this.props.homeRef.current)} */}

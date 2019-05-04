@@ -7,26 +7,17 @@
     padding-top: 45vh;
     font-size: 16px;
 }
-.imageBox {
-    position: relative;
-    width: 75%;
-    float: left;
-    height: 50%;
-    left: 12.5%;
-    box-shadow: 5px;
-    
-}
 
 #aboutMeCard {
-    max-height: 75vh
+    width: 40%;
+    max-width: 450px;
+    float: left;
+    max-width: 100%;
 }
 
 .aboutContainer {
     width: 100%;
 }
-
-
-
 
 .paragraph1, .paragraph2 {
     padding-left: 0;

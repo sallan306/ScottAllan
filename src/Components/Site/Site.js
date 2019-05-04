@@ -17,28 +17,81 @@ class Site extends Component {
       selectedNav: "home",
       scrollPercent: 0,
       backgroundColor: "#7F8688",
-      navBackgroundColor: "#7F8688",
+      navBackgroundColor: "transparent",
       navFontColor: "white",
-      fontColor: "white"
+      fontColor: "white",
+      navbarVisible: false,
+      sideNavVisible: false
   }
   goToPage = value => {
 
     if (value === "home") {
-      console.log(this.homeRef.current)
-      this.homeRef.current.scrollIntoView()
+      if (this.state.sideNavVisible) {
+        this.setState({sideNavVisible: false})
+        setTimeout( () => {
+          this.homeRef.current.scrollIntoView()
+        }
+        ,500)
+      }
+      else {
+        this.homeRef.current.scrollIntoView()
+      }
     }
     else if (value === "about") {
-      console.log(this.aboutRef.current)
-      this.aboutRef.current.scrollIntoView()
+      // this.aboutRef.current.scrollIntoView()
+      if (this.state.sideNavVisible) {
+        this.setState({sideNavVisible: false})
+        setTimeout( () => {
+          this.aboutRef.current.scrollIntoView()
+        }
+        ,500)
+      }
+      else {
+        this.aboutRef.current.scrollIntoView()
+      }
+
+
     }
     else if (value === "services") {
-      this.servicesRef.current.scrollIntoView()
+
+      if (this.state.sideNavVisible) {
+        this.setState({sideNavVisible: false})
+        setTimeout( () => {
+          this.servicesRef.current.scrollIntoView()
+        }
+        ,500)
+      }
+      else {
+        this.servicesRef.current.scrollIntoView()
+      }
+
     }
     else if (value === "portfolio") {
-      this.portfolioRef.current.scrollIntoView()
+      
+      if (this.state.sideNavVisible) {
+        this.setState({sideNavVisible: false})
+        setTimeout( () => {
+          this.portfolioRef.current.scrollIntoView()
+        }
+        ,500)
+      }
+      else {
+        this.portfolioRef.current.scrollIntoView()
+      }
+
     }
     else if (value === "contact") {
-      this.contactRef.current.scrollIntoView()
+      if (this.state.sideNavVisible) {
+        this.setState({sideNavVisible: false})
+        setTimeout( () => {
+          this.contactRef.current.scrollIntoView()
+        }
+        ,500)
+      }
+      else {
+        this.contactRef.current.scrollIntoView()
+      }
+
     }
 
   }
@@ -67,29 +120,39 @@ class Site extends Component {
       this.setState({selectedNav: "home"})
     }
 
-    if (this.state.scrollPercent >= 5) {
-      this.setState({navbarVisible: true})
-      console.log("true")
+    if (this.state.scrollPercent >= 22  ) {
+      this.setState({
+        navbarVisible: true
+      })
+      console.log(this.state.navbarVisible)
     }
     else {
       this.setState({navbarVisible: false})
-      console.log("false")
     }
   }
 
+  toggleSideNav = () => {
+    this.setState({
+      sideNavVisible: this.state.sideNavVisible ? false : true
+    }, )
+
+  }
     render() {
       return (
           <div id="site">
-
+            {/* <div className="debugger">{this.state.navbarVisible? "visible: true":"visible: false"}</div> */}
             <Navbar 
+              sideNavVisible={this.state.sideNavVisible}
               navbarVisible={this.state.navbarVisible}
               goToPage={this.goToPage}
               selectedNav={this.state.selectedNav}
               changeColor={this.changeColor}
               navBackgroundColor={this.state.navBackgroundColor}
               fontColor={this.state.navFontColor}
+              toggleSideNav={this.toggleSideNav}
             />
             <MainWindow 
+              navbarVisible={this.state.navbarVisible}
               scrollPercent={this.state.scrollPercent}
               getPercentage={this.getPercentage}
               selectedNav={this.state.selectedNav}
@@ -101,6 +164,7 @@ class Site extends Component {
               fontColor={this.state.fontColor}
               backgroundColor={this.state.backgroundColor}
               goToPage={this.goToPage}
+              sideNavVisible={this.state.sideNavVisible}
             />
         </div>  
       )

@@ -7,6 +7,11 @@ html, body {
   scroll-behavior: smooth;
 
 }
+.debugger {
+  position: fixed;
+  left: 100px;
+  right:100px;
+}
 
 body {
   
