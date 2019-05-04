@@ -22,6 +22,7 @@ class MainWindow extends Component {
             <Home 
                 homeRef={this.props.homeRef}
                 scrollPercent={this.props.scrollPercent}
+                goToPage={this.props.goToPage}
                 
             />
             <About 

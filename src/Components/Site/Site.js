@@ -100,6 +100,7 @@ class Site extends Component {
               contactRef={this.contactRef}
               fontColor={this.state.fontColor}
               backgroundColor={this.state.backgroundColor}
+              goToPage={this.goToPage}
             />
         </div>  
       )

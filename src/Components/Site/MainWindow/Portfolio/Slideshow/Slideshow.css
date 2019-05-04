@@ -1,0 +1,18 @@
+.leftArrow {
+    transform: rotate(135deg);
+}
+.rightArrow {
+    transform: rotate(-45deg);
+}
+
+.leftArrowBox, .rightArrowBox {
+width: 45%;
+}
+
+.leftArrowBox {
+    float: left;
+}
+
+.rightArrowBox {
+    float: right
+}

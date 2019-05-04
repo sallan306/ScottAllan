@@ -46,6 +46,8 @@ i {
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
+    width: 30px;
+    height: 30px;
   }
   
 .down {
@@ -59,8 +61,14 @@ i {
     top: 85vh;
     animation-name: blink;
     animation-iteration-count: infinite;
-    animation-duration: 1000ms;
-    animation-delay: 0ms
+    animation-duration: 750ms;
+    animation-delay: 0ms;
+    cursor: pointer;
+    -webkit-user-select: none;      
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    animation-direction: alternate;
 }
 .arrow1 {
     position: relative;

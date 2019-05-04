@@ -97,8 +97,7 @@ class Home extends Component {
                     </span>
                     <span className={this.state.cursorStatus} >|</span>
                 </span>
-                <span className="arrowContainer">
-                    <span className="arrow1"> <i class="arrow down"></i></span>
+                <span className="arrowContainer" onClick={() => this.props.goToPage("about")}>
                     <span className="arrow2"> <i class="arrow down"></i></span>
                 </span>
                 {/* {console.log(this.props.homeRef.current)} */}
