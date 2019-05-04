@@ -1,18 +1,160 @@
-.leftArrow {
-    transform: rotate(135deg);
+.portfolioItemsContainer {
+    width: 180vw;
+    text-align: center;
+    height: 60vh;
+    position: relative;
+    transition: 0.5s;
+    margin-top: 5vh;
 }
-.rightArrow {
+
+.portfolioLeftArrow, .portfolioRightArrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+
+}
+
+.portfolioLeftArrow:hover, .portfolioRightArrow:hover {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+}
+.portfolioRightArrow {
     transform: rotate(-45deg);
 }
-
-.leftArrowBox, .rightArrowBox {
-width: 45%;
+.portfolioLeftArrow {
+    transform: rotate(135deg);
 }
 
-.leftArrowBox {
+
+.portfolioLeftArrowBox, .portfolioRightArrowBox {
+    width: 20%;
+    cursor: pointer;
+    -webkit-user-select: none;      
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    animation-direction: alternate;
+}
+
+.portfolioLeftArrowBox {
     float: left;
 }
 
-.rightArrowBox {
+.portfolioRightArrowBox {
     float: right
 }
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.5s
+}
+.debugger {
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    color: red;
+    z-index: 9999;
+}
+
+.dot:hover {
+    background-color: black;
+}
+.dotSelected {
+    background-color: red
+}
+
+.portfolioNavigation {
+    width: 100%;
+    float: left;
+}
+
+.opaqueCard {
+    opacity: 0.7;
+}
+.unselected {
+    opacity: 0.1;
+    display: none;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
+.portfolioContainer {
+    width: 25vw;
+    height: 25vw;
+    border-style: solid;
+    border-width: 1vw;
+    border-color: black;
+    margin: 2.5vw;
+    background: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: inline-block;
+    transition: 0.5s
+}
+.portfolioImage {
+    transition: 0.5s;
+    margin: 0.5vw;
+    width: 22vw;
+    height: 22vw;
+
+}
+.hiddenContainer {
+    position: relative;
+    display: inline-grid;
+    top: -24vw;
+    left: -1vw;
+    width: 25vw;
+    height: 25vw;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+
+.portfolioTitle {
+    transition: 0.5s;
+    color: black;
+    position: relative;
+    top: 10px;
+    margin: 0;
+
+}
+.portfolioTitle2 {
+    transition: 0.5s;
+    color: black;
+    pointer-events: none;
+    margin-bottom: 0;
+}
+
+.highlighted {
+    opacity: 1;
+}
+.imgHighlighted {
+    filter: saturate(10%);
+    opacity: 0.2;
+}
+.aws-btn {
+    --button-default-font-size: 8px;
+    margin: 10px;
+}
+
+.infoPanel {
+    visibility: visible;
+    opacity: 0;
+    z-index: 999;
+    height: 70vh;
+    position: fixed;
+    top: 17.5vh;
+    width: 70vw;
+    transition: 0.5s;
+    background: red;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------- */

@@ -45,7 +45,7 @@ class Contact extends Component {
                         background: this.props.backgroundColor,
                         opacity: this.props.selectedNav === "contact" ? 1 : 0}}
                 >
-                    <p className="paragraph1" >
+                    <p className="contactParagraph" >
                         I am currently accepting freelance commissions. Please contact me using the form below. 
                     </p>
                     <form onSubmit={event => this.submitForm(event)}>

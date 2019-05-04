@@ -20,7 +20,7 @@
     text-align: left;
     float: left;
     transition: 0.2s;
-    font: 40px Georgia, serif;
+    font: 38px Georgia, serif;
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
@@ -41,24 +41,14 @@
     animation-delay: 300ms
 }
 
-i {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    width: 30px;
-    height: 30px;
-  }
-  
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
 
-.arrowContainer {
-    right: 45vw;
+
+.homeArrowContainer {
+    width: 100vw;
+    float: left;
+    text-align: center;
     position: relative;
-    top: 85vh;
+    top: 80vh;
     animation-name: blink;
     animation-iteration-count: infinite;
     animation-duration: 750ms;
@@ -70,16 +60,22 @@ i {
     user-select: none;
     animation-direction: alternate;
 }
-.arrow1 {
+.homeArrow {
     position: relative;
     top: 5px;
     left: 0px;
+    display: inline-block;
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    border-radius: 5px;
 }
-.arrow2 {
-    position: relative;
-    top: 5px;
-    left: 0px;
-}
+
 @keyframes blink {
     from { opacity: 1; }
     to { opacity: 0; }
