@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from "./Utilities/Navbar/Navbar"
+import Navbar from "./Navbar/Navbar"
 import MainWindow from "./MainWindow/MainWindow"
 import "./Site.css"
 
@@ -16,7 +16,7 @@ class Site extends Component {
   state = {
       selectedNav: "home",
       scrollPercent: 0,
-      backgroundColor: "#7F8688",
+      backgroundColor: "rgb(105,105,105, 0.8)",
       navBackgroundColor: "transparent",
       navFontColor: "white",
       fontColor: "white",

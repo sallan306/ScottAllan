@@ -9,16 +9,14 @@
     overflow-y: scroll;
     position: relative;
     z-index: 99;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    overflow-x: hidden
     
   }
 
-.home, .about, .contact, .portfolio, .services {
+/* .home, .about, .contact, .portfolio, .services {
 
-  height: 100vh;
-  transition: 0.5s;
-  overflow-y: scroll;
-}
+} */
 
 .about,.contact,.portfolio,.services {
   position: relative;
@@ -30,40 +28,54 @@
   border-style: solid;
   border-width: 1.5px;
   border-color: black;
-  -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
--webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
-  /* -webkit-box-shadow: 79px 54px 45px 16px rgba(0,0,0,0.53);
-  -moz-box-shadow: 79px 54px 45px 16px rgba(0,0,0,0.53);
-  box-shadow: 79px 54px 45px 16px rgba(0,0,0,0.53); */
-}
-.home {
-  z-index: 10;
-}
-.about {
-  z-index: 14;
-  background: rgb(70, 80, 107,0.95);
-  padding: 5vh;
   overflow: hidden;
 
 }
-.services {
+
+.backgroundPseudo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-attachment: "fixed";
+  z-index: 10;
+
+}
+.backgroundAbout {
+  filter: blur(5px) grayscale(60%)
+}
+.backgroundServices {
+  filter: sepia(1) grayscale(60%)
+}
+.backgroundPortfolio {
+  filter: saturate(1.5) grayscale(60%)
+}
+.backgroundContact {
+
+  filter: invert(0.6) grayscale(60%)
+  /* filter: brightness(1.5) grayscale(60%) */
+
+}
+#home {
+  z-index: 10;
+  height: 95vh;
+}
+#about {
+  z-index: 14;
+
+}
+#services {
   z-index: 13;
-  background: rgb(70, 80, 107, 0.95);
-  overflow: hidden;
+
 }
-.portfolio {
+#portfolio {
   z-index: 22;
-  background: rgb(70, 80, 107, 0.95);
-  padding: 5vh;
-  padding-left: 10vw;
-  padding-right: 10vw;
+
 }
-.contact {
+#contact {
   z-index: 11;
-  background: rgb(70, 80, 107, 0.95);
-  padding: 5vw;
-  overflow: hidden;
+  overflow-y: hidden;
+
 }
 
 .dummyBox {

@@ -5,7 +5,17 @@ class Navbar extends Component {
     state = {
 
     }
+    getFile = type => {
+      if (type === "pdf") {
+        // window.location.href = "./"
+      }
+      else if (type === "word") {
 
+      }
+      else if (type === "google") {
+
+      }
+    }
 
     render() {
       return (
@@ -28,14 +38,22 @@ class Navbar extends Component {
               style={{
                 visibility: this.props.sideNavVisible ? "visible" : "hidden", 
                 opacity: this.props.sideNavVisible ? 1 : 0, 
-                top: this.props.sideNavVisible ? 100 : 25,
+                top: this.props.sideNavVisible ? "10vh" : "0vh",
                 color: this.props.fontColor
                 }}
             >
-              Resume - 
-              <button style={{color: this.props.fontColor}} className="resumeButton">PDF</button> / 
-              <button style={{color: this.props.fontColor}} className="resumeButton">Word</button> / 
-              <button style={{color: this.props.fontColor}} className="resumeButton">Google Doc</button>
+              <div className="resumeContainer">
+                Resume - 
+                <button style={{color: "rgba(255, 255, 255, 0.7)"}} onClick={()=> this.getFile("pdf")} className="resumeButton">PDF</button> / 
+                <button style={{color: "rgba(255, 255, 255, 0.7)"}} onClick={()=> this.getFile("word")} className="resumeButton">Word</button> / 
+                <button style={{color: "rgba(255, 255, 255, 0.7)"}} onClick={()=> this.getFile("google")} className="resumeButton">Google Doc</button>
+              </div>
+              <div className="animalContainer">
+                Change background - 
+                <button style={{color: "brown"}} className="animalButton">Monkey</button> / 
+                <button style={{color: "yellow"}} className="animalButton">Giraffe</button> / 
+                <button style={{color: "white"}} className="animalButton">Pug</button>
+              </div>
             </span>
 
           </span>

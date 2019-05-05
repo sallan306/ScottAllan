@@ -9,8 +9,9 @@
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */      
-
 }
+
+  
 #myName {
     color: black;
     position: relative;
@@ -31,9 +32,7 @@
     transition: 0.2s
 }
 
-#home {
-    height: 90vh;
-}
+
 .inactiveCursor {
     animation-name: blink;
     animation-iteration-count: 1;
@@ -61,21 +60,36 @@
     animation-direction: alternate;
 }
 .homeArrow {
-    position: relative;
+    position: inherit;
     top: 5px;
     left: 0px;
     display: inline-block;
     border: solid white;
-    border-width: 0 5px 5px 0;
+    border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
     width: 30px;
     height: 30px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    border-radius: 5px;
+    border-radius: 3px;
 }
+.homeArrow2 {
+    position: inherit;
+    top: 5px;
+    left: 15px;
+    display: inline-block;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    border-radius: 3px;
 
+}
 @keyframes blink {
     from { opacity: 1; }
     to { opacity: 0; }

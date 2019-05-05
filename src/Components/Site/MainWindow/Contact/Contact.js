@@ -3,7 +3,8 @@ import "./Contact.css"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons' 
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'  
+import animalPic from "../../../../Resources/Images/BetterBackground2.jpg"   
 
 library.add(fab, faEnvelope)
 
@@ -42,54 +43,61 @@ class Contact extends Component {
                     id="contact" 
                     className="contact" 
                     style={{ 
-                        background: this.props.backgroundColor,
-                        opacity: this.props.selectedNav === "contact" ? 1 : 0}}
+
+                    }}
                 >
-                    <p className="contactParagraph" >
-                        I am currently accepting freelance commissions. Please contact me using the form below. 
-                    </p>
-                    <form onSubmit={event => this.submitForm(event)}>
-                        <input 
-                            onChange={this.changeHandler} 
-                            id="firstName"
-                            name="firstName"
-                            value={this.state.firstName} 
-                            placeholder="First Name"
-                            type="text"
-                            required
-                        /><br/>
-                        <input 
-                            onChange={this.changeHandler} 
-                            id="lastName"
-                            name="lastName" 
-                            value={this.state.lastName}  
-                            placeholder="Last Name" 
-                            type="text"
-                            required
-                        /><br/>
-                        <input 
-                            onChange={this.changeHandler} 
-                            id="email"
-                            name="email"    
-                            value={this.state.email}     
-                            placeholder="Email"     
-                            type="email"
-                            required
-                        /><br/>
-                        <button>Submit</button>
-                    </form>
+                    <div className="backgroundPseudo backgroundContact" style={{
+                            backgroundImage: "url("+animalPic+")",
+                            backgroundPositionY: (-8*this.props.scrollPercent),
+                            backgroundAttachment: "fixed",
+                            zIndex: 1
+                    }}/>
+                    <span className="contactContent" style={{position: "relative", zIndex: 10}}>
+                        <p style={{position: "relative", zIndex: 10}} className="contactParagraph" >
+                            I am currently accepting freelance commissions. Please contact me using the form below. 
+                        </p>
+                        <form style={{position: "relative", zIndex: 10}} onSubmit={event => this.submitForm(event)}>
+                            <input 
+                                onChange={this.changeHandler} 
+                                id="firstName"
+                                name="firstName"
+                                value={this.state.firstName} 
+                                placeholder="First Name"
+                                type="text"
+                                required
+                            /><br/>
+                            <input 
+                                onChange={this.changeHandler} 
+                                id="lastName"
+                                name="lastName" 
+                                value={this.state.lastName}  
+                                placeholder="Last Name" 
+                                type="text"
+                                required
+                            /><br/>
+                            <input 
+                                onChange={this.changeHandler} 
+                                id="email"
+                                name="email"    
+                                value={this.state.email}     
+                                placeholder="Email"     
+                                type="email"
+                                required
+                            /><br/>
+                            <button>Submit</button>
+                        </form>
 
 
-                        <a className="btn" href="https://github.com/sallan306">
+                        <a className="btn socialMediaButtons" href="https://github.com/sallan306">
                         <FontAwesomeIcon size="3x" icon={["fab","github"]}/>
                         </a>
-                        <a className="btn" href="https://www.linkedin.com/in/scott-allan-360a1289/">
+                        <a className="btn socialMediaButtons" href="http://www.linkedin.com/in/ScottAllanWebDesign">
                             <FontAwesomeIcon size="3x" icon={["fab","linkedin"]}/>
                         </a>
-                        <a className="btn" href="https://www.linkedin.com/in/scott-allan-360a1289/">
+                        <a className="btn socialMediaButtons" href="mailto:sallan306@gmail.com">
                         <FontAwesomeIcon size="3x" icon={faEnvelope}/>
                         </a>
-                        
+                    </span>
                 </div>
             </div>
         )

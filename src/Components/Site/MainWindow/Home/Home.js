@@ -10,7 +10,8 @@ class Home extends Component {
         jobText: "",
         oldWord: "A Web Designer",
         jobColor: "#000080",
-        oldColor: "black"
+        oldColor: "black",
+        hueRotate: 0
     }
 
     addLetters = () => {
@@ -72,6 +73,9 @@ class Home extends Component {
 
     componentDidMount() {
         this.addLetters()
+        setInterval(()=> {
+            this.setState({hueRotate: this.state.hueRotate +0.1})
+        },2000)
     }
 
     render() {
@@ -88,6 +92,11 @@ class Home extends Component {
                     alt="Scott Allan" 
                     style={{top:(-8*this.props.scrollPercent)}}
                      />
+                <svg style={{position: "fixed"}}>
+                    <filter id="blur">
+                        <feGaussianBlur stdDeviation="5" />
+                    </filter>
+                </svg>
                 <span   
                     id="myName"
                     className="myName">Hello, I'm Scott. 
@@ -100,6 +109,7 @@ class Home extends Component {
                 </span>
                     <span style={{visibility: this.props.navbarVisible ? "hidden":"visible"}}className="homeArrowContainer" onClick={() => this.props.goToPage("about")}>
                         <i className="homeArrow down"></i>
+                        <i className="homeArrow2 down"></i>
                      </span>
 
                 {/* {console.log(this.props.homeRef.current)} */}

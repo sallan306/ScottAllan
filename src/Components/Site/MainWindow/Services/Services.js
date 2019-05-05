@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import "./Services.css"
+import animalPic from "../../../../Resources/Images/BetterBackground2.jpg"     
                 
 class Services extends Component {
 componentDidMount() {
-    console.log(this.props.servicesRef.current)
+
 }
     render(props) {
         return (
@@ -14,9 +15,14 @@ componentDidMount() {
                     id="services"
                     className="services" 
                     style={{ 
-                        background: this.props.backgroundColor,
-                        opacity: this.props.selectedNav === "services" ? 1 : 0
                         }}>
+
+                    <div className="backgroundPseudo backgroundServices" style={{
+                            backgroundImage: "url("+animalPic+")",
+                            backgroundPositionY: (-8*this.props.scrollPercent),
+                            backgroundAttachment: "fixed",
+                            zIndex: 1
+                    }}/>
                 </div>
             </div>
         )

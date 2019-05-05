@@ -82,9 +82,9 @@
 }
 .sideNavLinks {
     position: fixed;
-    top: 100px;
+    top: 2vh;
     transition: 1s;
-    left: 45vw;
+    left: 15vw;
 }
 .menuItem {
     width: 30px;
@@ -106,10 +106,13 @@
     transform:  rotate(45deg);
                 /* translateY(10px); */
 }
-.resumeButton {
+
+.resumeContainer, .animalContainer {
+    text-align: left;
+}
+.resumeButton, .animalButton {
     background: transparent;
     border: 0;
-    color: #3fb0ac
 }
 
 @media only screen and (max-width: 450px) {

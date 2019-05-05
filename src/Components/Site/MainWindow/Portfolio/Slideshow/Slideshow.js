@@ -7,13 +7,24 @@ import "./Slideshow.css"
 
                 
 class Slideshow extends Component {
+    constructor(props) {
+        super();
+        this.portfolioRefs = [];
+        this.dotRefs = [];
+
+        PortfolioItems.map(item => {
+            return (
+                this.portfolioRefs[item.id-1] = React.createRef(),
+                this.dotRefs[item.id-1] = React.createRef()
+            )
+        })
+    }
     state = {
         highlighted: "",
         showInfoPanel: false,
         selectedItem: [],
         currentSlideshow: 1,
-        slideshowScrollDistance: 22.5,
-        mappedItems: []
+        slideshowScrollDistance: 32.5
     }
 
     mouseEnter = value => {
@@ -43,77 +54,38 @@ class Slideshow extends Component {
         })
     }
     componentDidMount() {
-        document.getElementById("dotNumber1").classList.add("dotSelected")
-        document.getElementById("container1").classList.remove("unselected")
 
-
-
-    
+        this.portfolioRefs[0].current.classList.remove("unselected")
+        this.dotRefs[0].current.classList.add("dotSelected")
 
 
     }
-    navigate = direction => {
-        if (direction === "left") {
-            if (this.state.currentSlideshow > 1 ){
-                PortfolioItems.map( item => {
-                    return (
-                        document.getElementById("dotNumber"+item.id).classList.remove("dotSelected"),
-                        document.getElementById("container"+item.id).classList.add("unselected")
-                        )
-                    })
-                    this.setState({
-                        
-                        currentSlideshow: this.state.currentSlideshow-1,
-                        slideshowScrollDistance: this.state.slideshowScrollDistance + 30
-                    
-                    }, () => {
+    componentDidUpdate() {
 
-                        document.getElementById("dotNumber"+this.state.currentSlideshow).classList.add("dotSelected")
-                        document.getElementById("container"+this.state.currentSlideshow).classList.remove("unselected")
-                    })
+            this.portfolioRefs[this.state.currentSlideshow-1].current.classList.remove("unselected")
+            this.dotRefs[this.state.currentSlideshow-1].current.classList.add("dotSelected")
 
-            }
-        }
-        if (direction === "right") {
-            if (this.state.currentSlideshow < PortfolioItems.length ){
-                PortfolioItems.map( item => {
-                    return (
-                        document.getElementById("dotNumber"+item.id).classList.remove("dotSelected"),
-                        document.getElementById("container"+item.id).classList.add("unselected")
-                        )
-                    })
-                this.setState({
-                    
-                    currentSlideshow: this.state.currentSlideshow+1,
-                    slideshowScrollDistance: this.state.slideshowScrollDistance - 30
-                
-                }, () => {
-
-                    document.getElementById("dotNumber"+this.state.currentSlideshow).classList.add("dotSelected")
-                    document.getElementById("container"+this.state.currentSlideshow).classList.remove("unselected")
-                })
-
-            }
-        }
     }
-    goToPortfolioItem = number => {
+
+    goToPortfolioItem = selectedDot => {
         this.setState({
-            currentSlideshow: number,
-            slideshowScrollDistance: ((number-1)*(-30)+22)
+            currentSlideshow: selectedDot,
+            slideshowScrollDistance: ((selectedDot-1)*(-30)+32.5)
         })
         PortfolioItems.map( item => {
             return (
-                document.getElementById("dotNumber"+item.id).classList.remove("dotSelected"),
-                document.getElementById("container"+item.id).classList.add("unselected")
+                this.portfolioRefs[item.id-1].current.classList.add("unselected"),
+                this.dotRefs[item.id-1].current.classList.remove("dotSelected")
             )
         })
-        document.getElementById("dotNumber"+number).classList.add("dotSelected")
-        document.getElementById("container"+number).classList.remove("unselected")
+
+        this.portfolioRefs[selectedDot-1].current.classList.remove("unselected")
+        this.dotRefs[selectedDot-1].current.classList.add("dotSelected")
         
     }
     render() {
         return (
-            <div id="slideshow" className="slideshow">
+            <div id="slideshow" className="slideshow" style={{position: "relative", zIndex: 10}}>
             <div className="debugger">
             {/* {"current slideshow: "+this.state.currentSlideshow} */}
             {/* {"map length: "+this.selectedItem} */}
@@ -134,7 +106,7 @@ class Slideshow extends Component {
                 <div id="portfolioItemsContainer" className="portfolioItemsContainer" style={{left: this.state.slideshowScrollDistance+"vw"}}>
                     {PortfolioItems.map( item => 
                     { return (
-                        <div key={"container"+item.id} id={"container"+item.id} className={"portfolioContainer unselected portfolioContainer"+item.id }>
+                        <div ref={this.portfolioRefs[item.id-1]}key={"container"+item.id} id={"container"+item.id} className={"portfolioContainer unselected portfolioContainer"+item.id }>
                             <img 
                                 key={"image"+item.id} 
                                 className={this.state.highlighted === item.id ? "imgHighlighted portfolioImage" :"portfolioImage"} 
@@ -165,15 +137,13 @@ class Slideshow extends Component {
                 </div>
 
                 <span className="portfolioNavigation">
-                    <div className="portfolioLeftArrowBox" onClick={()=> this.navigate("left")}><i className="portfolioLeftArrow"></i></div>
                     {
                         PortfolioItems.map( item => {
                             return (
-                                <div key={item.id} onClick={() => this.goToPortfolioItem(item.id)}id={"dotNumber"+item.id}className={"dot"}></div>
+                                <div ref={this.dotRefs[item.id-1]} key={item.id} onClick={() => this.goToPortfolioItem(item.id)}id={"dotNumber"+item.id}className={"dot"}></div>
                             )
                         })
                     }
-                    <div className="portfolioRightArrowBox" onClick={()=> this.navigate("right")}><i className="portfolioRightArrow"></i></div>
                 </span>
 
             </div>

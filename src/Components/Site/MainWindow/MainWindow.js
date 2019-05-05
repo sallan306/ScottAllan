@@ -18,7 +18,7 @@ class MainWindow extends Component {
             style={{marginTop: this.props.sideNavVisible ? "15vh" : 0}}
             onScroll={ ()=> this.props.getPercentage()}
         >   
-            {<div className="testVar2">{this.props.scrollPercent}</div>}
+            {/* {<div className="testVar2">{this.props.scrollPercent}</div>} */}
             {/* {<div className="testVar">{this.props.selectedNav}</div>}  */}
             {/* {<div className="testVar">{this.props.navbarVisible ? "true" : "false"}</div>} */}
             <Home 
@@ -33,24 +33,28 @@ class MainWindow extends Component {
                 aboutRef={this.props.aboutRef}
                 backgroundColor={this.props.backgroundColor}
                 fontColor={this.props.fontColor}
+                scrollPercent={this.props.scrollPercent}
             />
             <Services 
                 servicesRef={this.props.servicesRef}
                 selectedNav={this.props.selectedNav}
                 backgroundColor={this.props.backgroundColor}
                 fontColor={this.props.fontColor}
+                scrollPercent={this.props.scrollPercent}
             />
             <Portfolio 
                 selectedNav={this.props.selectedNav}
                 portfolioRef={this.props.portfolioRef}
                 backgroundColor={this.props.backgroundColor}
                 fontColor={this.props.fontColor}
+                scrollPercent={this.props.scrollPercent}
             />
             <Contact
                 selectedNav={this.props.selectedNav}
                 contactRef={this.props.contactRef}
                 backgroundColor={this.props.backgroundColor}
                 fontColor={this.props.fontColor}
+                scrollPercent={this.props.scrollPercent}
             />
             {/* <Footer/> */}
         </div>

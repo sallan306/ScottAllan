@@ -7,6 +7,6 @@
     width: 200%;
 }
 
-.contactParagraph {
-    
+.fa-3x:hover {
+    filter: blur(2px)
 }

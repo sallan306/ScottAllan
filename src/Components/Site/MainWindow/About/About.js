@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./About.css"
-import myPicuture from "../../../../Resources/Images/MeBackyard.jpg"                
+import myPicuture from "../../../../Resources/Images/MeBackyard.jpg";
+import animalPic from "../../../../Resources/Images/BetterBackground2.jpg"                
 class About extends Component {
 
     render() {
@@ -13,17 +14,19 @@ class About extends Component {
                         id="about" 
                         className="about" 
                         style={{ 
-                            background: this.props.backgroundColor,
-                            opacity: this.props.selectedNav === "about" ? 1 : 0, 
-                            visibility: this.props.selectedNav === "about" ? "visible" : "hidden"}}
+
+                        }}
                     >
-                        <h1 
-                            id="aboutTitle" 
-                            className="navbarReference">ABOUT</h1>
-                        <div className="container aboutContainer">
+                    <div className="backgroundPseudo backgroundAbout" style={{
+                            backgroundImage: "url("+animalPic+")",
+                            backgroundPositionY: (-8*this.props.scrollPercent),
+                            backgroundAttachment: "fixed",
+                            zIndex: 1
+                    }}/>
+                        <div style={{position: "relative",zIndex: 11}}className="container aboutContainer">
                             <div>
                                 <img id="aboutMeCard" className="col-md-5"src={myPicuture} alt="me" />
-                                <p className="paragraph1" style={{color: this.props.fontColor}}>
+                                <p className="paragraph1" style={{ color: this.props.fontColor}}>
                                     From 5 years old i have loved the content behind a screen, and to this day I remain strong in my quest to be the ultimate computer nerd. 
                                     I have a passion for visually appealing and effective web solutions, and have been honing my skills for years. I want your site
                                     to stand out among the sea of never ending websites; engaging the user and drawing them back via compelling UI techniques and actually useful

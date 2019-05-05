@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Portfolio.css"
 import Slideshow from "./Slideshow/Slideshow";
+import animalPic from "../../../../Resources/Images/BetterBackground2.jpg"     
 
 
                 
@@ -18,10 +19,14 @@ class Portfolio extends Component {
                     id="portfolio"
                     className="portfolio" 
                     style={{ 
-                        background: this.props.backgroundColor,
-                        opacity: this.props.selectedNav === "portfolio" ? 1 : 0
-                            }}
+                    }}
                 >
+                    <div className="backgroundPseudo backgroundPortfolio" style={{
+                            backgroundImage: "url("+animalPic+")",
+                            backgroundPositionY: (-8*this.props.scrollPercent),
+                            backgroundAttachment: "fixed",
+                            zIndex: 1
+                    }}/>
                     <Slideshow/>
                 </div>
             </div>
