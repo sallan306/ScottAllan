@@ -4,10 +4,10 @@ import Home from "./Home/Home"
 import About from "./About/About"
 import Services from "./Services/Services"
 import Portfolio from "./Portfolio/Portfolio"
-import Contact from "./Contact/Contact"       
+import Contact from "./Contact/Contact"    
+
 class MainWindow extends Component {
     state = {
-
     }
     render() {
         return (
@@ -26,6 +26,8 @@ class MainWindow extends Component {
                 scrollPercent={this.props.scrollPercent}
                 goToPage={this.props.goToPage}
                 navbarVisible={this.props.navbarVisible}
+                backgroundPicture={this.props.backgroundPicture}
+                fontColor={this.props.fontColor}
                 
             />
             <About 
@@ -34,6 +36,7 @@ class MainWindow extends Component {
                 backgroundColor={this.props.backgroundColor}
                 fontColor={this.props.fontColor}
                 scrollPercent={this.props.scrollPercent}
+                backgroundPicture={this.props.backgroundPicture}
             />
             <Services 
                 servicesRef={this.props.servicesRef}
@@ -41,6 +44,7 @@ class MainWindow extends Component {
                 backgroundColor={this.props.backgroundColor}
                 fontColor={this.props.fontColor}
                 scrollPercent={this.props.scrollPercent}
+                backgroundPicture={this.props.backgroundPicture}
             />
             <Portfolio 
                 selectedNav={this.props.selectedNav}
@@ -48,6 +52,7 @@ class MainWindow extends Component {
                 backgroundColor={this.props.backgroundColor}
                 fontColor={this.props.fontColor}
                 scrollPercent={this.props.scrollPercent}
+                backgroundPicture={this.props.backgroundPicture}
             />
             <Contact
                 selectedNav={this.props.selectedNav}
@@ -55,6 +60,7 @@ class MainWindow extends Component {
                 backgroundColor={this.props.backgroundColor}
                 fontColor={this.props.fontColor}
                 scrollPercent={this.props.scrollPercent}
+                backgroundPicture={this.props.backgroundPicture}
             />
             {/* <Footer/> */}
         </div>

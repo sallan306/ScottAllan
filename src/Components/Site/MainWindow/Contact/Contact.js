@@ -4,7 +4,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'  
-import animalPic from "../../../../Resources/Images/BetterBackground2.jpg"   
 
 library.add(fab, faEnvelope)
 
@@ -47,7 +46,7 @@ class Contact extends Component {
                     }}
                 >
                     <div className="backgroundPseudo backgroundContact" style={{
-                            backgroundImage: "url("+animalPic+")",
+                            backgroundImage: "url("+this.props.backgroundPicture+")",
                             backgroundPositionY: (-8*this.props.scrollPercent),
                             backgroundAttachment: "fixed",
                             zIndex: 1

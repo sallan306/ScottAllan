@@ -20,6 +20,23 @@ class Navbar extends Component {
     render() {
       return (
         <div className="navbar" style={{background: this.props.navBackgroundColor, top: this.props.navbarVisible ? 0 : -100}}>
+          <div className="backgroundPseudo backgroundSidenav" style={{
+                  backgroundImage: "url("+this.props.backgroundPicture+")",
+                  backgroundPositionY: (-8*this.props.scrollPercent),
+                  backgroundAttachment: "fixed",
+                  zIndex: 1,
+                  top: this.props.sideNavVisible ? "0vh" : "-22vh",
+                  left: 0,
+                  height: "22vh",
+                  width: "100vw",
+                  transition: "1s",
+                  borderStyle: "solid",
+                  borderColor: "black",
+                  borderLeftWidth: 0,
+                  borderRightWidth: 0,
+                  borderTopWidth: 0,
+                  borderBottomWidth: 1
+          }}/>
           <button className="sideNavButton" onClick={()=> this.props.toggleSideNav()}>
             <div className={this.props.sideNavVisible ? "menuItem menuItem1 open1" : "menuItem menuItem1"} style={{background: this.props.fontColor}}></div>
             <div className={this.props.sideNavVisible ? "menuItem menuItem2 open2" : "menuItem menuItem2"} style={{background: this.props.fontColor}}></div>
@@ -50,9 +67,10 @@ class Navbar extends Component {
               </div>
               <div className="animalContainer">
                 Change background - 
-                <button style={{color: "brown"}} className="animalButton">Monkey</button> / 
-                <button style={{color: "yellow"}} className="animalButton">Giraffe</button> / 
-                <button style={{color: "white"}} className="animalButton">Pug</button>
+                <button onClick={()=> this.props.changeBackground("llama")} style={{color: "white"}} className="animalButton">Llama</button> / 
+                <button onClick={()=> this.props.changeBackground("giraffe")} style={{color: "yellow"}} className="animalButton">Giraffe</button> / 
+                <button onClick={()=> this.props.changeBackground("pug")} style={{color: "brown"}} className="animalButton">Pug</button>
+                <button onClick={()=> this.props.changeBackground("elephant")} style={{color: "gray"}} className="animalButton">Elephant</button>
               </div>
             </span>
 

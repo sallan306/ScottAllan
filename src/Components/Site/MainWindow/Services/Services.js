@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import "./Services.css"
-import animalPic from "../../../../Resources/Images/BetterBackground2.jpg"     
                 
 class Services extends Component {
 componentDidMount() {
@@ -18,7 +16,7 @@ componentDidMount() {
                         }}>
 
                     <div className="backgroundPseudo backgroundServices" style={{
-                            backgroundImage: "url("+animalPic+")",
+                            backgroundImage: "url("+this.props.backgroundPicture+")",
                             backgroundPositionY: (-8*this.props.scrollPercent),
                             backgroundAttachment: "fixed",
                             zIndex: 1

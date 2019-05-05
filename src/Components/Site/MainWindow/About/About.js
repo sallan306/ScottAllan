@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./About.css"
-import myPicuture from "../../../../Resources/Images/MeBackyard.jpg";
-import animalPic from "../../../../Resources/Images/BetterBackground2.jpg"                
+import myPicuture from "../../../../Resources/Images/MeBackyard.jpg";              
 class About extends Component {
 
     render() {
@@ -18,7 +17,7 @@ class About extends Component {
                         }}
                     >
                     <div className="backgroundPseudo backgroundAbout" style={{
-                            backgroundImage: "url("+animalPic+")",
+                            backgroundImage: "url("+this.props.backgroundPicture+")",
                             backgroundPositionY: (-8*this.props.scrollPercent),
                             backgroundAttachment: "fixed",
                             zIndex: 1

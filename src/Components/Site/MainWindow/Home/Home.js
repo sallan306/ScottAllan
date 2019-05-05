@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Home.css"
-import myPicuture from "../../../../Resources/Images/BetterBackground2.jpg"
                 
 class Home extends Component {
     state = {
@@ -88,7 +87,7 @@ class Home extends Component {
             {/* <div className="debugger">{this.props.navbarVisible ? "true" : "false"}</div> */}
                 <img 
                     id="homePic" 
-                    src={myPicuture} 
+                    src={this.props.backgroundPicture} 
                     alt="Scott Allan" 
                     style={{top:(-8*this.props.scrollPercent)}}
                      />
@@ -108,8 +107,8 @@ class Home extends Component {
                     <span className={this.state.cursorStatus} >|</span>
                 </span>
                     <span style={{visibility: this.props.navbarVisible ? "hidden":"visible"}}className="homeArrowContainer" onClick={() => this.props.goToPage("about")}>
-                        <i className="homeArrow down"></i>
-                        <i className="homeArrow2 down"></i>
+                        <i style={{border: "solid "+this.props.fontColor, borderWidth: "0 3px 3px 0"}}className="homeArrow down"></i>
+                        <i style={{border: "solid "+this.props.fontColor, borderWidth: "0 3px 3px 0"}}className="homeArrow2 down"></i>
                      </span>
 
                 {/* {console.log(this.props.homeRef.current)} */}
