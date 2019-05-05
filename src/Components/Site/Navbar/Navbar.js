@@ -25,9 +25,9 @@ class Navbar extends Component {
                   backgroundPositionY: (-8*this.props.scrollPercent),
                   backgroundAttachment: "fixed",
                   zIndex: -10,
-                  top: this.props.sideNavVisible ? "0vh" : "-22vh",
+                  top: this.props.sideNavVisible ? "0vh" : "-22.3vh",
                   left: 0,
-                  height: "22vh",
+                  height: "22.3vh",
                   width: "100vw",
                   transition: "1s",
                   borderStyle: "solid",
@@ -55,7 +55,7 @@ class Navbar extends Component {
               style={{
                 visibility: this.props.sideNavVisible ? "visible" : "hidden", 
                 opacity: this.props.sideNavVisible ? 1 : 0, 
-                top: this.props.sideNavVisible ? "10vh" : "0vh",
+                top: this.props.sideNavVisible ? "10vh" : "-5vh",
                 color: this.props.fontColor
                 }}
             >
