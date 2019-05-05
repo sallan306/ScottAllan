@@ -42,7 +42,7 @@ class Site extends Component {
       this.setState({backgroundPicture: elephantPic, fontColor: "white", navFontColor: "white"})
     }
     else if (input === "giraffe") {
-      this.setState({backgroundPicture: giraffePic, fontColor: "black", navFontColor: "black"})
+      this.setState({backgroundPicture: giraffePic, fontColor: "white", navFontColor: "black"})
     }
     else if (input === "pug") {
       this.setState({backgroundPicture: pugPic, fontColor: "white", navFontColor: "white"})

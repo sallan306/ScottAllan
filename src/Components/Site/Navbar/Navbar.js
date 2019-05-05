@@ -24,7 +24,7 @@ class Navbar extends Component {
                   backgroundImage: "url("+this.props.backgroundPicture+")",
                   backgroundPositionY: (-8*this.props.scrollPercent),
                   backgroundAttachment: "fixed",
-                  zIndex: 1,
+                  zIndex: -10,
                   top: this.props.sideNavVisible ? "0vh" : "-22vh",
                   left: 0,
                   height: "22vh",

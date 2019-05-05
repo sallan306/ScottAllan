@@ -107,8 +107,8 @@ class Home extends Component {
                     <span className={this.state.cursorStatus} >|</span>
                 </span>
                     <span style={{visibility: this.props.navbarVisible ? "hidden":"visible"}}className="homeArrowContainer" onClick={() => this.props.goToPage("about")}>
-                        <i style={{border: "solid "+this.props.fontColor, borderWidth: "0 3px 3px 0"}}className="homeArrow down"></i>
-                        <i style={{border: "solid "+this.props.fontColor, borderWidth: "0 3px 3px 0"}}className="homeArrow2 down"></i>
+                        <i style={{border: "solid", borderColor: this.props.fontColor, borderWidth: "0 3px 3px 0"}}className="homeArrow down"></i>
+                        <i style={{border: "solid", borderColor: this.props.fontColor, borderWidth: "0 3px 3px 0"}}className="homeArrow2 down"></i>
                      </span>
 
                 {/* {console.log(this.props.homeRef.current)} */}

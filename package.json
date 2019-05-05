@@ -9,6 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "bootstrap": "^4.3.1",
     "emailjs": "^2.2.0",
+    "gh-pages": "^2.0.1",
     "jquery": "^3.4.0",
     "nodemailer": "^6.1.1",
     "nodemailer-smtp-transport": "^2.7.4",
@@ -23,11 +24,14 @@
     "waypoints": "^4.0.1",
     "yarn": "^1.13.0"
   },
+  "homepage": "https://sallan306.github.io/ReactWebsite/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
