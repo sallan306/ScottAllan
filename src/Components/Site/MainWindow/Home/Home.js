@@ -89,7 +89,7 @@ class Home extends Component {
                     id="homePic" 
                     src={this.props.backgroundPicture} 
                     alt="Scott Allan" 
-                    style={{top:(-8*this.props.scrollPercent)}}
+                    style={{top:(this.props.backgroundScrollSpeed*this.props.scrollPercent)}}
                      />
                 <svg style={{position: "fixed"}}>
                     <filter id="blur">

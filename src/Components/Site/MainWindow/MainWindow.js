@@ -28,6 +28,7 @@ class MainWindow extends Component {
                 navbarVisible={this.props.navbarVisible}
                 backgroundPicture={this.props.backgroundPicture}
                 fontColor={this.props.fontColor}
+                backgroundScrollSpeed={this.props.backgroundScrollSpeed}
                 
             />
             <About 
@@ -37,6 +38,7 @@ class MainWindow extends Component {
                 fontColor={this.props.fontColor}
                 scrollPercent={this.props.scrollPercent}
                 backgroundPicture={this.props.backgroundPicture}
+                backgroundScrollSpeed={this.props.backgroundScrollSpeed}
             />
             <Services 
                 servicesRef={this.props.servicesRef}
@@ -45,6 +47,7 @@ class MainWindow extends Component {
                 fontColor={this.props.fontColor}
                 scrollPercent={this.props.scrollPercent}
                 backgroundPicture={this.props.backgroundPicture}
+                backgroundScrollSpeed={this.props.backgroundScrollSpeed}
             />
             <Portfolio 
                 selectedNav={this.props.selectedNav}
@@ -53,6 +56,7 @@ class MainWindow extends Component {
                 fontColor={this.props.fontColor}
                 scrollPercent={this.props.scrollPercent}
                 backgroundPicture={this.props.backgroundPicture}
+                backgroundScrollSpeed={this.props.backgroundScrollSpeed}
             />
             <Contact
                 selectedNav={this.props.selectedNav}
@@ -61,6 +65,7 @@ class MainWindow extends Component {
                 fontColor={this.props.fontColor}
                 scrollPercent={this.props.scrollPercent}
                 backgroundPicture={this.props.backgroundPicture}
+                backgroundScrollSpeed={this.props.backgroundScrollSpeed}
             />
             {/* <Footer/> */}
         </div>

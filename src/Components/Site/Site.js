@@ -28,7 +28,8 @@ class Site extends Component {
       navbarVisible: false,
       sideNavVisible: false,
       backgroundPicture: elephantPic,
-      scrollThrottle: 1
+      scrollThrottle: 1,
+      backgroundScrollSpeed: -8
   }
   componentDidMount() {
     window.addEventListener('scroll', () => this.handleScroll());
@@ -191,6 +192,7 @@ class Site extends Component {
               changeBackground={this.changeBackground}
               backgroundPicture={this.state.backgroundPicture}
               scrollPercent={this.state.scrollPercent}
+              backgroundScrollSpeed={this.state.backgroundScrollSpeed}
             />
             <MainWindow 
               closeSideNav={this.closeSideNav}
@@ -208,6 +210,7 @@ class Site extends Component {
               goToPage={this.goToPage}
               sideNavVisible={this.state.sideNavVisible}
               backgroundPicture={this.state.backgroundPicture}
+              backgroundScrollSpeed={this.state.backgroundScrollSpeed}
             />
         </div>  
       )
