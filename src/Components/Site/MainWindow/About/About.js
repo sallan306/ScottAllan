@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./About.css"
-import myPicuture from "../../../../Resources/Images/MeBackyard.jpg";              
+import myPicuture from "../Images/MeBackyard.jpg";              
 class About extends Component {
 
     render() {
