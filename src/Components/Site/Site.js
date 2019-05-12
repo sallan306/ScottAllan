@@ -204,7 +204,7 @@ class Site extends Component {
     render() {
       return (
           <div id="site">
-            <div className="debugger">{this.state.width}</div>
+            {/* <div className="debugger">{this.state.width}</div> */}
             <Navbar 
             
               sideNavVisible={this.state.sideNavVisible}
