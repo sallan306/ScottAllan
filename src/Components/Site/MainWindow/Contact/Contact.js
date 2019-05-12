@@ -47,9 +47,7 @@ class Contact extends Component {
                 >
                     <div className="backgroundPseudo backgroundContact" style={{
                             backgroundImage: "url("+this.props.backgroundPicture+")",
-                            backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent),
-                            backgroundAttachment: "fixed",
-                            zIndex: 1
+                            backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
                     }}/>
                     <span className="contactContent" style={{position: "relative", zIndex: 10}}>
                         <p style={{position: "relative", zIndex: 10}} className="contactParagraph" >

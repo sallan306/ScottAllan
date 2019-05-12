@@ -17,9 +17,7 @@ componentDidMount() {
 
                     <div className="backgroundPseudo backgroundServices" style={{
                             backgroundImage: "url("+this.props.backgroundPicture+")",
-                            backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent),
-                            backgroundAttachment: "fixed",
-                            zIndex: 1
+                            backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
                     }}/>
                 </div>
             </div>

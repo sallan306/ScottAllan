@@ -4,7 +4,6 @@
     z-index: -1;
     pointer-events: none;
     left: 0;
-    filter: grayscale(75%);
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */

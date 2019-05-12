@@ -29,10 +29,36 @@ class Site extends Component {
       sideNavVisible: false,
       backgroundPicture: elephantPic,
       scrollThrottle: 1,
-      backgroundScrollSpeed: -8
+      backgroundScrollSpeed: -8,
+      width: 0,
+      height: 0
   }
   componentDidMount() {
     window.addEventListener('scroll', () => this.handleScroll());
+    window.addEventListener('resize', () => this.updateWindowDimensions())
+    this.updateWindowDimensions()
+  }
+  updateWindowDimensions = () => {
+    console.log("activated")
+    this.setState(
+      { width: window.innerWidth, height: window.innerHeight }
+      , () => {
+        if (this.state.width > 1800) {
+          this.setState({backgroundScrollSpeed: -8})
+        }
+        else if (this.state.width > 1200) {
+          this.setState({backgroundScrollSpeed: -6})
+        }
+        else if (this.state.width > 800) {
+          this.setState({backgroundScrollSpeed: -4})
+        }
+        else if (this.state.width > 550) {
+          this.setState({backgroundScrollSpeed: -2})
+        }
+        else if (this.state.width > 350) {
+          this.setState({backgroundScrollSpeed: -1})
+        }
+      });
   }
   handleScroll = () => {
     this.setState({sideNavVisible: false})
@@ -178,7 +204,7 @@ class Site extends Component {
     render() {
       return (
           <div id="site">
-            {/* <div className="debugger">{this.state.navbarVisible? "visible: true":"visible: false"}</div> */}
+            <div className="debugger">{this.state.width}</div>
             <Navbar 
             
               sideNavVisible={this.state.sideNavVisible}

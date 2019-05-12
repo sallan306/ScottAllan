@@ -19,23 +19,15 @@ class Navbar extends Component {
 
     render() {
       return (
-        <div className="navbar" style={{background: this.props.navBackgroundColor, top: this.props.navbarVisible ? 0 : -100}}>
-          <div className="backgroundPseudo backgroundSidenav" style={{
+        <div className="navbar" 
+          style={{
+            background: this.props.navBackgroundColor, 
+            top: this.props.navbarVisible ? 0 : -100}
+            }>
+            <div className="backgroundPseudo backgroundSidenav" style={{
                   backgroundImage: "url("+this.props.backgroundPicture+")",
                   backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent),
-                  backgroundAttachment: "fixed",
-                  zIndex: -10,
-                  top: this.props.sideNavVisible ? "0vh" : "-22.3vh",
-                  left: 0,
-                  height: "22.3vh",
-                  width: "100vw",
-                  transition: "1s",
-                  borderStyle: "solid",
-                  borderColor: "black",
-                  borderLeftWidth: 0,
-                  borderRightWidth: 0,
-                  borderTopWidth: 0,
-                  borderBottomWidth: 1
+                  height: this.props.sideNavVisible ? "20vh" : "0vh",
           }}/>
           <button className="sideNavButton" onClick={()=> this.props.toggleSideNav()}>
             <div className={this.props.sideNavVisible ? "menuItem menuItem1 open1" : "menuItem menuItem1"} style={{background: this.props.fontColor}}></div>
@@ -45,8 +37,9 @@ class Navbar extends Component {
           <span 
             className="sideNav" 
             style={{
-              visibility: this.props.sideNavVisible ? "visible" : "hidden", 
-              height: this.props.sideNavVisible ? "40vh" : "6vh",
+              visibility: this.props.sideNavVisible ? "visible" : "visible", 
+              height: this.props.sideNavVisible ? "20vh" : "0vh",
+              top: 0,
               background: this.props.navBackgroundColor
               }}
             >
@@ -55,7 +48,7 @@ class Navbar extends Component {
               style={{
                 visibility: this.props.sideNavVisible ? "visible" : "hidden", 
                 opacity: this.props.sideNavVisible ? 1 : 0, 
-                top: this.props.sideNavVisible ? "10vh" : "-5vh",
+                top: this.props.sideNavVisible ? "10vh" : "-10vh",
                 color: this.props.fontColor
                 }}
             >

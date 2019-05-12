@@ -91,11 +91,6 @@ class Home extends Component {
                     alt="Scott Allan" 
                     style={{top:(this.props.backgroundScrollSpeed*this.props.scrollPercent)}}
                      />
-                <svg style={{position: "fixed"}}>
-                    <filter id="blur">
-                        <feGaussianBlur stdDeviation="5" />
-                    </filter>
-                </svg>
                 <span   
                     id="myName"
                     className="myName">Hello, I'm Scott. 
