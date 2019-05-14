@@ -40,9 +40,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   z-index: -10;
-  /* filter: blur(3px) grayscale(60%);
-  -ms-filter: blur(3px) grayscale(60%);
-  -webkit-filter: blur(3px) grayscale(60%); */
+  /* transition: 1s; */
 }
 .backgroundSidenav {
   top: 0;
@@ -52,9 +50,7 @@
   background-size: 100%;
   background-attachment: fixed;
   z-index: -10;
-  /* filter: blur(3px) grayscale(60%);
-  -ms-filter: blur(3px) grayscale(60%);
-  -webkit-filter: blur(3px) grayscale(60%); */
+
   transition: 1s;
 
 

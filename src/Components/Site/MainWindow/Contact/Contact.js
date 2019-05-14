@@ -53,7 +53,7 @@ class Contact extends Component {
                         <p style={{position: "relative", zIndex: 10}} className="contactParagraph" >
                             I am currently accepting freelance commissions. Please contact me using the form below. 
                         </p>
-                        <form className="contactForm" style={{position: "relative", zIndex: 10}} onSubmit={event => this.submitForm(event)}>
+                        {/* <form className="contactForm" style={{position: "relative", zIndex: 10}} onSubmit={event => this.submitForm(event)}>
                             <input 
                                 className="formInput"
                                 onChange={this.changeHandler} 
@@ -85,7 +85,7 @@ class Contact extends Component {
                                 required
                             />
                             <button className="formButton">Submit</button>
-                        </form>
+                        </form> */}
 
 
                         <a className="btn socialMediaButtons" href="https://github.com/sallan306">

@@ -6,7 +6,9 @@ import "./Site.css"
 import elephantPic from "./MainWindow/Images/elephant.jpg"   
 import elephantBlur from "./MainWindow/Images/elephant_blur.jpg"   
 import llamaPic from "./MainWindow/Images/llama.jpg"   
+import llamaBlur from "./MainWindow/Images/llama_blur.jpg" 
 import pugPic from "./MainWindow/Images/pug.jpg"   
+import pugBlur from "./MainWindow/Images/pug_blur.jpg"   
 import giraffePic from "./MainWindow/Images/giraffe.jpg"   
 import giraffeBlur from "./MainWindow/Images/giraffe_blur.jpg"   
 
@@ -25,12 +27,12 @@ class Site extends Component {
       scrollPercent: 0,
       backgroundColor: "rgb(105,105,105, 0.8)",
       navBackgroundColor: "transparent",
-      navFontColor: "white",
+      navFontColor: "black",
       fontColor: "white",
       navbarVisible: false,
       sideNavVisible: false,
-      backgroundPicture: elephantPic,
-      backgroundBlur: elephantBlur,
+      backgroundPicture: giraffePic,
+      backgroundBlur: giraffeBlur,
       scrollThrottle: 1,
       backgroundScrollSpeed: -8,
       width: 0
@@ -48,13 +50,13 @@ class Site extends Component {
           this.setState({backgroundScrollSpeed: -8})
         }
         else if (this.state.width > 1200) {
-          this.setState({backgroundScrollSpeed: -6})
+          this.setState({backgroundScrollSpeed: -5})
         }
         else if (this.state.width > 800) {
-          this.setState({backgroundScrollSpeed: -4})
+          this.setState({backgroundScrollSpeed: -3})
         }
         else if (this.state.width > 550) {
-          this.setState({backgroundScrollSpeed: -2})
+          this.setState({backgroundScrollSpeed: -1})
         }
         else if (this.state.width > 350) {
           this.setState({backgroundScrollSpeed: -1})
@@ -86,12 +88,14 @@ class Site extends Component {
     else if (input === "pug") {
       this.setState({
         backgroundPicture: pugPic, 
+        backgroundBlur: pugBlur,
         fontColor: "white", 
         navFontColor: "white"})
     }
     else if (input === "llama") {
       this.setState({
         backgroundPicture: llamaPic, 
+        backgroundBlur: llamaBlur,
         fontColor: "black", 
         navFontColor: "black"})
     }
@@ -222,9 +226,8 @@ class Site extends Component {
     render() {
       return (
           <div id="site">
-            <div className="debugger">{this.state.scrollPercent}</div>
+            <div className="debugger">{this.state.width}</div>
             <Navbar 
-            
               sideNavVisible={this.state.sideNavVisible}
               navbarVisible={this.state.navbarVisible}
               goToPage={this.goToPage}
