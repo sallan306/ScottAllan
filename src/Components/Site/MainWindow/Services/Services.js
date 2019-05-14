@@ -16,7 +16,7 @@ componentDidMount() {
                         }}>
 
                     <div className="backgroundPseudo backgroundServices" style={{
-                            backgroundImage: "url("+this.props.backgroundPicture+")",
+                            backgroundImage: "url("+this.props.backgroundBlur+")",
                             backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
                     }}/>
                 </div>

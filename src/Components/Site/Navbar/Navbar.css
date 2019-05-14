@@ -139,17 +139,39 @@
     .navButton {
         margin-left: 0px;
         margin-right: 0px;
-        width: 70px;
+        width: 58px;
         height: 35px;
         float: left;
     }
     .sideNavButton {
-        bottom: 1vh;
+        top: 1vh;
+        height: 5vh;
     }
     .navButtonsContainer {
 
         position: fixed;
         right: 10px;
-        top: 3px;
+        top: 15px;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+
+    .navButton {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 50px;
+        height: 35px;
+        float: left;
+    }
+    .sideNavButton {
+        top: 1vh;
+        height: 5vh;
+    }
+    .navButtonsContainer {
+
+        position: fixed;
+        right: 10px;
+        top: 15px;
     }
 }

@@ -89,7 +89,11 @@ class Home extends Component {
                     id="homePic" 
                     src={this.props.backgroundPicture} 
                     alt="Scott Allan" 
-                    style={{top:(this.props.backgroundScrollSpeed*this.props.scrollPercent)}}
+                    style={{
+                        top:(this.props.backgroundScrollSpeed*this.props.scrollPercent),
+
+                    
+                    }}
                      />
                 <span   
                     id="myName"

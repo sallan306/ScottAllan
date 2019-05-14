@@ -38,10 +38,11 @@
   height: 100%;
   background-size: 100%;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   z-index: -10;
-  filter: blur(3px) grayscale(60%);
+  /* filter: blur(3px) grayscale(60%);
   -ms-filter: blur(3px) grayscale(60%);
-  -webkit-filter: blur(3px) grayscale(60%);
+  -webkit-filter: blur(3px) grayscale(60%); */
 }
 .backgroundSidenav {
   top: 0;
@@ -51,10 +52,11 @@
   background-size: 100%;
   background-attachment: fixed;
   z-index: -10;
-  filter: blur(3px) grayscale(60%);
+  /* filter: blur(3px) grayscale(60%);
   -ms-filter: blur(3px) grayscale(60%);
-  -webkit-filter: blur(3px) grayscale(60%);
+  -webkit-filter: blur(3px) grayscale(60%); */
   transition: 1s;
+
 
 }
 
@@ -105,4 +107,17 @@
 #mainWindow {
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
+}
+
+@media only screen and (max-width: 420px) { 
+  .backgroundSidenav {
+
+    background-size: 100vw 120vh;
+  
+  }
+  .backgroundAbout, .backgroundServices, .backgroundPortfolio, .backgroundContact {
+
+    background-size: 100vw 120vh;
+
+  }
 }

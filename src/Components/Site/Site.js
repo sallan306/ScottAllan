@@ -4,9 +4,11 @@ import MainWindow from "./MainWindow/MainWindow"
 import "./Site.css"
 
 import elephantPic from "./MainWindow/Images/elephant.jpg"   
+import elephantBlur from "./MainWindow/Images/elephant_blur.jpg"   
 import llamaPic from "./MainWindow/Images/llama.jpg"   
 import pugPic from "./MainWindow/Images/pug.jpg"   
 import giraffePic from "./MainWindow/Images/giraffe.jpg"   
+import giraffeBlur from "./MainWindow/Images/giraffe_blur.jpg"   
 
 
 class Site extends Component {
@@ -28,18 +30,17 @@ class Site extends Component {
       navbarVisible: false,
       sideNavVisible: false,
       backgroundPicture: elephantPic,
+      backgroundBlur: elephantBlur,
       scrollThrottle: 1,
       backgroundScrollSpeed: -8,
-      width: 0,
-      height: 0
+      width: 0
   }
   componentDidMount() {
-    window.addEventListener('scroll', () => this.handleScroll());
+    // window.addEventListener('scroll', () => this.handleScroll());
     window.addEventListener('resize', () => this.updateWindowDimensions())
     this.updateWindowDimensions()
   }
   updateWindowDimensions = () => {
-    console.log("activated")
     this.setState(
       { width: window.innerWidth, height: window.innerHeight }
       , () => {
@@ -58,24 +59,41 @@ class Site extends Component {
         else if (this.state.width > 350) {
           this.setState({backgroundScrollSpeed: -1})
         }
+        else {
+          this.setState({backgroundScrollSpeed: -1})
+        }
       });
   }
-  handleScroll = () => {
-    this.setState({sideNavVisible: false})
-    console.log("hello")
-  }
+  // handleScroll = () => {
+  //   this.setState({sideNavVisible: false})
+  //   console.log("hello")
+  // }
   changeBackground = input => {
     if (input === "elephant") {
-      this.setState({backgroundPicture: elephantPic, fontColor: "white", navFontColor: "white"})
+      this.setState({
+        backgroundPicture: elephantPic, 
+        backgroundBlur: elephantBlur,
+        fontColor: "white", 
+        navFontColor: "white"})
     }
     else if (input === "giraffe") {
-      this.setState({backgroundPicture: giraffePic, fontColor: "white", navFontColor: "black"})
+      this.setState({
+        backgroundPicture: giraffePic, 
+        backgroundBlur: giraffeBlur,
+        fontColor: "white", 
+        navFontColor: "black"})
     }
     else if (input === "pug") {
-      this.setState({backgroundPicture: pugPic, fontColor: "white", navFontColor: "white"})
+      this.setState({
+        backgroundPicture: pugPic, 
+        fontColor: "white", 
+        navFontColor: "white"})
     }
     else if (input === "llama") {
-      this.setState({backgroundPicture: llamaPic, fontColor: "black", navFontColor: "black"})
+      this.setState({
+        backgroundPicture: llamaPic, 
+        fontColor: "black", 
+        navFontColor: "black"})
     }
   }
   goToPage = value => {
@@ -204,7 +222,7 @@ class Site extends Component {
     render() {
       return (
           <div id="site">
-            {/* <div className="debugger">{this.state.width}</div> */}
+            <div className="debugger">{this.state.scrollPercent}</div>
             <Navbar 
             
               sideNavVisible={this.state.sideNavVisible}
@@ -216,7 +234,7 @@ class Site extends Component {
               fontColor={this.state.navFontColor}
               toggleSideNav={this.toggleSideNav}
               changeBackground={this.changeBackground}
-              backgroundPicture={this.state.backgroundPicture}
+              backgroundBlur={this.state.backgroundBlur}
               scrollPercent={this.state.scrollPercent}
               backgroundScrollSpeed={this.state.backgroundScrollSpeed}
             />
@@ -236,6 +254,7 @@ class Site extends Component {
               goToPage={this.goToPage}
               sideNavVisible={this.state.sideNavVisible}
               backgroundPicture={this.state.backgroundPicture}
+              backgroundBlur={this.state.backgroundBlur}
               backgroundScrollSpeed={this.state.backgroundScrollSpeed}
             />
         </div>  

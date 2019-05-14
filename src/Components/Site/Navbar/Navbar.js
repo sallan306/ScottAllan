@@ -25,7 +25,7 @@ class Navbar extends Component {
             top: this.props.navbarVisible ? 0 : -100}
             }>
             <div className="backgroundPseudo backgroundSidenav" style={{
-                  backgroundImage: "url("+this.props.backgroundPicture+")",
+                  backgroundImage: "url("+this.props.backgroundBlur+")",
                   backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent),
                   height: this.props.sideNavVisible ? "20vh" : "0vh",
           }}/>

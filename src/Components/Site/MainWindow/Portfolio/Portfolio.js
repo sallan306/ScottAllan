@@ -21,7 +21,7 @@ class Portfolio extends Component {
                     }}
                 >
                     <div className="backgroundPseudo backgroundPortfolio" style={{
-                            backgroundImage: "url("+this.props.backgroundPicture+")",
+                            backgroundImage: "url("+this.props.backgroundBlur+")",
                             backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
                     }}/>
                     <Slideshow/>

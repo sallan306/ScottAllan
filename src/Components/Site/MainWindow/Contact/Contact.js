@@ -46,15 +46,16 @@ class Contact extends Component {
                     }}
                 >
                     <div className="backgroundPseudo backgroundContact" style={{
-                            backgroundImage: "url("+this.props.backgroundPicture+")",
+                            backgroundImage: "url("+this.props.backgroundBlur+")",
                             backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
                     }}/>
                     <span className="contactContent" style={{position: "relative", zIndex: 10}}>
                         <p style={{position: "relative", zIndex: 10}} className="contactParagraph" >
                             I am currently accepting freelance commissions. Please contact me using the form below. 
                         </p>
-                        <form style={{position: "relative", zIndex: 10}} onSubmit={event => this.submitForm(event)}>
+                        <form className="contactForm" style={{position: "relative", zIndex: 10}} onSubmit={event => this.submitForm(event)}>
                             <input 
+                                className="formInput"
                                 onChange={this.changeHandler} 
                                 id="firstName"
                                 name="firstName"
@@ -62,8 +63,9 @@ class Contact extends Component {
                                 placeholder="First Name"
                                 type="text"
                                 required
-                            /><br/>
+                            />
                             <input 
+                                className="formInput"
                                 onChange={this.changeHandler} 
                                 id="lastName"
                                 name="lastName" 
@@ -71,8 +73,9 @@ class Contact extends Component {
                                 placeholder="Last Name" 
                                 type="text"
                                 required
-                            /><br/>
+                            />
                             <input 
+                                className="formInput"
                                 onChange={this.changeHandler} 
                                 id="email"
                                 name="email"    
@@ -80,8 +83,8 @@ class Contact extends Component {
                                 placeholder="Email"     
                                 type="email"
                                 required
-                            /><br/>
-                            <button>Submit</button>
+                            />
+                            <button className="formButton">Submit</button>
                         </form>
 
 

@@ -17,7 +17,7 @@ class About extends Component {
                         }}
                     >
                     <div className="backgroundPseudo backgroundAbout" style={{
-                            backgroundImage: "url("+this.props.backgroundPicture+")",
+                            backgroundImage: "url("+this.props.backgroundBlur+")",
                             backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
                     }}/>
                         <div style={{position: "relative",zIndex: 11}}className="container aboutContainer">

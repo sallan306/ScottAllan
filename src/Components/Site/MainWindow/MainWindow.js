@@ -37,7 +37,7 @@ class MainWindow extends Component {
                 backgroundColor={this.props.backgroundColor}
                 fontColor={this.props.fontColor}
                 scrollPercent={this.props.scrollPercent}
-                backgroundPicture={this.props.backgroundPicture}
+                backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
             />
             <Services 
@@ -46,7 +46,7 @@ class MainWindow extends Component {
                 backgroundColor={this.props.backgroundColor}
                 fontColor={this.props.fontColor}
                 scrollPercent={this.props.scrollPercent}
-                backgroundPicture={this.props.backgroundPicture}
+                backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
             />
             <Portfolio 
@@ -55,7 +55,7 @@ class MainWindow extends Component {
                 backgroundColor={this.props.backgroundColor}
                 fontColor={this.props.fontColor}
                 scrollPercent={this.props.scrollPercent}
-                backgroundPicture={this.props.backgroundPicture}
+                backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
             />
             <Contact
@@ -64,7 +64,7 @@ class MainWindow extends Component {
                 backgroundColor={this.props.backgroundColor}
                 fontColor={this.props.fontColor}
                 scrollPercent={this.props.scrollPercent}
-                backgroundPicture={this.props.backgroundPicture}
+                backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
             />
             {/* <Footer/> */}
