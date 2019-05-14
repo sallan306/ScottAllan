@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "677f610d30aef08e1e3f82d4abfb0acc",
+    "revision": "e0305044b072b12300cdbb1f7eea9370",
     "url": "/ReactWebsite/index.html"
   },
   {
-    "revision": "b15fdfd4320cc9d27456",
+    "revision": "9d2783e4dbd6fc79a25d",
     "url": "/ReactWebsite/static/css/2.411e88dd.chunk.css"
   },
   {
-    "revision": "41fca6f69f3701388b3a",
-    "url": "/ReactWebsite/static/css/main.dc0c924b.chunk.css"
+    "revision": "1f264d48783ed9d83718",
+    "url": "/ReactWebsite/static/css/main.18304e45.chunk.css"
   },
   {
-    "revision": "b15fdfd4320cc9d27456",
-    "url": "/ReactWebsite/static/js/2.3f4ba421.chunk.js"
+    "revision": "9d2783e4dbd6fc79a25d",
+    "url": "/ReactWebsite/static/js/2.7759578c.chunk.js"
   },
   {
-    "revision": "41fca6f69f3701388b3a",
-    "url": "/ReactWebsite/static/js/main.11df48fd.chunk.js"
+    "revision": "1f264d48783ed9d83718",
+    "url": "/ReactWebsite/static/js/main.427a7823.chunk.js"
   },
   {
     "revision": "1a05591de56d4ef2975e",
@@ -44,12 +44,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ReactWebsite/static/media/SunnyWeekend.f29039fd.png"
   },
   {
-    "revision": "eb1cffd018316a1e6111423b7b895954",
-    "url": "/ReactWebsite/static/media/elephant.eb1cffd0.jpg"
+    "revision": "87b42e3793610dbb063e4bfd12856d76",
+    "url": "/ReactWebsite/static/media/elephant.87b42e37.jpg"
+  },
+  {
+    "revision": "1dc728854e1634064c570c9f494bc2d7",
+    "url": "/ReactWebsite/static/media/elephant_blur.1dc72885.jpg"
   },
   {
     "revision": "79af8f0905360f421c038c087b6444dd",
     "url": "/ReactWebsite/static/media/giraffe.79af8f09.jpg"
+  },
+  {
+    "revision": "1c15b21dc1c54ec8d38c81b29d5d9db1",
+    "url": "/ReactWebsite/static/media/giraffe_blur.1c15b21d.jpg"
   },
   {
     "revision": "c53508fc9f0850ccc7deaec2e56a7524",
