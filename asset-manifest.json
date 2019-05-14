@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/ReactWebsite/static/css/main.18304e45.chunk.css",
-    "main.js": "/ReactWebsite/static/js/main.427a7823.chunk.js",
-    "main.js.map": "/ReactWebsite/static/js/main.427a7823.chunk.js.map",
+    "main.css": "/ReactWebsite/static/css/main.8f41e0f0.chunk.css",
+    "main.js": "/ReactWebsite/static/js/main.64c28b8e.chunk.js",
+    "main.js.map": "/ReactWebsite/static/js/main.64c28b8e.chunk.js.map",
     "runtime~main.js": "/ReactWebsite/static/js/runtime~main.fca6adba.js",
     "runtime~main.js.map": "/ReactWebsite/static/js/runtime~main.fca6adba.js.map",
     "static/css/2.411e88dd.chunk.css": "/ReactWebsite/static/css/2.411e88dd.chunk.css",
-    "static/js/2.7759578c.chunk.js": "/ReactWebsite/static/js/2.7759578c.chunk.js",
-    "static/js/2.7759578c.chunk.js.map": "/ReactWebsite/static/js/2.7759578c.chunk.js.map",
+    "static/js/2.67916f1e.chunk.js": "/ReactWebsite/static/js/2.67916f1e.chunk.js",
+    "static/js/2.67916f1e.chunk.js.map": "/ReactWebsite/static/js/2.67916f1e.chunk.js.map",
     "index.html": "/ReactWebsite/index.html",
-    "precache-manifest.26a1f9196a4447ab2419efd12eefa703.js": "/ReactWebsite/precache-manifest.26a1f9196a4447ab2419efd12eefa703.js",
+    "precache-manifest.1d193760ed43d1eb30af1f7a7ea610bf.js": "/ReactWebsite/precache-manifest.1d193760ed43d1eb30af1f7a7ea610bf.js",
     "service-worker.js": "/ReactWebsite/service-worker.js",
     "static/css/2.411e88dd.chunk.css.map": "/ReactWebsite/static/css/2.411e88dd.chunk.css.map",
-    "static/css/main.18304e45.chunk.css.map": "/ReactWebsite/static/css/main.18304e45.chunk.css.map",
+    "static/css/main.8f41e0f0.chunk.css.map": "/ReactWebsite/static/css/main.8f41e0f0.chunk.css.map",
     "static/media/BrewStash.png": "/ReactWebsite/static/media/BrewStash.60f85c74.png",
     "static/media/CrystalCollectors.png": "/ReactWebsite/static/media/CrystalCollectors.f221baa9.png",
     "static/media/IDo.png": "/ReactWebsite/static/media/IDo.717e53be.png",
@@ -23,7 +23,9 @@
     "static/media/giraffe.jpg": "/ReactWebsite/static/media/giraffe.79af8f09.jpg",
     "static/media/giraffe_blur.jpg": "/ReactWebsite/static/media/giraffe_blur.1c15b21d.jpg",
     "static/media/kindling.png": "/ReactWebsite/static/media/kindling.c53508fc.png",
-    "static/media/llama.jpg": "/ReactWebsite/static/media/llama.a4052e21.jpg",
-    "static/media/pug.jpg": "/ReactWebsite/static/media/pug.4065a224.jpg"
+    "static/media/llama.jpg": "/ReactWebsite/static/media/llama.411b80dd.jpg",
+    "static/media/llama_blur.jpg": "/ReactWebsite/static/media/llama_blur.b3912ff3.jpg",
+    "static/media/pug.jpg": "/ReactWebsite/static/media/pug.3496a7c6.jpg",
+    "static/media/pug_blur.jpg": "/ReactWebsite/static/media/pug_blur.0b5d6d30.jpg"
   }
 }
