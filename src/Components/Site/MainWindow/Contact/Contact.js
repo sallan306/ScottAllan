@@ -50,8 +50,8 @@ class Contact extends Component {
                             backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
                     }}/>
                     <span className="contactContent" style={{position: "relative", zIndex: 10}}>
-                        <p style={{position: "relative", zIndex: 10}} className="contactParagraph" >
-                            I am currently accepting freelance commissions. Please contact me using the form below. 
+                        <p style={{color: this.props.fontColor, position: "relative", zIndex: 10}} className="contactParagraph" >
+                            I am currently accepting freelance commissions. Please contact me using the links below. 
                         </p>
                         {/* <form className="contactForm" style={{position: "relative", zIndex: 10}} onSubmit={event => this.submitForm(event)}>
                             <input 
@@ -89,13 +89,13 @@ class Contact extends Component {
 
 
                         <a className="btn socialMediaButtons" href="https://github.com/sallan306">
-                        <FontAwesomeIcon size="3x" icon={["fab","github"]}/>
+                        <FontAwesomeIcon color={this.props.fontColor} size="3x" icon={["fab","github"]}/>
                         </a>
                         <a className="btn socialMediaButtons" href="http://www.linkedin.com/in/ScottAllanWebDesign">
-                            <FontAwesomeIcon size="3x" icon={["fab","linkedin"]}/>
+                            <FontAwesomeIcon color={this.props.fontColor} size="3x" icon={["fab","linkedin"]}/>
                         </a>
                         <a className="btn socialMediaButtons" href="mailto:sallan306@gmail.com">
-                        <FontAwesomeIcon size="3x" icon={faEnvelope}/>
+                        <FontAwesomeIcon color={this.props.fontColor} size="3x" icon={faEnvelope}/>
                         </a>
                     </span>
                 </div>
