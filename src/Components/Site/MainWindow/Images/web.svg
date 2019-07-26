@@ -1,7 +1,10 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<<<<<<< HEAD
  <?xml-stylesheet type="text/css" href="style.css"?>
+=======
+>>>>>>> b3d6cec41ff57495182ad0b211ff2c68f6aab5f6
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="1025.000000pt" height="533.000000pt" viewBox="0 0 1025.000000 533.000000"
  preserveAspectRatio="xMidYMid meet">

@@ -32,6 +32,7 @@ componentDidMount() {
                             <SEO fillColor={this.props.fontColor}/>
                             <p style={{color: this.props.fontColor}} className="serviceBlurb">I feel that way about this</p>  
                         </div>
+
                     </div>
                 </div>
             </div>
