@@ -14,7 +14,10 @@ class Contact extends Component {
         firstName: "",
         lastName: "",
         subject: "",
-        email: ""
+        email: "",
+        githubHover: false,
+        linkedinHover: false,
+        emailHover: false
         
     }
     submitForm = event => {
@@ -53,49 +56,24 @@ class Contact extends Component {
                         <p style={{color: this.props.fontColor, position: "relative", zIndex: 10}} className="contactParagraph" >
                             I am currently accepting freelance commissions. Please contact me using the links below. 
                         </p>
-                        {/* <form className="contactForm" style={{position: "relative", zIndex: 10}} onSubmit={event => this.submitForm(event)}>
-                            <input 
-                                className="formInput"
-                                onChange={this.changeHandler} 
-                                id="firstName"
-                                name="firstName"
-                                value={this.state.firstName} 
-                                placeholder="First Name"
-                                type="text"
-                                required
-                            />
-                            <input 
-                                className="formInput"
-                                onChange={this.changeHandler} 
-                                id="lastName"
-                                name="lastName" 
-                                value={this.state.lastName}  
-                                placeholder="Last Name" 
-                                type="text"
-                                required
-                            />
-                            <input 
-                                className="formInput"
-                                onChange={this.changeHandler} 
-                                id="email"
-                                name="email"    
-                                value={this.state.email}     
-                                placeholder="Email"     
-                                type="email"
-                                required
-                            />
-                            <button className="formButton">Submit</button>
-                        </form> */}
 
-
-                        <a className="btn socialMediaButtons" href="https://github.com/sallan306">
-                        <FontAwesomeIcon color={this.props.fontColor} size="3x" icon={["fab","github"]}/>
+                        <a  className="btn socialMediaButtons"  
+                            onMouseEnter={() => this.setState({githubHover: true})} 
+                            onMouseLeave={() => this.setState({githubHover: false})}
+                            href="https://github.com/sallan306">
+                            <FontAwesomeIcon spin={this.state.githubHover} color={this.props.fontColor} size="3x" icon={["fab","github"]}/>
                         </a>
-                        <a className="btn socialMediaButtons" href="http://www.linkedin.com/in/ScottAllanWebDesign">
-                            <FontAwesomeIcon color={this.props.fontColor} size="3x" icon={["fab","linkedin"]}/>
+                        <a className="btn socialMediaButtons" 
+                            onMouseEnter={() => this.setState({linkedinHover: true})} 
+                            onMouseLeave={() => this.setState({linkedinHover: false})}
+                            href="http://www.linkedin.com/in/ScottAllanWebDesign">
+                            <FontAwesomeIcon spin={this.state.linkedinHover} color={this.props.fontColor} size="3x" icon={["fab","linkedin"]}/>
                         </a>
-                        <a className="btn socialMediaButtons" href="mailto:sallan306@gmail.com">
-                        <FontAwesomeIcon color={this.props.fontColor} size="3x" icon={faEnvelope}/>
+                        <a className="btn socialMediaButtons" 
+                            onMouseEnter={() => this.setState({emailHover: true})} 
+                            onMouseLeave={() => this.setState({emailHover: false})}
+                            href="mailto:sallan306@gmail.com">
+                            <FontAwesomeIcon spin={this.state.emailHover} color={this.props.fontColor} size="3x" icon={faEnvelope}/>
                         </a>
                     </span>
                 </div>

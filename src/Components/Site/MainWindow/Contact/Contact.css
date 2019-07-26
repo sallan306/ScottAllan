@@ -7,10 +7,6 @@
     width: 200%;
 }
 
-.fa-3x:hover {
-    filter: blur(2px)
-}
-
 .contactParagraph {
     padding-top: 25vh;
     width: 50vw;
