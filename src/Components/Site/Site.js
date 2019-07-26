@@ -72,8 +72,8 @@ class Site extends Component {
       this.setState({
         backgroundPicture: elephantPic, 
         backgroundBlur: elephantBlur,
-        fontColor: "white", 
-        navFontColor: "white"})
+        fontColor: "black", 
+        navFontColor: "black"})
     }
     else if (input === "giraffe") {
       this.setState({
@@ -166,7 +166,8 @@ class Site extends Component {
 
   toggleSideNav = () => {
     this.setState({
-      sideNavVisible: this.state.sideNavVisible ? false : true
+      sideNavVisible: this.state.sideNavVisible ? false : true,
+      navbarVisible: true
     })
 
   }
