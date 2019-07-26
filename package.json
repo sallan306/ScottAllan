@@ -9,6 +9,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.0.1",
+    "jquery": "^3.4.1",
     "npm": "^6.9.0",
     "react": "^16.7.0",
     "react-awesome-button": "^6.1.0",
@@ -17,7 +18,8 @@
     "react-gsap": "^1.2.0",
     "react-inview-monitor": "^2.2.1",
     "react-scripts": "^3.0.0",
-    "yarn": "^1.13.0"
+    "yarn": "^1.13.0",
+    "zenscroll": "^4.0.2"
   },
   "homepage": "https://sallan306.github.io/ReactWebsite/",
   "scripts": {

@@ -40,7 +40,7 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   z-index: -10;
-  /* transition: 1s; */
+  /* transition: 0.1s; */
 }
 .backgroundSidenav {
   top: 0;

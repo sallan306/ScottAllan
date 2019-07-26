@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from "./Navbar/Navbar"
 import MainWindow from "./MainWindow/MainWindow"
 import "./Site.css"
+import $ from "jquery"
 
 import elephantPic from "./MainWindow/Images/elephant.jpg"   
 import elephantBlur from "./MainWindow/Images/elephant_blur.jpg"   
@@ -28,7 +29,7 @@ class Site extends Component {
       backgroundColor: "rgb(105,105,105, 0.8)",
       navBackgroundColor: "transparent",
       navFontColor: "black",
-      fontColor: "white",
+      fontColor: "black",
       navbarVisible: false,
       sideNavVisible: false,
       backgroundPicture: giraffePic,
@@ -38,10 +39,10 @@ class Site extends Component {
       width: 0
   }
   componentDidMount() {
-    // window.addEventListener('scroll', () => this.handleScroll());
     window.addEventListener('resize', () => this.updateWindowDimensions())
     this.updateWindowDimensions()
   }
+
   updateWindowDimensions = () => {
     this.setState(
       { width: window.innerWidth, height: window.innerHeight }
@@ -66,10 +67,6 @@ class Site extends Component {
         }
       });
   }
-  // handleScroll = () => {
-  //   this.setState({sideNavVisible: false})
-  //   console.log("hello")
-  // }
   changeBackground = input => {
     if (input === "elephant") {
       this.setState({
@@ -82,7 +79,7 @@ class Site extends Component {
       this.setState({
         backgroundPicture: giraffePic, 
         backgroundBlur: giraffeBlur,
-        fontColor: "white", 
+        fontColor: "black", 
         navFontColor: "black"})
     }
     else if (input === "pug") {
@@ -101,76 +98,31 @@ class Site extends Component {
     }
   }
   goToPage = value => {
-
-    if (value === "home") {
-      if (this.state.sideNavVisible) {
-        this.setState({sideNavVisible: false})
-        setTimeout( () => {
-          this.homeRef.current.scrollIntoView()
-        }
-        ,500)
-      }
-      else {
-        this.homeRef.current.scrollIntoView()
-      }
+    var multiplier = 0
+    switch(value) {
+      case "about": 
+        multiplier = 1; break;
+      case "services": 
+        multiplier = 2; break;
+      case "portfolio": 
+        multiplier = 3; break;
+      case "contact": 
+        multiplier = 4; break;
+      default:
+        break;
     }
-    else if (value === "about") {
-      // this.aboutRef.current.scrollIntoView()
-      if (this.state.sideNavVisible) {
-        this.setState({sideNavVisible: false})
-        setTimeout( () => {
-          this.aboutRef.current.scrollIntoView()
-        }
-        ,500)
+    if (this.state.sideNavVisible) {
+      this.setState({sideNavVisible: false})
+     setTimeout( () => {      
+        $("#mainWindow").animate({scrollTop: window.innerHeight*multiplier - 30}, 'slow');
+        this.getPercentage()
       }
-      else {
-        this.aboutRef.current.scrollIntoView()
-      }
-
-
+      ,500)
     }
-    else if (value === "services") {
-
-      if (this.state.sideNavVisible) {
-        this.setState({sideNavVisible: false})
-        setTimeout( () => {
-          this.servicesRef.current.scrollIntoView()
-        }
-        ,500)
-      }
-      else {
-        this.servicesRef.current.scrollIntoView()
-      }
-
+    else {
+      $("#mainWindow").animate({scrollTop: window.innerHeight*multiplier - 30}, 'fast');
+      this.getPercentage()
     }
-    else if (value === "portfolio") {
-      
-      if (this.state.sideNavVisible) {
-        this.setState({sideNavVisible: false})
-        setTimeout( () => {
-          this.portfolioRef.current.scrollIntoView()
-        }
-        ,500)
-      }
-      else {
-        this.portfolioRef.current.scrollIntoView()
-      }
-
-    }
-    else if (value === "contact") {
-      if (this.state.sideNavVisible) {
-        this.setState({sideNavVisible: false})
-        setTimeout( () => {
-          this.contactRef.current.scrollIntoView()
-        }
-        ,500)
-      }
-      else {
-        this.contactRef.current.scrollIntoView()
-      }
-
-    }
-
   }
   getPercentage = () => {
     
@@ -226,7 +178,7 @@ class Site extends Component {
     render() {
       return (
           <div id="site">
-            <div className="debugger">{this.state.width}</div>
+            {/* <div className="debugger">{this.state.width}</div> */}
             <Navbar 
               sideNavVisible={this.state.sideNavVisible}
               navbarVisible={this.state.navbarVisible}
