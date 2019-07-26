@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Navbar.css"
+import Resume from "../MainWindow/Files/Resume.pdf"
 
 class Navbar extends Component {
     state = {
@@ -7,7 +8,7 @@ class Navbar extends Component {
     }
     getFile = type => {
       if (type === "pdf") {
-        // window.location.href = "./"
+         window.location.href = Resume
       }
       else if (type === "word") {
 
