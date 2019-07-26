@@ -35,7 +35,10 @@ class Contact extends Component {
             [name] : value
         })
     }
-
+    spinOnce = input => {
+        this.setState({[input]: true})
+        setTimeout(()=> this.setState({[input]: false}),2000)
+    }
     render() {
         return (
             <div
@@ -58,20 +61,17 @@ class Contact extends Component {
                         </p>
 
                         <a  className="btn socialMediaButtons"  
-                            onMouseEnter={() => this.setState({githubHover: true})} 
-                            onMouseLeave={() => this.setState({githubHover: false})}
+                            onMouseEnter={() => this.spinOnce("githubHover")} 
                             href="https://github.com/sallan306">
                             <FontAwesomeIcon spin={this.state.githubHover} color={this.props.fontColor} size="3x" icon={["fab","github"]}/>
                         </a>
                         <a className="btn socialMediaButtons" 
-                            onMouseEnter={() => this.setState({linkedinHover: true})} 
-                            onMouseLeave={() => this.setState({linkedinHover: false})}
+                            onMouseEnter={() => this.spinOnce("linkedinHover")} 
                             href="http://www.linkedin.com/in/ScottAllanWebDesign">
                             <FontAwesomeIcon spin={this.state.linkedinHover} color={this.props.fontColor} size="3x" icon={["fab","linkedin"]}/>
                         </a>
                         <a className="btn socialMediaButtons" 
-                            onMouseEnter={() => this.setState({emailHover: true})} 
-                            onMouseLeave={() => this.setState({emailHover: false})}
+                            onMouseEnter={() => this.spinOnce("emailHover")} 
                             href="mailto:sallan306@gmail.com">
                             <FontAwesomeIcon spin={this.state.emailHover} color={this.props.fontColor} size="3x" icon={faEnvelope}/>
                         </a>
