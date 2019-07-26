@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./Navbar.css"
 import Resume from "../MainWindow/Files/Resume.pdf"
+const googleLink = "https://docs.google.com/document/d/15yJT9t423c4WiMPlCgdmDld2Lw-szrcb59tT_2JN7Zg/edit?usp=sharing"
 
 class Navbar extends Component {
     state = {
@@ -10,11 +11,8 @@ class Navbar extends Component {
       if (type === "pdf") {
          window.location.href = Resume
       }
-      else if (type === "word") {
-
-      }
       else if (type === "google") {
-
+        window.location.href = googleLink
       }
     }
 
@@ -56,14 +54,13 @@ class Navbar extends Component {
               <div className="resumeContainer">
                 Resume - 
                 <button style={{color: "rgba(255, 255, 255, 0.7)"}} onClick={()=> this.getFile("pdf")} className="resumeButton">PDF</button> / 
-                <button style={{color: "rgba(255, 255, 255, 0.7)"}} onClick={()=> this.getFile("word")} className="resumeButton">Word</button> / 
                 <button style={{color: "rgba(255, 255, 255, 0.7)"}} onClick={()=> this.getFile("google")} className="resumeButton">Google Doc</button>
               </div>
               <div className="animalContainer">
-                Change background - 
+                Background - 
                 <button onClick={()=> this.props.changeBackground("llama")} style={{color: "white"}} className="animalButton">Llama</button> / 
                 <button onClick={()=> this.props.changeBackground("giraffe")} style={{color: "yellow"}} className="animalButton">Giraffe</button> / 
-                <button onClick={()=> this.props.changeBackground("pug")} style={{color: "brown"}} className="animalButton">Pug</button>
+                <button onClick={()=> this.props.changeBackground("pug")} style={{color: "brown"}} className="animalButton">Pug</button> /
                 <button onClick={()=> this.props.changeBackground("elephant")} style={{color: "gray"}} className="animalButton">Elephant</button>
               </div>
             </span>
