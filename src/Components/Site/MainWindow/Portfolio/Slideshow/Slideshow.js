@@ -62,8 +62,8 @@ class Slideshow extends Component {
     }
     componentDidUpdate() {
 
-            this.portfolioRefs[this.state.currentSlideshow-1].current.classList.remove("unselected")
-            this.dotRefs[this.state.currentSlideshow-1].current.classList.add("dotSelected")
+            // this.portfolioRefs[this.state.currentSlideshow-1].current.classList.remove("unselected")
+            // this.dotRefs[this.state.currentSlideshow-1].current.classList.add("dotSelected")
 
     }
 
@@ -78,22 +78,23 @@ class Slideshow extends Component {
                 this.dotRefs[item.id-1].current.classList.remove("dotSelected")
             )
         })
+        console.log(selectedDot)
 
         this.portfolioRefs[selectedDot-1].current.classList.remove("unselected")
         this.dotRefs[selectedDot-1].current.classList.add("dotSelected")
         
     }
     moveDirection = direction => {
-        if (this.state.currentSlideshow !== 1 && direction === "left") {
+        if (this.state.currentSlideshow > 1 && direction === "left") {
             this.setState({
-                currentSlideshow: this.state.currentSlideshow - 1
+                currentSlideshow: parseInt(this.state.currentSlideshow) - 1
                 }, ()=> {
-                    this.goToPortfolioItem(this.state.currentSlideshow)
+                    this.goToPortfolioItem(this.state.currentSlideshow) 
             })
         }
-        if (this.state.currentSlideshow !== 6 && direction === "right") {
+        if (this.state.currentSlideshow < 6 && direction === "right") {
             this.setState({
-                currentSlideshow: this.state.currentSlideshow + 1
+                currentSlideshow: parseInt(this.state.currentSlideshow) + 1
                 }, ()=> {
                     this.goToPortfolioItem(this.state.currentSlideshow)
             })
@@ -114,7 +115,7 @@ class Slideshow extends Component {
                         {
                             this.state.selectedItem.technologies ? 
                             this.state.selectedItem.technologies.map(function(item, i) { 
-                                return (<li key={i}>{item}</li>)
+                                return (<li className="infoPanelListItem" key={i}>{item}</li>)
                             }) :
                             "nothing"
                         }

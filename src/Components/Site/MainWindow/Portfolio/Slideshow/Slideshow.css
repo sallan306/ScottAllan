@@ -12,6 +12,7 @@
     width: 180vw;
     text-align: center;
     height: 70vh;
+    top: 5vh;
     position: relative;
     margin-top: 0vh;
     transition: 0.5s
@@ -82,6 +83,8 @@
 .portfolioNavigation {
     width: 100%;
     float: left;
+    position: relative;
+    z-index: 100;
 }
 
 .opaqueCard {
@@ -90,7 +93,7 @@
 .unselected {
     opacity: 0.4;
     display: none;
-    top: 5vh;
+    /* top: 5vh; */
     transform: translateY(5vh);
     transition: 0.5s;
     transition-duration: 0.5s;
@@ -166,10 +169,21 @@
     z-index: 999;
     height: 70vh;
     position: fixed;
-    top: 17.5vh;
-    width: 70vw;
+    top: 12.5vh;
+    width: 60vw;
     transition: 0.5s;
-    background: red;
-    left: 15vw;
+    background: black;
+    left: 20vw;
+    font-size: 20px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: gray;
+}
+.infoPanelDescription {
+
+}
+.infoPanelListItem {
+    font-size: 20px;
+    text-align: left;
 }
 /* -------------------------------------------------------------------------------------------------------------------------------- */
