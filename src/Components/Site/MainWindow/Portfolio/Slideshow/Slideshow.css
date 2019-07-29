@@ -1,3 +1,10 @@
+.navArrow {
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
 .slideshow {
     margin-top: 5vh
 }
@@ -11,8 +18,8 @@
 }
 
 .portfolioLeftArrow, .portfolioRightArrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
+    border: solid #bbb;
+    border-width: 0 4px 4px 0;
     display: inline-block;
     padding: 3px;
     width: 30px;
@@ -21,8 +28,8 @@
 }
 
 .portfolioLeftArrow:hover, .portfolioRightArrow:hover {
-    border: solid white;
-    border-width: 0 3px 3px 0;
+    border: solid black;
+    border-width: 0 6px 6px 0;
 }
 .portfolioRightArrow {
     transform: rotate(-45deg);
@@ -35,11 +42,6 @@
 .portfolioLeftArrowBox, .portfolioRightArrowBox {
     width: 20%;
     cursor: pointer;
-    -webkit-user-select: none;      
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none;
-    animation-direction: alternate;
 }
 
 .portfolioLeftArrowBox {
@@ -71,6 +73,7 @@
 
 .dot:hover {
     background-color: black;
+    border-radius: 5px;
 }
 .dotSelected {
     background-color: red

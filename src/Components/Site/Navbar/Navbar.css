@@ -32,7 +32,13 @@
     color: #3fb0ac;
     text-align: center;
     margin: 0 auto;
+    opacity: 0.6;
+    transition: 0.5s
 }
+.navName:hover {
+    opacity: 1;
+}
+
 
 .navUnderline {
     position: relative;
@@ -64,14 +70,19 @@
     top: 0vh;
     left: 10px;
     outline: none;
+    opacity: 0.5;
+    transition: 0.5s
 
 }
 
-
+.sideNavButton:hover {
+    opacity: 1;
+}
 
 .sideNavButton:focus {
     border: none;
-    outline: none
+    outline: none;
+
 }
 .sideNav {
     position: fixed;
@@ -92,7 +103,9 @@
     top: 2vh;
     transition: 1s;
     left: 15vw;
+
 }
+
 .menuItem {
     width: 30px;
     height: 4px;
@@ -120,8 +133,13 @@
 .resumeButton, .animalButton {
     background: transparent;
     border: 0;
+    opacity: 0.7;
 }
-
+.resumeButton:hover, .animalButton:hover {
+    background: transparent;
+    border: 0;
+    opacity: 1;
+}
 @media only screen and (max-width: 450px) {
 
     .navButton {

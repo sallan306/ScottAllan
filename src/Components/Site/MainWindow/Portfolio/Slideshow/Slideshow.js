@@ -83,6 +83,23 @@ class Slideshow extends Component {
         this.dotRefs[selectedDot-1].current.classList.add("dotSelected")
         
     }
+    moveDirection = direction => {
+        if (this.state.currentSlideshow !== 1 && direction === "left") {
+            this.setState({
+                currentSlideshow: this.state.currentSlideshow - 1
+                }, ()=> {
+                    this.goToPortfolioItem(this.state.currentSlideshow)
+            })
+        }
+        if (this.state.currentSlideshow !== 6 && direction === "right") {
+            this.setState({
+                currentSlideshow: this.state.currentSlideshow + 1
+                }, ()=> {
+                    this.goToPortfolioItem(this.state.currentSlideshow)
+            })
+        }
+
+    }
     render() {
         return (
             <div id="slideshow" className="slideshow" style={{position: "relative", zIndex: 10}}>
@@ -137,13 +154,16 @@ class Slideshow extends Component {
                 </div>
 
                 <span className="portfolioNavigation">
+                    <div onClick={()=> this.moveDirection("left")} className="navArrow portfolioLeftArrow"></div>
                     {
+                        
                         PortfolioItems.map( item => {
                             return (
                                 <div ref={this.dotRefs[item.id-1]} key={item.id} onClick={() => this.goToPortfolioItem(item.id)}id={"dotNumber"+item.id}className={"dot"}></div>
                             )
                         })
                     }
+                    <div  onClick={()=> this.moveDirection("right")} className="navArrow portfolioRightArrow"></div>
                 </span>
 
             </div>

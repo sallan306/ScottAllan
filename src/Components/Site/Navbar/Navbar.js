@@ -5,7 +5,7 @@ const googleLink = "https://docs.google.com/document/d/15yJT9t423c4WiMPlCgdmDld2
 
 class Navbar extends Component {
     state = {
-
+      opacity: 1
     }
     getFile = type => {
       if (type === "pdf") {
@@ -29,7 +29,7 @@ class Navbar extends Component {
                   height: this.props.sideNavVisible ? "20vh" : "0vh",
           }}/>
           <button className="sideNavButton" onClick={()=> this.props.toggleSideNav()}>
-            <div className={this.props.sideNavVisible ? "menuItem menuItem1 open1" : "menuItem menuItem1"} style={{background: this.props.fontColor}}></div>
+            <div className={this.props.sideNavVisible ? "menuItem menuItem1 open1" : "menuItem menuItem1"} style={{opacity: this.state.opacity, background: this.props.fontColor}}></div>
             <div className={this.props.sideNavVisible ? "menuItem menuItem2 open2" : "menuItem menuItem2"} style={{background: this.props.fontColor}}></div>
             <div className={this.props.sideNavVisible ? "menuItem menuItem3 open3" : "menuItem menuItem3"} style={{background: this.props.fontColor}}></div>
           </button>
@@ -58,7 +58,6 @@ class Navbar extends Component {
               </div>
               <div className="animalContainer">
                 Background - 
-                <button onClick={()=> this.props.changeBackground("llama")} style={{color: "white"}} className="animalButton">Llama</button> / 
                 <button onClick={()=> this.props.changeBackground("giraffe")} style={{color: "yellow"}} className="animalButton">Giraffe</button> / 
                 <button onClick={()=> this.props.changeBackground("pug")} style={{color: "brown"}} className="animalButton">Pug</button> /
                 <button onClick={()=> this.props.changeBackground("elephant")} style={{color: "gray"}} className="animalButton">Elephant</button>
