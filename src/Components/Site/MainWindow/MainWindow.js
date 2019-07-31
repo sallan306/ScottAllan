@@ -18,7 +18,7 @@ class MainWindow extends Component {
             style={{marginTop: this.props.sideNavVisible ? "15vh" : 0}}
             onScroll={ ()=> this.props.getPercentage()}
         >   
-            {/* {<div className="testVar2">{this.props.scrollPercent}</div>} */}
+            {/* {<div className="testVar2">{this.props.changingBackground ? "true" : "false"}</div>} */}
             {/* {<div className="testVar">{this.props.selectedNav}</div>}  */}
             {/* {<div className="testVar">{this.props.navbarVisible ? "true" : "false"}</div>} */}
             <Home 
@@ -39,6 +39,7 @@ class MainWindow extends Component {
                 scrollPercent={this.props.scrollPercent}
                 backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
+                changingBackground={this.props.changingBackground}
             />
             <Services 
                 servicesRef={this.props.servicesRef}
@@ -48,6 +49,7 @@ class MainWindow extends Component {
                 scrollPercent={this.props.scrollPercent}
                 backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
+                changingBackground={this.props.changingBackground}
             />
             <Portfolio 
                 selectedNav={this.props.selectedNav}
@@ -57,6 +59,7 @@ class MainWindow extends Component {
                 scrollPercent={this.props.scrollPercent}
                 backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
+                changingBackground={this.props.changingBackground}
             />
             <Contact
                 selectedNav={this.props.selectedNav}
@@ -66,6 +69,7 @@ class MainWindow extends Component {
                 scrollPercent={this.props.scrollPercent}
                 backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
+                changingBackground={this.props.changingBackground}
             />
             {/* <Footer/> */}
         </div>

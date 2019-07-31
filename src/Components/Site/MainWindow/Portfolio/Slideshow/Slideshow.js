@@ -69,7 +69,7 @@ class Slideshow extends Component {
 
     goToPortfolioItem = selectedDot => {
         this.setState({
-            currentSlideshow: selectedDot,
+            currentSlideshow: parseInt(selectedDot),
             slideshowScrollDistance: ((selectedDot-1)*(-30)+32.5)
         })
         PortfolioItems.map( item => {
@@ -104,10 +104,10 @@ class Slideshow extends Component {
     render() {
         return (
             <div id="slideshow" className="slideshow" style={{position: "relative", zIndex: 10}}>
-            <div className="debugger">
-            {/* {"current slideshow: "+this.state.currentSlideshow} */}
-            {/* {"map length: "+this.selectedItem} */}
-            </div>
+            {/* <div className="debugger">
+            {"current slideshow: "+this.state.currentSlideshow}
+            {"map length: "+this.selectedItem}
+            </div> */}
 
                 <div className="infoPanel" style={{opacity: this.state.showInfoPanel ? 1 : 0, visibility: this.state.showInfoPanel ? "visible" : "hidden"}}>
                     <p className="infoPanelDescription">{this.state.selectedItem.description}</p>
@@ -124,7 +124,7 @@ class Slideshow extends Component {
                 <div id="portfolioItemsContainer" className="portfolioItemsContainer" style={{left: this.state.slideshowScrollDistance+"vw"}}>
                     {PortfolioItems.map( item => 
                     { return (
-                        <div ref={this.portfolioRefs[item.id-1]}key={"container"+item.id} id={"container"+item.id} className={"portfolioContainer unselected portfolioContainer"+item.id }>
+                        <div style={{borderColor: this.props.fontColor, background: this.props.fontColor === "black" ? "white" : "black"}}ref={this.portfolioRefs[item.id-1]}key={"container"+item.id} id={"container"+item.id} className={"portfolioContainer unselected portfolioContainer"+item.id }>
                             <img 
                                 key={"image"+item.id} 
                                 className={this.state.highlighted === item.id ? "imgHighlighted portfolioImage" :"portfolioImage"} 
@@ -155,7 +155,7 @@ class Slideshow extends Component {
                 </div>
 
                 <span className="portfolioNavigation">
-                    <div onClick={()=> this.moveDirection("left")} className="navArrow portfolioLeftArrow"></div>
+                    <div onClick={()=> this.moveDirection("left")} className={this.state.currentSlideshow !== 1 ? "navArrowActive navArrowLeft" : "navArrowInactive navArrowLeft"}></div>
                     {
                         
                         PortfolioItems.map( item => {
@@ -164,7 +164,7 @@ class Slideshow extends Component {
                             )
                         })
                     }
-                    <div  onClick={()=> this.moveDirection("right")} className="navArrow portfolioRightArrow"></div>
+                    <div  onClick={()=> this.moveDirection("right")} className={this.state.currentSlideshow !== 6 ? "navArrowActive navArrowRight" : "navArrowInactive navArrowRight"}></div>
                 </span>
 
             </div>

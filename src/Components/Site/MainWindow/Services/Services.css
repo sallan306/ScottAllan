@@ -1,8 +1,18 @@
-#servicesTitle {
-    margin: 0;
-}
-
 .servicesRef {
     width: 100%;
     height: 100%;
+}
+
+.servicesContainer {
+    margin-top: 20vh
+}
+.serviceBlurb {
+    font-size: 16px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 30px;
+}
+.serviceBox {
+    width: 33%;
+    float: left;
 }

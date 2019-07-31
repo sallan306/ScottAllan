@@ -14,10 +14,6 @@
     
   }
 
-/* .home, .about, .contact, .portfolio, .services {
-
-} */
-
 .about,.contact,.portfolio,.services {
   position: relative;
   width: 95vw;
@@ -40,7 +36,6 @@
   background-attachment: fixed;
   background-repeat: no-repeat;
   z-index: -10;
-  /* transition: 1s; */
 }
 .backgroundSidenav {
   top: 0;
@@ -50,7 +45,6 @@
   background-size: 100%;
   background-attachment: fixed;
   z-index: -10;
-
   transition: 1s;
 
 

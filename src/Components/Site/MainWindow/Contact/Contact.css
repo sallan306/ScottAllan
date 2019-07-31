@@ -11,6 +11,7 @@
     padding-top: 25vh;
     width: 50vw;
     margin-left: 22.5vw;
+    font-size: 22px;
 }
 
 @media only screen and (max-width: 450px) {
@@ -26,9 +27,7 @@
 }
 
 @media only screen and (max-width: 420px) {
-    
-    .contactContent {
-    }
+
     .contactParagraph {
         padding-top: 20vh;
         font-size: 16px;

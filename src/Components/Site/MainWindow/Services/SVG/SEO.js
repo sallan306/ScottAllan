@@ -9,8 +9,8 @@ class SEO extends Component {
 <svg 
     version="1.0" 
     xmlns="http://www.w3.org/2000/svg"
-    width="100" 
-    height="100" 
+    width="125" 
+    height="125" 
     viewBox="0 0 372.000000 374.000000"
     preserveAspectRatio="xMidYMid meet"
     fill={this.props.fillColor}

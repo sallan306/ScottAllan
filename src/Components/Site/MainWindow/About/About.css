@@ -1,20 +1,19 @@
 
 .paragraph1 {
     float: left;
-    width: 45vw;
-    margin: 5vw;
-    margin-top: 30vh;
-    font-size: 16px;
+    width: 40vw;
+    height: 100%;
+    margin: 8vw;
+    font-size: 18px;
 }
 
 #aboutMeCard {
-    height: 59vh;
+    height: 60vh;
     border: 5px;
     border-style: solid;
-    border-color: black;
     margin-top: 15vh;
     float: left;
-    max-width: 30%;
+    width: 45vh;
     padding: 0;
     margin-left: 4vw;
 }

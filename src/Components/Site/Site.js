@@ -6,8 +6,6 @@ import $ from "jquery"
 
 import elephantPic from "./MainWindow/Images/elephant.jpg"   
 import elephantBlur from "./MainWindow/Images/elephant_blur.jpg"   
-import llamaPic from "./MainWindow/Images/llama.jpg"   
-import llamaBlur from "./MainWindow/Images/llama_blur.jpg" 
 import pugPic from "./MainWindow/Images/pug.jpg"   
 import pugBlur from "./MainWindow/Images/pug_blur.jpg"   
 import giraffePic from "./MainWindow/Images/giraffe.jpg"   
@@ -36,7 +34,8 @@ class Site extends Component {
       backgroundBlur: giraffeBlur,
       scrollThrottle: 1,
       backgroundScrollSpeed: -8,
-      width: 0
+      width: 0,
+      changingBackground: false
   }
   componentDidMount() {
     window.addEventListener('resize', () => this.updateWindowDimensions())
@@ -68,6 +67,15 @@ class Site extends Component {
       });
   }
   changeBackground = input => {
+    this.setState({
+      changingBackground: true
+    }, () => {
+      setTimeout( () => {
+        this.setState({
+          changingBackground: false
+        })
+      },1000)
+    })
     if (input === "elephant") {
       this.setState({
         backgroundPicture: elephantPic, 
@@ -88,13 +96,6 @@ class Site extends Component {
         backgroundBlur: pugBlur,
         fontColor: "white", 
         navFontColor: "white"})
-    }
-    else if (input === "llama") {
-      this.setState({
-        backgroundPicture: llamaPic, 
-        backgroundBlur: llamaBlur,
-        fontColor: "black", 
-        navFontColor: "black"})
     }
   }
   goToPage = value => {
@@ -167,7 +168,13 @@ class Site extends Component {
   toggleSideNav = () => {
     this.setState({
       sideNavVisible: this.state.sideNavVisible ? false : true,
-      navbarVisible: true
+
+    }, () => {
+      if (this.state.selectedNav === "home") {
+        this.setState({
+          navbarVisible: this.state.sideNavVisible === true ? true : false
+        })
+      }
     })
 
   }
@@ -179,7 +186,7 @@ class Site extends Component {
     render() {
       return (
           <div id="site">
-            {/* <div className="debugger">{this.state.width}</div> */}
+            {/* <div className="debugger">{this.state.changingBackground ? "true" : "false"}</div> */}
             <Navbar 
               sideNavVisible={this.state.sideNavVisible}
               navbarVisible={this.state.navbarVisible}
@@ -212,6 +219,7 @@ class Site extends Component {
               backgroundPicture={this.state.backgroundPicture}
               backgroundBlur={this.state.backgroundBlur}
               backgroundScrollSpeed={this.state.backgroundScrollSpeed}
+              changingBackground={this.state.changingBackground}
             />
         </div>  
       )

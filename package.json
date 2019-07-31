@@ -13,7 +13,7 @@
     "npm": "^6.9.0",
     "react": "^16.7.0",
     "react-awesome-button": "^6.1.0",
-    "react-bootstrap": "^1.0.0-beta.8",
+    "react-bootstrap": "^1.0.0-beta.10",
     "react-dom": "^16.7.0",
     "react-gsap": "^1.2.0",
     "react-inview-monitor": "^2.2.1",

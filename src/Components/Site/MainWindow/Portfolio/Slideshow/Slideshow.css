@@ -1,9 +1,45 @@
-.navArrow {
+.navArrowActive {
     display: inline-block;
     cursor: pointer;
     transition: 0.5s;
     margin-left: 1vw;
     margin-right: 1vw;
+    border: solid #bbb;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+}
+.navArrowInactive {
+    display: inline-block;
+    cursor: default;
+    transition: 0.5s;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    opacity: 0.4;
+    border: solid #bbb;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+}
+
+.navArrowActive:hover {
+    border: solid navy;
+    border-width: 0 6px 6px 0;
+    transition: 0.5s
+}
+.navArrowActive:active {
+    border: solid black;
+    border-width: 0 6px 6px 0;
+}
+.navArrowRight {
+    transform: rotate(-45deg);
+}
+.navArrowLeft {
+    transform: rotate(135deg);
 }
 .slideshow {
     margin-top: 5vh
@@ -18,40 +54,6 @@
     transition: 0.5s
 }
 
-.portfolioLeftArrow, .portfolioRightArrow {
-    border: solid #bbb;
-    border-width: 0 4px 4px 0;
-    display: inline-block;
-    padding: 3px;
-    width: 30px;
-    height: 30px;
-
-}
-
-.portfolioLeftArrow:hover, .portfolioRightArrow:hover {
-    border: solid black;
-    border-width: 0 6px 6px 0;
-}
-.portfolioRightArrow {
-    transform: rotate(-45deg);
-}
-.portfolioLeftArrow {
-    transform: rotate(135deg);
-}
-
-
-.portfolioLeftArrowBox, .portfolioRightArrowBox {
-    width: 20%;
-    cursor: pointer;
-}
-
-.portfolioLeftArrowBox {
-    float: left;
-}
-
-.portfolioRightArrowBox {
-    float: right
-}
 
 .dot {
     height: 25px;
@@ -64,21 +66,25 @@
     margin-left: 1vw;
     margin-right: 1vw;
 }
+.dot:hover {
+    background-color: navy;
+    border-radius: 5px;
+}
+.dot:active {
+    background-color: black;
+}
+.dotSelected {
+    background-color: navy
+}
 .debugger {
     position: fixed;
     top: 100px;
     left: 100px;
-    color: red;
+    color: navy;
     z-index: 9999;
 }
 
-.dot:hover {
-    background-color: black;
-    border-radius: 5px;
-}
-.dotSelected {
-    background-color: red
-}
+
 
 .portfolioNavigation {
     width: 100%;
@@ -107,7 +113,6 @@
     height: 25vw;
     border-style: solid;
     border-width: 1vw;
-    border-color: black;
     margin: 2.5vw;
     background: white;
     margin-top: 0;

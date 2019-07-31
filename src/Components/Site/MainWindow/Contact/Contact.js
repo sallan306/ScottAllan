@@ -52,12 +52,13 @@ class Contact extends Component {
                     }}
                 >
                     <div className="backgroundPseudo backgroundContact" style={{
+                            transition: this.props.changingBackground === true ? "1s" : "0s",
                             backgroundImage: "url("+this.props.backgroundBlur+")",
                             backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
                     }}/>
                     <span className="contactContent" style={{position: "relative", zIndex: 10}}>
                         <p style={{color: this.props.fontColor, position: "relative", zIndex: 10}} className="contactParagraph" >
-                            I am currently accepting freelance commissions. Please contact me using the links below. 
+                            I am currently accepting freelance commissions and job offers in the Portland, OR area. Please contact me using the links below! 
                         </p>
 
                         <a  className="btn socialMediaButtons"  

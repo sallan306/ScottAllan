@@ -21,10 +21,11 @@ class Portfolio extends Component {
                     }}
                 >
                     <div className="backgroundPseudo backgroundPortfolio" style={{
+                            transition: this.props.changingBackground === true ? "1s" : "0s",
                             backgroundImage: "url("+this.props.backgroundBlur+")",
                             backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
                     }}/>
-                    <Slideshow/>
+                    <Slideshow fontColor={this.props.fontColor}/>
                 </div>
             </div>
 
