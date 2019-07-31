@@ -27,7 +27,7 @@
 }
 
 .navArrowActive:hover {
-    border: solid navy;
+    border: solid darkred;
     border-width: 0 6px 6px 0;
     transition: 0.5s
 }
@@ -67,14 +67,14 @@
     margin-right: 1vw;
 }
 .dot:hover {
-    background-color: navy;
+    background-color: darkred;
     border-radius: 5px;
 }
 .dot:active {
     background-color: black;
 }
 .dotSelected {
-    background-color: navy
+    background-color: darkred
 }
 .debugger {
     position: fixed;

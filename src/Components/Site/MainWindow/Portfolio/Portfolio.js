@@ -18,6 +18,8 @@ class Portfolio extends Component {
                     id="portfolio"
                     className="portfolio" 
                     style={{ 
+                        transition: "1s",
+                        borderColor: this.props.fontColor
                     }}
                 >
                     <div className="backgroundPseudo backgroundPortfolio" style={{
@@ -25,7 +27,9 @@ class Portfolio extends Component {
                             backgroundImage: "url("+this.props.backgroundBlur+")",
                             backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
                     }}/>
-                    <Slideshow fontColor={this.props.fontColor}/>
+                    <Slideshow 
+                        fontColor={this.props.fontColor}
+                        SVGSecondaryColor={this.props.SVGSecondaryColor}/>
                 </div>
             </div>
 

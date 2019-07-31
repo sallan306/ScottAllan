@@ -48,7 +48,8 @@ class Contact extends Component {
                     id="contact" 
                     className="contact" 
                     style={{ 
-
+                        transition: "1s",
+                        borderColor: this.props.fontColor
                     }}
                 >
                     <div className="backgroundPseudo backgroundContact" style={{
@@ -64,17 +65,17 @@ class Contact extends Component {
                         <a  className="btn socialMediaButtons"  
                             onMouseEnter={() => this.spinOnce("githubHover")} 
                             href="https://github.com/sallan306">
-                            <FontAwesomeIcon spin={this.state.githubHover} color={this.props.fontColor} size="3x" icon={["fab","github"]}/>
+                            <FontAwesomeIcon spin={this.state.githubHover} style={{transition: "1s"}}color={this.props.fontColor} size="3x" icon={["fab","github"]}/>
                         </a>
                         <a className="btn socialMediaButtons" 
                             onMouseEnter={() => this.spinOnce("linkedinHover")} 
                             href="http://www.linkedin.com/in/ScottAllanWebDesign">
-                            <FontAwesomeIcon spin={this.state.linkedinHover} color={this.props.fontColor} size="3x" icon={["fab","linkedin"]}/>
+                            <FontAwesomeIcon spin={this.state.linkedinHover} style={{transition: "1s"}}color={this.props.fontColor} size="3x" icon={["fab","linkedin"]}/>
                         </a>
                         <a className="btn socialMediaButtons" 
                             onMouseEnter={() => this.spinOnce("emailHover")} 
                             href="mailto:sallan306@gmail.com">
-                            <FontAwesomeIcon spin={this.state.emailHover} color={this.props.fontColor} size="3x" icon={faEnvelope}/>
+                            <FontAwesomeIcon spin={this.state.emailHover} style={{transition: "1s"}}color={this.props.fontColor} size="3x" icon={faEnvelope}/>
                         </a>
                     </span>
                 </div>

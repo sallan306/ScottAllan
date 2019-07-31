@@ -21,7 +21,9 @@ class Navbar extends Component {
         <div className="navbar" 
           style={{
             background: this.props.navBackgroundColor, 
-            top: this.props.navbarVisible ? 0 : -100}
+            top: this.props.navbarVisible ? 0 : -100,
+          
+          }
             }>
             <div className="backgroundPseudo backgroundSidenav" style={{
                   backgroundImage: "url("+this.props.backgroundBlur+")",
@@ -39,7 +41,8 @@ class Navbar extends Component {
               visibility: this.props.sideNavVisible ? "visible" : "visible", 
               height: this.props.sideNavVisible ? "20vh" : "0vh",
               top: 0,
-              background: this.props.navBackgroundColor
+              background: this.props.navBackgroundColor,
+              borderColor: this.props.fontColor
               }}
             >
             <span 
@@ -53,8 +56,8 @@ class Navbar extends Component {
             >
               <div className="resumeContainer">
                 Resume - 
-                <button style={{color: "rgba(255, 255, 255, 0.7)"}} onClick={()=> this.getFile("pdf")} className="resumeButton">PDF</button> / 
-                <button style={{color: "rgba(255, 255, 255, 0.7)"}} onClick={()=> this.getFile("google")} className="resumeButton">Google Doc</button>
+                <button style={{transition: "1s",color: this.props.fontColor}} onClick={()=> this.getFile("pdf")} className="resumeButton">PDF</button> / 
+                <button style={{transition: "1s",color: this.props.fontColor}} onClick={()=> this.getFile("google")} className="resumeButton">Google Doc</button>
               </div>
               <div className="animalContainer">
                 Background - 

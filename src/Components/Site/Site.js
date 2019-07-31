@@ -28,6 +28,7 @@ class Site extends Component {
       navBackgroundColor: "transparent",
       navFontColor: "black",
       fontColor: "black",
+      SVGSecondaryColor: "darkred",
       navbarVisible: false,
       sideNavVisible: false,
       backgroundPicture: giraffePic,
@@ -81,21 +82,24 @@ class Site extends Component {
         backgroundPicture: elephantPic, 
         backgroundBlur: elephantBlur,
         fontColor: "black", 
-        navFontColor: "black"})
+        navFontColor: "black",
+        SVGSecondaryColor: "darkred"})
     }
     else if (input === "giraffe") {
       this.setState({
         backgroundPicture: giraffePic, 
         backgroundBlur: giraffeBlur,
         fontColor: "black", 
-        navFontColor: "black"})
+        navFontColor: "black",
+        SVGSecondaryColor: "darkred"})
     }
     else if (input === "pug") {
       this.setState({
         backgroundPicture: pugPic, 
         backgroundBlur: pugBlur,
         fontColor: "white", 
-        navFontColor: "white"})
+        navFontColor: "white",
+        SVGSecondaryColor: "navy"})
     }
   }
   goToPage = value => {
@@ -220,6 +224,7 @@ class Site extends Component {
               backgroundBlur={this.state.backgroundBlur}
               backgroundScrollSpeed={this.state.backgroundScrollSpeed}
               changingBackground={this.state.changingBackground}
+              SVGSecondaryColor={this.state.SVGSecondaryColor}
             />
         </div>  
       )

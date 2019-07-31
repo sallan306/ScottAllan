@@ -50,6 +50,7 @@ class MainWindow extends Component {
                 backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
                 changingBackground={this.props.changingBackground}
+                SVGSecondaryColor={this.props.SVGSecondaryColor}
             />
             <Portfolio 
                 selectedNav={this.props.selectedNav}
@@ -60,6 +61,7 @@ class MainWindow extends Component {
                 backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
                 changingBackground={this.props.changingBackground}
+                SVGSecondaryColor={this.props.SVGSecondaryColor}
             />
             <Contact
                 selectedNav={this.props.selectedNav}
