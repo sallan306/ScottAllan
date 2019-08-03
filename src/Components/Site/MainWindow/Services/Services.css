@@ -17,3 +17,7 @@
     width: 33%;
     float: left;
 }
+
+.fancyBorder {
+    transition: 1s
+}

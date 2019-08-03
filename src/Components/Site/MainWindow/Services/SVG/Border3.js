@@ -17,12 +17,13 @@ class Border extends Component {
         return (
             <svg 
                 version="1.1" 
-                id="Calque_1" 
+                className="fancyBorder border3"
                 xmlns="http://www.w3.org/2000/svg" 
                 x="0px" y="0px"
                 width="310"
                 height="60"
                 viewBox="0 0 310 60"
+                fill={this.props.fillColor}
             >
             <g>
             <path

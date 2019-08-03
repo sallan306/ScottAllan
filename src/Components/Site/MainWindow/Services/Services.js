@@ -38,19 +38,19 @@ componentDidMount() {
                             <WebDesign 
                                 fillColor={this.props.fontColor}
                                 SVGSecondaryColor={this.props.SVGSecondaryColor}        />
-                            <Border1/>
+                            <Border1 fillColor={this.props.fontColor}/>
                             <p style={{color: this.props.fontColor}} className="serviceBlurb">Fluid Front-End development with effective User Experience solutions that draws users back to your site</p>                       
                         </div>
                         <div className="serviceBox seo">
                             <SEO fillColor={this.props.fontColor}
                             SVGSecondaryColor={this.props.SVGSecondaryColor}/>
-                            <Border2/>
+                            <Border2 fillColor={this.props.fontColor}/>
                             <p style={{color: this.props.fontColor}} className="serviceBlurb">Proper Search Engine Optimization and Indexing so your voice gets the attention that it deserves</p>  
                         </div>
                         <div className="serviceBox responsive">
                             <Responsive fillColor={this.props.fontColor}
                             SVGSecondaryColor={this.props.SVGSecondaryColor}    />
-                            <Border3/>
+                            <Border3 fillColor={this.props.fontColor}/>
                             <p style={{color: this.props.fontColor}} className="serviceBlurb">Responsiveness across multiple platforms and devices. Your customers won't be limited by the shape of their screen</p>  
                         </div>
 
