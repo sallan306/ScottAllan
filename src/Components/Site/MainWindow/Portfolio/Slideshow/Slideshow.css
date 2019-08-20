@@ -27,13 +27,13 @@
 }
 
 .navArrowActive:hover {
-    border: solid darkred;
+    border: solid;
     border-width: 0 6px 6px 0;
     transition: 0.5s
 }
 .navArrowActive:active {
-    border: solid black;
-    border-width: 0 6px 6px 0;
+    border: solid;
+    border-width: 0 9px 9px 0;
 }
 .navArrowRight {
     transform: rotate(-45deg);
@@ -58,7 +58,6 @@
 .dot {
     height: 25px;
     width: 25px;
-    background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
     cursor: pointer;
@@ -67,15 +66,9 @@
     margin-right: 1vw;
 }
 .dot:hover {
-    background-color: darkred;
     border-radius: 5px;
 }
-.dot:active {
-    background-color: black;
-}
-.dotSelected {
-    background-color: darkred
-}
+
 .debugger {
     position: fixed;
     top: 100px;

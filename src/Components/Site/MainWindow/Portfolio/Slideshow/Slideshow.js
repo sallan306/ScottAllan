@@ -7,6 +7,7 @@ import "./Slideshow.css"
 
                 
 class Slideshow extends Component {
+    
     constructor(props) {
         super();
         this.portfolioRefs = [];
@@ -19,6 +20,7 @@ class Slideshow extends Component {
             )
         })
     }
+    
     state = {
         highlighted: "",
         showInfoPanel: false,
@@ -26,18 +28,18 @@ class Slideshow extends Component {
         currentSlideshow: 1,
         slideshowScrollDistance: 32.5,
         slideSize: 30,
+        dotColors: [ "darkred",'','','','','']
     }
-
     mouseEnter = value => {
         this.setState({ highlighted: value })
-        console.log("enter")
+        // console.log("enter")
     }
     mouseLeave = () => {
         this.setState({ highlighted: "" })
-        console.log("exit")
+        // console.log("exit")
     }
     mouseClicked = () => {
-        console.log("clicked")
+        // console.log("clicked")
     }
     displayMoreInfo = item => {
 
@@ -45,7 +47,7 @@ class Slideshow extends Component {
             showInfoPanel: true,
             selectedItem: item
         })
-        console.log("bing!")
+        // console.log("bing!")
         document.addEventListener('mousedown', () => {
 
             this.setState({
@@ -79,8 +81,8 @@ class Slideshow extends Component {
                 this.dotRefs[item.id-1].current.classList.remove("dotSelected")
             )
         })
-        console.log(selectedDot)
-
+        // console.log(selectedDot)
+        this.dotHovered(selectedDot)
         this.portfolioRefs[selectedDot-1].current.classList.remove("unselected")
         this.dotRefs[selectedDot-1].current.classList.add("dotSelected")
         
@@ -101,6 +103,39 @@ class Slideshow extends Component {
             })
         }
 
+    }
+    dotHovered = itemID => {
+        var tempArray = []
+        for (var i = 1; i<7;i++) {
+            if (i === parseInt(itemID)) {
+                // console.log(itemID + " matches")
+
+                tempArray[i-1] = this.props.secondaryColor
+
+            }
+            else {
+                tempArray[i-1] = this.props.primaryColor
+            }
+        }
+        this.setState({
+            dotColors: tempArray
+        })
+    }
+    dotUnHovered = () => {
+        var tempArray = []
+        for (var i = 1; i<7;i++) {
+            console.log("i: "+i+"selectedItem: "+this.state.currentSlideshow)
+            if (i === parseInt(this.state.currentSlideshow)) {
+                tempArray[i-1] = this.props.secondaryColor
+                console.log("yay")
+            }
+            else {
+                tempArray[i-1] = this.props.primaryColor
+            }
+        }
+        this.setState({
+            dotColors: tempArray
+        })
     }
     render() {
         return (
@@ -125,7 +160,7 @@ class Slideshow extends Component {
                 <div id="portfolioItemsContainer" className="portfolioItemsContainer" style={{left: this.state.slideshowScrollDistance+"vw"}}>
                     {PortfolioItems.map( item => 
                     { return (
-                        <div style={{borderColor: this.props.fontColor, background: this.props.fontColor === "black" ? "white" : "black"}}ref={this.portfolioRefs[item.id-1]}key={"container"+item.id} id={"container"+item.id} className={"portfolioContainer unselected portfolioContainer"+item.id }>
+                        <div style={{borderColor: this.props.primaryColor, background: this.props.primaryColor === "black" ? "white" : "black"}}ref={this.portfolioRefs[item.id-1]}key={"container"+item.id} id={"container"+item.id} className={"portfolioContainer unselected portfolioContainer"+item.id }>
                             <img 
                                 key={"image"+item.id} 
                                 className={this.state.highlighted === item.id ? "imgHighlighted portfolioImage" :"portfolioImage"} 
@@ -156,16 +191,39 @@ class Slideshow extends Component {
                 </div>
 
                 <span className="portfolioNavigation">
-                    <div onClick={()=> this.moveDirection("left")} className={this.state.currentSlideshow !== 1 ? "navArrowActive navArrowLeft" : "navArrowInactive navArrowLeft"}></div>
+                    <div 
+                        onClick={()=> this.moveDirection("left")} 
+                        className={this.state.currentSlideshow !== 1 ? "navArrowActive navArrowLeft" : "navArrowInactive navArrowLeft"}
+                        style={{borderColor: this.props.primaryColor}}
+                        >
+                    </div>
                     {
                         
                         PortfolioItems.map( item => {
                             return (
-                                <div ref={this.dotRefs[item.id-1]} key={item.id} onClick={() => this.goToPortfolioItem(item.id)}id={"dotNumber"+item.id}className={"dot"}></div>
+                                <div 
+                                    ref={this.dotRefs[item.id-1]}
+                                    key={item.id} 
+                                    
+                                    style={{backgroundColor: 
+                                        this.state.dotColors[item.id-1] === '' ? this.props.primaryColor : this.state.dotColors[item.id-1] 
+                                    
+                                    }}
+                                    onClick={() => this.goToPortfolioItem(item.id)}
+                                    id={"dotNumber"+item.id}
+                                    className={"dot"}
+                                    onMouseEnter={()=> this.dotHovered(item.id)}
+                                    onMouseLeave={()=> this.dotUnHovered()}
+                                    >
+                                </div>
                             )
                         })
                     }
-                    <div  onClick={()=> this.moveDirection("right")} className={this.state.currentSlideshow !== 6 ? "navArrowActive navArrowRight" : "navArrowInactive navArrowRight"}></div>
+                    <div  
+                        onClick={()=> this.moveDirection("right")} 
+                        className={this.state.currentSlideshow !== 6 ? "navArrowActive navArrowRight" : "navArrowInactive navArrowRight"}
+                        style={{borderColor: this.props.primaryColor}}>
+                    </div>
                 </span>
 
             </div>

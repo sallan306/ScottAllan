@@ -28,12 +28,12 @@ class Navbar extends Component {
           
           }
             }>
-            <div className="backgroundPseudo backgroundSidenav" style={{
+            {/* <div className="backgroundPseudo backgroundSidenav" style={{
                   backgroundImage: "url("+this.props.backgroundBlur+")",
                   backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent),
                   height: this.props.sideNavVisible ? "7.5vh" : "0vh",
                   transition: "0.5s"
-          }}/>
+          }}/> */}
           <button className="sideNavButton" onClick={()=> this.props.toggleSideNav()}>
             <div className={this.props.sideNavVisible ? "menuItem menuItem1 open1" : "menuItem menuItem1"} style={{opacity: this.state.opacity, background: this.props.fontColor}}></div>
             <div className={this.props.sideNavVisible ? "menuItem menuItem2 open2" : "menuItem menuItem2"} style={{background: this.props.fontColor}}></div>
@@ -77,7 +77,7 @@ class Navbar extends Component {
             </span>
 
           </span>
-          <span className="navButtonsContainer">
+          <span className="navButtonsContainer" style={{borderBottomColor: this.props.fontColor}}>
           <span className="navButton navContactButton" onClick={() => {this.props.goToPage("contact")}}>
               <div style={{color: this.props.fontColor}} className="navName navNameContact">Contact</div>
               <div id="underlineContact"style={{background: this.props.fontColor}} className={this.props.selectedNav === "contact" ? "navUnderline navSelected" : "navUnderline"}></div>

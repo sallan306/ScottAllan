@@ -28,8 +28,8 @@ class Portfolio extends Component {
                             backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
                     }}/>
                     <Slideshow 
-                        fontColor={this.props.fontColor}
-                        SVGSecondaryColor={this.props.SVGSecondaryColor}/>
+                        primaryColor={this.props.fontColor}
+                        secondaryColor={this.props.SVGSecondaryColor}/>
                 </div>
             </div>
 
