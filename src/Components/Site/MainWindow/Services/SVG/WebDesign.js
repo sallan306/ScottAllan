@@ -1,5 +1,4 @@
 import React, { Component } from "react"; 
-import "./WebDesign.css"
                 
 
 class WebDesign extends Component {
@@ -9,16 +8,18 @@ class WebDesign extends Component {
         return (
                 <svg 
                     version="1.1" 
-                    id="Capa_1" 
+                    className="serviceSVG webDesign"
                     xmlns="http://www.w3.org/2000/svg" 
-                    width="125" 
-                    height="125" 
                     viewBox="0 19.5 47.168 21" 
                     fill={this.props.fillColor}
-                    style={{transition: "1s"}}
+                    style={{
+                        transition: "1s",
+                        overflow: "visible"
+                    }}
                 >
                 <g>
-                <g className="insideTheComputer">
+                <g className="insideTheComputer"
+                    stlye={{overflow: "visible"}}>
                             <path d="M10.965,19.217h25.166v-6.166H10.965V19.217z M11.465,13.551h24.166v5.166H11.465V13.551z"/>
                             <path d="M10.941,25.764h7.739v-5.562h-7.739V25.764z M11.441,20.701h6.739v4.562h-6.739V20.701z"/>
                             <path d="M19.647,25.764h7.738v-5.562h-7.738V25.764z M20.147,20.701h6.738v4.562h-6.738V20.701z"/>
@@ -67,7 +68,7 @@ class WebDesign extends Component {
                     style={{transition: "1s"}}
                         fill={this.props.SVGSecondaryColor} 
                         stroke={this.props.fillColor === "black" ? "black" : "white"} 
-                        stroke-width="0.5"
+                        strokeWidth="0.5"
                         d="M47.168,36.918V6.699H0v30.219h19.252v1.945H9.188v1.605h28.179v-1.605h-9.846v-1.945H47.168z M3.45,32.469V10.149
                         h40.267v22.317H3.45V32.469z"
                     />

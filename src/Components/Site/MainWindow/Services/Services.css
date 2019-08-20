@@ -19,5 +19,38 @@
 }
 
 .fancyBorder {
-    transition: 1s
+    transition: 1s;
+    /* width: 310px;
+    height: 60; */
+}
+.serviceSVG {
+    width: 125px;
+    height: 125px;
+}
+
+@media only screen and (max-width: 420px) {
+    .serviceBox {
+        width: 95%;
+        margin-left: 2.5%;
+    }
+       
+    .fancyBorder {
+        width: 75%;
+    }
+    .servicesContainer {
+        margin-top: 4vh;
+    }
+    .serviceBlurb {
+        padding-top: 15px;
+        margin-bottom: 0;
+        font-size: 12px;
+    }
+    .serviceSVG {
+        width: 25%;
+        height: 25%;
+    }
+    .webDesign {
+        /* margin-top: 5vh; */
+        overflow: visible;
+    }
 }

@@ -24,7 +24,8 @@ class Slideshow extends Component {
         showInfoPanel: false,
         selectedItem: [],
         currentSlideshow: 1,
-        slideshowScrollDistance: 32.5
+        slideshowScrollDistance: 32.5,
+        slideSize: 30,
     }
 
     mouseEnter = value => {
@@ -70,7 +71,7 @@ class Slideshow extends Component {
     goToPortfolioItem = selectedDot => {
         this.setState({
             currentSlideshow: parseInt(selectedDot),
-            slideshowScrollDistance: ((selectedDot-1)*(-30)+32.5)
+            slideshowScrollDistance: ((selectedDot-1)*(-this.state.slideSize)+32.5)
         })
         PortfolioItems.map( item => {
             return (

@@ -3,9 +3,6 @@ import React, { Component } from "react";
 
 class Border extends Component {
 
-    componentDidMount() {
-
-    }
     render(props) {
         return (
             <svg
@@ -13,9 +10,9 @@ class Border extends Component {
             className="fancyBorder Border1"
             x="0px"
             y="0px"
+            width={(this.props.borderWidth/1000)*310}
+            height={"60px"}
             viewBox="0 0 310 60"
-            width="310"
-            height="60"
             fill={this.props.fillColor}
 
             >

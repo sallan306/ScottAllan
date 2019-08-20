@@ -13,19 +13,48 @@
     user-select: none; 
 }
 .navButtonsContainer {
+    border-bottom: 1px solid black;
+    width: 100vw;
     right: 0vw;
-    top: 7px;
-    z-index: 99;
+    height: 7.5vh;
+    top: 0px;
+    transition: 0.5s;
     position: absolute;
 }
 .navButton {
     width: 70px;
     height: 35px;
-    float: left;
+    float: right;
+    margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
     text-align: center;
     cursor: pointer;
+}
+
+.animalButton {
+    background: transparent;
+    border: 0;
+    opacity: 0.4;
+    transition: 1s
+}
+.animalSelected {
+    opacity: 0.6;
+    animation-name: opacitySlider;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-delay: 0ms;
+    pointer-events: none;
+    outline: none;
+}
+.animalSelected:focus {
+    outline: none
+}
+
+@keyframes opacitySlider {
+    from {opacity: 1;}
+    to {opacity: 0.6;}
 }
 .navName {
     color: #3fb0ac;
@@ -85,23 +114,17 @@
 }
 .sideNav {
     position: fixed;
+    z-index: 99;
     left: 0;
-    width: 100%;
+    width: 30%;
     height: 15vh;
-    transition: 1s;
-    border-style: solid;
-    border-color: black;
-    border-left-width: 0;
-    border-right-width: 0;
-    border-top-width: 0;
-    border-bottom-width: 1px;
+    transition: 0.5s;
     
 }
 .sideNavLinks {
     position: fixed;
-    top: 2vh;
-    transition: 1s;
-    left: 15vw;
+    transition: 0.5s;
+    left: 10vw;
 
 }
 
@@ -115,24 +138,29 @@
 }
 .open1 {
     transform:  rotate(-45deg)
-                translate(-13px,12px);
+                translate(-9px,8px);
 }
 .open2 {
     opacity: 0;
 }
 
 .open3 {
-    transform:  rotate(45deg);
-                /* translateY(10px); */
+    transform:  rotate(45deg)
+                translate(-4px,-4px);
 }
 
 .resumeContainer, .animalContainer {
     text-align: left;
 }
-.resumeButton, .animalButton {
+.resumeButton {
     background: transparent;
     border: 0;
     opacity: 0.7;
+    transition: 0.5s
+}
+
+.animalButton {
+    height: 7.5vh;
 }
 .resumeButton:hover, .animalButton:hover {
     background: transparent;

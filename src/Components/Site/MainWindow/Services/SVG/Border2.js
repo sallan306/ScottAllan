@@ -6,12 +6,6 @@ class Border extends Component {
         cogOpacity: 1
     }
     componentDidMount() {
-
-        // setInterval(()=> {
-        //     this.setState({
-        //         cogOpacity: this.state.cogOpacity === 0.2 ? 1 : 0.2
-        //     })
-        // },600)
     }
     render(props) {
         return (
@@ -21,7 +15,7 @@ class Border extends Component {
                 xmlns="http://www.w3.org/2000/svg" 
                 x="0px" y="0px"
                 viewBox="0 0 310 60"
-                width="310"
+                width={(this.props.borderWidth/1000)*310}
                 height="60"
                 fill={this.props.fillColor}
             >

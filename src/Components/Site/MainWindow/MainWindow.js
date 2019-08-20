@@ -15,7 +15,7 @@ class MainWindow extends Component {
         <div 
             id="mainWindow" 
             className="mainWindow" 
-            style={{marginTop: this.props.sideNavVisible ? "15vh" : 0}}
+            style={{marginTop: this.props.sideNavVisible ? "7.5vh" : "7.5vh"}}
             onScroll={ ()=> this.props.getPercentage()}
         >   
             {/* {<div className="testVar2">{this.props.changingBackground ? "true" : "false"}</div>} */}
@@ -51,6 +51,7 @@ class MainWindow extends Component {
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
                 changingBackground={this.props.changingBackground}
                 SVGSecondaryColor={this.props.SVGSecondaryColor}
+                width={this.props.width}
             />
             <Portfolio 
                 selectedNav={this.props.selectedNav}

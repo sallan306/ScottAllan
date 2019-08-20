@@ -1,24 +1,73 @@
 
 .paragraph1 {
     float: left;
-    width: 40vw;
+    width: 40%;
     height: 100%;
-    margin: 8vw;
+    margin-top: 22.5vh;
+    margin-right: 5vw;
+    margin-left: 5vw;
     font-size: 18px;
 }
 
-#aboutMeCard {
-    height: 60vh;
-    border: 5px;
+.aboutMeCard {
+    max-width: 40%;
+    height: 80%;
     border-style: solid;
-    margin-top: 15vh;
+    margin-top: 5%;
     float: left;
-    width: 45vh;
     padding: 0;
-    margin-left: 4vw;
+    margin-left: 5%;
 }
 
 .aboutContainer {
     width: 100%;
+    height: 100%;
 }
 
+@media only screen and (max-width: 1000px) {
+    .paragraph1 {
+        width: 30vw;
+        font-size: 15px;
+    }
+    .aboutMeCard {
+        margin-left: 5vw
+
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    .paragraph1 {
+        margin-top: 30vh;
+        width: 30vw;
+        font-size: 12px;
+    }
+    .aboutMeCard {
+        margin-left: 10vw
+
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .paragraph1 {
+        margin-top: 30vh;
+        width: 35vw;
+        font-size: 12px;
+    }
+    .aboutMeCard {
+        margin-left: 10vw
+
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    .paragraph1 {
+        margin-top: 2vh;
+        width: 95%;
+        margin-left: 2.5%;
+        font-size: 11px;
+    }
+    .aboutMeCard {
+        margin-left: 2.5%;
+        margin-top: 2vh;
+        width: 95%;
+    }
+  }

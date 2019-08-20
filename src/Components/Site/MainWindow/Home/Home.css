@@ -47,7 +47,7 @@
     float: left;
     text-align: center;
     position: relative;
-    top: 80vh;
+    top: 72vh;
     animation-name: blink;
     animation-iteration-count: infinite;
     animation-duration: 750ms;

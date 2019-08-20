@@ -36,7 +36,8 @@ class Site extends Component {
       scrollThrottle: 1,
       backgroundScrollSpeed: -8,
       width: 0,
-      changingBackground: false
+      changingBackground: false,
+      selectedAnimal: "giraffe"
   }
   componentDidMount() {
     window.addEventListener('resize', () => this.updateWindowDimensions())
@@ -79,6 +80,7 @@ class Site extends Component {
     })
     if (input === "elephant") {
       this.setState({
+        selectedAnimal: "elephant",
         backgroundPicture: elephantPic, 
         backgroundBlur: elephantBlur,
         fontColor: "black", 
@@ -87,6 +89,7 @@ class Site extends Component {
     }
     else if (input === "giraffe") {
       this.setState({
+        selectedAnimal: "giraffe",
         backgroundPicture: giraffePic, 
         backgroundBlur: giraffeBlur,
         fontColor: "black", 
@@ -94,7 +97,8 @@ class Site extends Component {
         SVGSecondaryColor: "darkred"})
     }
     else if (input === "pug") {
-      this.setState({
+      this.setState({        
+        selectedAnimal: "pug",
         backgroundPicture: pugPic, 
         backgroundBlur: pugBlur,
         fontColor: "white", 
@@ -119,10 +123,10 @@ class Site extends Component {
     if (this.state.sideNavVisible) {
       this.setState({sideNavVisible: false})
      setTimeout( () => {      
-        $("#mainWindow").animate({scrollTop: window.innerHeight*multiplier - 30}, 'slow');
+        $("#mainWindow").animate({scrollTop: window.innerHeight*multiplier - 30}, 'fast');
         this.getPercentage()
       }
-      ,500)
+      ,200)
     }
     else {
       $("#mainWindow").animate({scrollTop: window.innerHeight*multiplier - 30}, 'fast');
@@ -204,6 +208,7 @@ class Site extends Component {
               backgroundBlur={this.state.backgroundBlur}
               scrollPercent={this.state.scrollPercent}
               backgroundScrollSpeed={this.state.backgroundScrollSpeed}
+              selectedAnimal={this.state.selectedAnimal}
             />
             <MainWindow 
               closeSideNav={this.closeSideNav}
@@ -225,6 +230,7 @@ class Site extends Component {
               backgroundScrollSpeed={this.state.backgroundScrollSpeed}
               changingBackground={this.state.changingBackground}
               SVGSecondaryColor={this.state.SVGSecondaryColor}
+              width={this.state.width}
             />
         </div>  
       )

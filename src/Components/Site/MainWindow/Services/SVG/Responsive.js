@@ -17,9 +17,8 @@ class Responsive extends Component {
         return (
             <svg 
                 version="1.1" 
+                className="serviceSVG responsive"
                 xmlns="http://www.w3.org/2000/svg" 
-                width="125" 
-                height="125"
                 viewBox="0 0 1000 1000"
                 fill={this.props.fillColor}
             >

@@ -23,7 +23,13 @@ class About extends Component {
                             backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
                     }}/>
                         <div style={{position: "relative",zIndex: 11}}className="container aboutContainer">
-                            <img style={{transition: "1s",borderColor: this.props.fontColor}}id="aboutMeCard" className="col-md-5"src={myPicuture} alt="me" />
+                            <img    style={{
+                                        transition: "1s",
+                                        borderColor: this.props.fontColor
+                                    }}
+                                    className="aboutMeCard" 
+                                    src={myPicuture} 
+                                    alt="me" />
                             <p className="paragraph1" style={{ transition: "1s",color: this.props.fontColor}}>
                                 From 5 years old i have loved the content behind a screen, and to this day I remain strong in my quest to be the ultimate computer nerd. 
                                 I have a passion for visually appealing and effective web solutions, and have been honing my skills for years. I want your site

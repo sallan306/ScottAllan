@@ -8,9 +8,8 @@ class SEO extends Component {
         return (
 <svg 
     version="1.0" 
+    className="serviceSVG seo"
     xmlns="http://www.w3.org/2000/svg"
-    width="125" 
-    height="125" 
     viewBox="0 0 372.000000 374.000000"
     preserveAspectRatio="xMidYMid meet"
     fill={this.props.fillColor}
@@ -22,7 +21,7 @@ class SEO extends Component {
 
             fill={this.props.SVGSecondaryColor}
             stroke={this.props.fillColor === "black" ? "black" : "white"} 
-            stroke-width="20" 
+            strokeWidth="20" 
             style={{transition: "1s"}}
             d="M1707 3669 c-459 -59 -865 -415 -992 -869 -200 -712 300 -1439 1042
             -1513 195 -19 420 16 591 94 36 16 69 26 73 22 4 -5 64 -96 132 -202 l125
