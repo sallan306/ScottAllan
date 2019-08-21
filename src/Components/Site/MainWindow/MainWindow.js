@@ -63,6 +63,7 @@ class MainWindow extends Component {
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
                 changingBackground={this.props.changingBackground}
                 SVGSecondaryColor={this.props.SVGSecondaryColor}
+                width={this.props.width}
             />
             <Contact
                 selectedNav={this.props.selectedNav}

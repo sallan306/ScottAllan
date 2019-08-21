@@ -28,7 +28,8 @@ class Slideshow extends Component {
         currentSlideshow: 1,
         slideSize: 300,
         dotColors: [ "darkred",'','','','',''],
-        result: 0
+        result: 0,
+        sizeMultiplier: 1
     }
     mouseEnter = value => {
         this.setState({ highlighted: value })
@@ -62,11 +63,11 @@ class Slideshow extends Component {
         this.dotRefs[0].current.classList.add("dotSelected")
 
         switch(this.props.slideshowSize) {
-            case "large" : this.setState({ slideSize: 300})
+            case "large" : this.setState({ sizeMultiplier: 1})
             break
-            case "medium" : this.setState({ slideSize: 200})
+            case "medium" : this.setState({ sizeMultiplier: 0.7})
             break
-            case "small" : this.setState({ slideSize: 100})
+            case "small" : this.setState({ sizeMultiplier: 0.4})
             break
         }
 
@@ -247,10 +248,10 @@ class Slideshow extends Component {
                                     key={item.id} 
                                     style={{
                                         backgroundColor: this.state.dotColors[item.id-1] === '' ? this.props.primaryColor : this.state.dotColors[item.id-1],
-                                        width: (this.state.slideSize*0.1),
-                                        height: (this.state.slideSize*0.1),
-                                        marginLeft: (this.state.slideSize*0.05),
-                                        marginRight: (this.state.slideSize*0.05)
+                                        width: (this.state.slideSize*0.1*this.state.sizeMultiplier),
+                                        height: (this.state.slideSize*0.1*this.state.sizeMultiplier),
+                                        marginLeft: (this.state.slideSize*this.state.sizeMultiplier*0.05),
+                                        marginRight: (this.state.slideSize*this.state.sizeMultiplier*0.05)
                                     
                                     }}
                                     onClick={() => this.goToPortfolioItem(item.id)}
