@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./About.css"
-import myPicuture from "../Images/MeBackyard.jpg";              
+import myPicuture from "../Images/MeBackyard.jpg";         
+import myPicutureWide from "../Images/MeBackyardWide.jpg"     
 class About extends Component {
 
     render() {
@@ -28,7 +29,7 @@ class About extends Component {
                                         borderColor: this.props.fontColor
                                     }}
                                     className="aboutMeCard" 
-                                    src={myPicuture} 
+                                    src={ this.props.width > 420 ? myPicuture : myPicutureWide} 
                                     alt="me" />
                             <p className="paragraph1" style={{ transition: "1s",color: this.props.fontColor}}>
                                 From 5 years old i have loved the content behind a screen, and to this day I remain strong in my quest to be the ultimate computer nerd. 

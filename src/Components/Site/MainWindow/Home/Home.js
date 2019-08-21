@@ -97,7 +97,8 @@ class Home extends Component {
                      />
                 <span   
                     id="myName"
-                    className="myName">Hello, I'm Scott. 
+                    className="myName"
+                    style={{color: this.props.fontColor}}>Hello, I'm Scott. 
                     <span   
                         id="myJob" 
                         style={{color: this.state.jobColor, transition: "0.1s", cursor: "auto"}}> 

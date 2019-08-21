@@ -29,7 +29,9 @@ class Portfolio extends Component {
                     }}/>
                     <Slideshow 
                         primaryColor={this.props.fontColor}
-                        secondaryColor={this.props.SVGSecondaryColor}/>
+                        secondaryColor={this.props.SVGSecondaryColor}
+                        slideshowSize={"large"}
+                    />
                 </div>
             </div>
 

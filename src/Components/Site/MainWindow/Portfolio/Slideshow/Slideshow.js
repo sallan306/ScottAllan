@@ -26,9 +26,9 @@ class Slideshow extends Component {
         showInfoPanel: false,
         selectedItem: [],
         currentSlideshow: 1,
-        slideshowScrollDistance: 32.5,
-        slideSize: 30,
-        dotColors: [ "darkred",'','','','','']
+        slideSize: 300,
+        dotColors: [ "darkred",'','','','',''],
+        result: 0
     }
     mouseEnter = value => {
         this.setState({ highlighted: value })
@@ -61,6 +61,19 @@ class Slideshow extends Component {
         this.portfolioRefs[0].current.classList.remove("unselected")
         this.dotRefs[0].current.classList.add("dotSelected")
 
+        switch(this.props.slideshowSize) {
+            case "large" : this.setState({ slideSize: 300})
+            break
+            case "medium" : this.setState({ slideSize: 200})
+            break
+            case "small" : this.setState({ slideSize: 100})
+            break
+        }
+
+        this.setState ({
+            result: -this.state.currentSlideshow*this.state.slideSize
+        })
+
 
     }
     componentDidUpdate() {
@@ -73,7 +86,12 @@ class Slideshow extends Component {
     goToPortfolioItem = selectedDot => {
         this.setState({
             currentSlideshow: parseInt(selectedDot),
-            slideshowScrollDistance: ((selectedDot-1)*(-this.state.slideSize)+32.5)
+            
+        }, () => {
+            console.log(this.state.currentSlideshow)
+            this.setState({
+                result: -this.state.slideSize*1.2*(this.state.currentSlideshow-1)-this.state.slideSize
+            })
         })
         PortfolioItems.map( item => {
             return (
@@ -124,10 +142,10 @@ class Slideshow extends Component {
     dotUnHovered = () => {
         var tempArray = []
         for (var i = 1; i<7;i++) {
-            console.log("i: "+i+"selectedItem: "+this.state.currentSlideshow)
+            // console.log("i: "+i+"selectedItem: "+this.state.currentSlideshow)
             if (i === parseInt(this.state.currentSlideshow)) {
                 tempArray[i-1] = this.props.secondaryColor
-                console.log("yay")
+                // console.log("yay")
             }
             else {
                 tempArray[i-1] = this.props.primaryColor
@@ -142,7 +160,7 @@ class Slideshow extends Component {
             <div id="slideshow" className="slideshow" style={{position: "relative", zIndex: 10}}>
             {/* <div className="debugger">
             {"current slideshow: "+this.state.currentSlideshow}
-            {"map length: "+this.selectedItem}
+            {"result: "+this.state.result}
             </div> */}
 
                 <div className="infoPanel" style={{opacity: this.state.showInfoPanel ? 1 : 0, visibility: this.state.showInfoPanel ? "visible" : "hidden"}}>
@@ -157,43 +175,64 @@ class Slideshow extends Component {
                         }
                     </ul>
                 </div>
-                <div id="portfolioItemsContainer" className="portfolioItemsContainer" style={{left: this.state.slideshowScrollDistance+"vw"}}>
-                    {PortfolioItems.map( item => 
-                    { return (
-                        <div style={{borderColor: this.props.primaryColor, background: this.props.primaryColor === "black" ? "white" : "black"}}ref={this.portfolioRefs[item.id-1]}key={"container"+item.id} id={"container"+item.id} className={"portfolioContainer unselected portfolioContainer"+item.id }>
-                            <img 
-                                key={"image"+item.id} 
-                                className={this.state.highlighted === item.id ? "imgHighlighted portfolioImage" :"portfolioImage"} 
-                                src={item.imgURL}
-                                alt={item.name}
-
-                            />
-                            <div                             
-                                onMouseEnter={() => this.mouseEnter(item.id)}
-                                onMouseLeave={() => this.mouseLeave()} 
-                                className={this.state.highlighted === item.id ? "highlighted hiddenContainer" : "hiddenContainer"} >
-                                <p  
-                                    key={"title"+item.id}
-                                    className={"portfolioTitle"}>{item.name}            
-                                </p>
-                                <div className="buttonBox">
-                                    <AwesomeButtonSocial   size="icon" href={item.github} type="github" ></AwesomeButtonSocial>
-                                    <AwesomeButton   size="icon" href={item.liveLink} >DEMO</AwesomeButton>
-                                    <AwesomeButton   size="icon" onPress={() => this.displayMoreInfo(item)} >INFO</AwesomeButton>
+                <div className="PortfolioItemsCenteringBox">
+                    
+                    <div 
+                        id="portfolioTrack" 
+                        className="portfolioTrack" 
+                        style={{ 
+                            left: this.state.result,
+                            width: (this.state.slideSize*8)
+                            }}>
+                        {PortfolioItems.map( item => 
+                        { return (
+                            <div 
+                                id={"container"+item.id} 
+                                className={"portfolioContainer unselected portfolioContainer"+item.id }
+                                ref={this.portfolioRefs[item.id-1]}
+                                key={"container"+item.id} 
+                                style={{
+                                    borderColor: this.props.primaryColor, 
+                                    background: this.props.primaryColor === "black" ? "white" : "black",
+                                    width: this.state.slideSize,
+                                    height: this.state.slideSize,
+                                    margin: (this.state.slideSize*0.1)
+                                }}
+                            >
+                                <img 
+                                    key={"image"+item.id} 
+                                    className={this.state.highlighted === item.id ? "imgHighlighted portfolioImage" :"portfolioImage"} 
+                                    src={item.imgURL}
+                                    alt={item.name}
+                                />
+                                <div                             
+                                    onMouseEnter={() => this.mouseEnter(item.id)}
+                                    onMouseLeave={() => this.mouseLeave()} 
+                                    className={this.state.highlighted === item.id ? "highlighted hiddenContainer" : "hiddenContainer"} >
+                                    <p  
+                                        key={"title"+item.id}
+                                        className={"portfolioTitle"}>{item.name}            
+                                    </p>
+                                    <div className="buttonBox">
+                                        <AwesomeButtonSocial   size="icon" href={item.github} type="github" ></AwesomeButtonSocial>
+                                        <AwesomeButton   size="icon" href={item.liveLink} >DEMO</AwesomeButton>
+                                        <AwesomeButton   size="icon" onPress={() => this.displayMoreInfo(item)} >INFO</AwesomeButton>
+                                    </div>
+                                    <h6  
+                                        key={"paragraph"+item.id}
+                                        className="portfolioTitle2">{item.shortDescription}
+                                    </h6>
                                 </div>
-                                <h6  
-                                    key={"paragraph"+item.id}
-                                    className="portfolioTitle2">{item.shortDescription}
-                                </h6>
                             </div>
-                        </div>
-                    )})}
+                        )})}
+                    </div>
                 </div>
+                
 
                 <span className="portfolioNavigation">
                     <div 
-                        onClick={()=> this.moveDirection("left")} 
                         className={this.state.currentSlideshow !== 1 ? "navArrowActive navArrowLeft" : "navArrowInactive navArrowLeft"}
+                        onClick={()=> this.moveDirection("left")} 
                         style={{borderColor: this.props.primaryColor}}
                         >
                     </div>
@@ -202,16 +241,19 @@ class Slideshow extends Component {
                         PortfolioItems.map( item => {
                             return (
                                 <div 
+                                    id={"dotNumber"+item.id}
+                                    className={ item.id === 1 ? "dot dotSelected" : "dot"}
                                     ref={this.dotRefs[item.id-1]}
                                     key={item.id} 
-                                    
-                                    style={{backgroundColor: 
-                                        this.state.dotColors[item.id-1] === '' ? this.props.primaryColor : this.state.dotColors[item.id-1] 
+                                    style={{
+                                        backgroundColor: this.state.dotColors[item.id-1] === '' ? this.props.primaryColor : this.state.dotColors[item.id-1],
+                                        width: (this.state.slideSize*0.1),
+                                        height: (this.state.slideSize*0.1),
+                                        marginLeft: (this.state.slideSize*0.05),
+                                        marginRight: (this.state.slideSize*0.05)
                                     
                                     }}
                                     onClick={() => this.goToPortfolioItem(item.id)}
-                                    id={"dotNumber"+item.id}
-                                    className={"dot"}
                                     onMouseEnter={()=> this.dotHovered(item.id)}
                                     onMouseLeave={()=> this.dotUnHovered()}
                                     >

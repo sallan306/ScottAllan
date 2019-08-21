@@ -186,7 +186,7 @@
         margin-right: 0px;
         width: 58px;
         height: 35px;
-        float: left;
+        float: right;
     }
     .sideNavButton {
         top: 1vh;
@@ -196,7 +196,6 @@
 
         position: fixed;
         right: 10px;
-        top: 15px;
     }
 }
 
@@ -217,6 +216,5 @@
 
         position: fixed;
         right: 10px;
-        top: 15px;
     }
 }
