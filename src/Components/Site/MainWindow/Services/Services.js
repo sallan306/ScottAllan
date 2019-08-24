@@ -15,7 +15,7 @@ componentDidMount() {
 }
 
 isMobile = () => {
-    if (this.props.width > 700) {
+    if (this.props.width > 420) {
         return (
             <div className="servicesContainer">
                 <div className="serviceBox web">
@@ -29,8 +29,9 @@ isMobile = () => {
                     <p style={{color: this.props.primaryColor}} className="serviceBlurb">Fluid Front-End development with effective User Experience solutions that draws users back to your site</p>                       
                 </div>
                 <div className="serviceBox seo">
-                    <SEO fillColor={this.props.primaryColor}
-                    secondaryColor={this.props.secondaryColor}/>
+                    <SEO 
+                        fillColor={this.props.primaryColor}
+                        secondaryColor={this.props.secondaryColor}/>
                     <Border2 
                         fillColor={this.props.primaryColor}
                         borderWidth={this.props.width}
@@ -38,8 +39,9 @@ isMobile = () => {
                     <p style={{color: this.props.primaryColor}} className="serviceBlurb">Proper Search Engine Optimization and Indexing so your voice gets the attention that it deserves</p>  
                 </div>
                 <div className="serviceBox responsive">
-                    <Responsive fillColor={this.props.primaryColor}
-                    secondaryColor={this.props.secondaryColor}    />
+                    <Responsive 
+                        fillColor={this.props.primaryColor}
+                        secondaryColor={this.props.secondaryColor}    />
                     <Border3 
                         fillColor={this.props.primaryColor}
                         borderWidth={this.props.width}
@@ -56,19 +58,21 @@ isMobile = () => {
                 <div className="serviceBox web">
                     <WebDesign 
                         fillColor={this.props.primaryColor}
-                        SVGSecondaryColor={this.props.SVGSecondaryColor}        />
+                        secondaryColor={this.props.secondaryColor}        />
                     <p style={{color: this.props.primaryColor}} className="serviceBlurb">Fluid Front-End development with effective User Experience solutions that draws users back to your site</p>                       
                     {/* <Border1 fillColor={this.props.primaryColor}/> */}
                 </div>
                 <div className="serviceBox seo">
-                    <SEO fillColor={this.props.primaryColor}
-                    SVGSecondaryColor={this.props.SVGSecondaryColor}/>
+                    <SEO 
+                        fillColor={this.props.primaryColor}
+                        secondaryColor={this.props.secondaryColor}/>
                     <p style={{color: this.props.primaryColor}} className="serviceBlurb">Proper Search Engine Optimization and Indexing so your voice gets the attention that it deserves</p>  
                     {/* <Border2 fillColor={this.props.primaryColor}/> */}
                 </div>
                 <div className="serviceBox responsive">
-                    <Responsive fillColor={this.props.primaryColor}
-                    SVGSecondaryColor={this.props.SVGSecondaryColor}    />
+                    <Responsive 
+                        fillColor={this.props.primaryColor}
+                        secondaryColor={this.props.secondaryColor}    />
                     <p style={{color: this.props.primaryColor}} className="serviceBlurb">Responsiveness across multiple platforms and devices. Your customers won't be limited by the shape of their screen</p>  
                     {/* <Border3 fillColor={this.props.primaryColor}/> */}
                 </div>

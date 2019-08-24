@@ -6,6 +6,8 @@ import "./Slideshow.css"
 
 
                 
+
+var currentColor = ""
 class Slideshow extends Component {
     
     constructor(props) {
@@ -20,7 +22,6 @@ class Slideshow extends Component {
             )
         })
     }
-    
     state = {
         highlighted: "",
         showInfoPanel: false,
@@ -29,8 +30,11 @@ class Slideshow extends Component {
         slideSize: 300,
         dotColors: [ "navy",'','','','',''],
         result: 0,
-        sizeMultiplier: 1
+        sizeMultiplier: 1,
+        currentColor: ""
     }
+
+
     mouseEnter = value => {
         this.setState({ highlighted: value })
         // console.log("enter")
@@ -72,18 +76,26 @@ class Slideshow extends Component {
             default : {
                 break
             }
+            
         }
+        currentColor = this.props.secondaryColor
+        
 
         this.setState ({
-            result: -this.state.currentSlideshow*this.state.slideSize
+            result: -this.state.currentSlideshow*this.state.slideSize,
+            dotColors: [ this.props.secondaryColor,'','','','','']
         })
 
 
     }
     componentDidUpdate() {
 
-            // this.portfolioRefs[this.state.currentSlideshow-1].current.classList.remove("unselected")
-            // this.dotRefs[this.state.currentSlideshow-1].current.classList.add("dotSelected")
+        if (currentColor !== this.props.secondaryColor) {
+
+            this.dotUnHovered()
+            currentColor = this.props.secondaryColor
+
+        }
 
     }
 
@@ -167,7 +179,16 @@ class Slideshow extends Component {
             {"result: "+this.state.result}
             </div> */}
 
-                <div className="infoPanel" style={{opacity: this.state.showInfoPanel ? 1 : 0, visibility: this.state.showInfoPanel ? "visible" : "hidden"}}>
+                <div className="infoPanel" 
+                    style={{
+                        opacity: this.state.showInfoPanel ? 1 : 0, 
+                        visibility: this.state.showInfoPanel ? "visible" : "hidden",
+                        color: this.props.primaryColor,
+                        borderColor: this.props.primaryColor,
+                        background: this.props.primaryColor === "white" ? "black" : "white"
+                    }}
+
+                >
                     <p className="infoPanelDescription">{this.state.selectedItem.description}</p>
                     <ul>
                         {

@@ -1,24 +1,35 @@
 
-.paragraph1 {
+
+.centerImage, .centerParagraph {
     float: left;
-    width: 40%;
-    height: 100%;
-    margin-top: 22.5vh;
-    margin-right: 5vw;
-    margin-left: 5vw;
-    font-size: 18px;
 }
 .centerImage {
-    width: 50%;
+    width: 30%;
     height: 100%;
 }
 .aboutMeCard {
     height: 80%;
     border-style: solid;
-    margin-top: 10%;
+    margin-top: 15%;
     float: left;
     padding: 0;
     margin-left: 5%;
+}
+.centerParagraph {
+    width: 70%;
+}
+
+.paragraph1 {
+    float: left;
+    width: 90%;
+    height: 100%;
+    margin-top: 20%;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    font-size: 18px;
+}
+.container {
+    max-width: 1200px   ;
 }
 
 .aboutContainer {
@@ -28,7 +39,6 @@
 
 @media only screen and (max-width: 1000px) {
     .paragraph1 {
-        width: 30vw;
         font-size: 15px;
     }
     /* .aboutMeCard {
@@ -38,8 +48,6 @@
 
   @media only screen and (max-width: 900px) {
     .paragraph1 {
-        margin-top: 30vh;
-        width: 30vw;
         font-size: 12px;
     }
     /* .aboutMeCard {
@@ -49,28 +57,45 @@
 
   @media only screen and (max-width: 800px) {
     .paragraph1 {
-        margin-top: 30vh;
-        width: 35vw;
         font-size: 12px;
     }
-    /* .aboutMeCard {
+    .centerImage {
+        width: 45%
+    }
+    .centerParagraph {
+        width: 45%;
+    }
+    .paragraph1 {
+        margin-top: 25vh;
+        width: 100%;
 
-    } */
+    }
+  }
+  @media only screen and (max-width: 550px) {
+
+    .paragraph1 {
+        font-size: 11px;
+        margin-top: 2.5%;
+        margin-left: 0;
+    }
+    .aboutMeCard {
+        width: 70%;
+        margin-left: 15%;
+        height: auto;
+        margin-top: 2.5%;
+    }
+
   }
   @media only screen and (max-width: 420px) {
     .paragraph1 {
         margin-top: 2vh;
         width: 95%;
         margin-left: 2.5%;
-        font-size: 13px;
+        font-size: 10px;
     }
-    /* .aboutMeCard { */
-        /* margin-left: 3%;
-        margin-bottom: 3%;
-        margin-top: 5%;
-        width: 95%;
-        max-width: 95%;
-        max-height: 80%;
-        height: 40%; */
-    /* } */
+
+    .aboutMeCard {
+        width: 90%;
+        margin-left: 5%;
+    }
   }

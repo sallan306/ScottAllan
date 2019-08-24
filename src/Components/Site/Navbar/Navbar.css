@@ -98,6 +98,7 @@
     position: fixed;
     top: 0vh;
     left: 5px;
+    height: 0px;
     outline: none;
     opacity: 0.5;
     transition: 0.5s
@@ -201,8 +202,6 @@
         float: right;
     }
     .sideNavButton {
-        top: 1vh;
-        height: 5vh;
     }
     .navButtonsContainer {
 
@@ -221,8 +220,6 @@
         float: right;
     }
     .sideNavButton {
-        top: 1vh;
-        height: 5vh;
     }
     .navButtonsContainer {
 

@@ -28,6 +28,22 @@
     height: 125px;
 }
 
+@media only screen and (max-width: 800px) { 
+    .servicesContainer { 
+        margin-top: 5vh;
+    }
+    .serviceBlurb {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 600px) { 
+
+    .serviceBlurb {
+        font-size: 12px;
+    }
+}
+
+
 @media only screen and (max-width: 420px) {
     .serviceBox {
         width: 95%;
@@ -38,12 +54,12 @@
         width: 75%;
     }
     .servicesContainer {
-        margin-top: 15vh;
+        margin-top: 5vh;
     }
     .serviceBlurb {
-        padding-top: 15px;
+        padding-top: 0;
         margin-bottom: 0;
-        font-size: 12px;
+        font-size: 11px;
     }
     .serviceSVG {
         width: 25%;
@@ -55,8 +71,3 @@
     }
 }
 
-@media only screen and (max-width: 420px) { 
-    .servicesContainer { 
-        margin-top: 10vh;
-    }
-}

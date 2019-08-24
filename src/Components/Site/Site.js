@@ -61,11 +61,11 @@ class Site extends Component {
         else if (this.state.width > 550) {
           this.setState({backgroundScrollSpeed: -2})
         }
-        else if (this.state.width > 350) {
-          this.setState({backgroundScrollSpeed: -1})
+        else if (this.state.width > 450) {
+          this.setState({backgroundScrollSpeed: -0.5})
         }
         else {
-          this.setState({backgroundScrollSpeed: -1})
+          this.setState({backgroundScrollSpeed: -0.5})
         }
       });
   }
@@ -85,7 +85,7 @@ class Site extends Component {
         backgroundPicture: elephantPic, 
         backgroundBlur: elephantBlur,
         primaryColor: "black",
-        secondaryColor: "navy",
+        secondaryColor: "rgb(121, 89, 64)",
         animalOffset: 80})
     }
     else if (input === "cat") {

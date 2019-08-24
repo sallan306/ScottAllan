@@ -37,6 +37,7 @@ class MainWindow extends Component {
                 aboutRef={this.props.aboutRef}
                 backgroundColor={this.props.backgroundColor}
                 primaryColor={this.props.primaryColor}
+                secondaryColor={this.props.secondaryColor}
                 scrollPercent={this.props.scrollPercent}
                 backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}

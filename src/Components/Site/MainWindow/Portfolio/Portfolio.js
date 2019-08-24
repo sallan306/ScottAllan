@@ -8,7 +8,6 @@ class Portfolio extends Component {
     state = {
 
     }
-
     render() {
         return (
             <div                         
