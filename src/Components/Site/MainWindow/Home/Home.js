@@ -90,15 +90,13 @@ class Home extends Component {
                     src={this.props.backgroundPicture} 
                     alt="Scott Allan" 
                     style={{
-                        top:(this.props.backgroundScrollSpeed*this.props.scrollPercent),
-
-                    
+                        top:(this.props.backgroundScrollSpeed*(this.props.animalOffset+this.props.scrollPercent)),
                     }}
                      />
                 <span   
                     id="myName"
                     className="myName"
-                    style={{color: this.props.fontColor}}>Hello, I'm Scott. 
+                    style={{color: this.props.primaryColor}}>Hello, I'm Scott. 
                     <span   
                         id="myJob" 
                         style={{color: this.state.jobColor, transition: "0.1s", cursor: "auto"}}> 
@@ -107,8 +105,8 @@ class Home extends Component {
                     <span className={this.state.cursorStatus} >|</span>
                 </span>
                     <span style={{visibility: this.props.navbarVisible ? "hidden":"visible"}}className="homeArrowContainer" onClick={() => this.props.goToPage("about")}>
-                        <i style={{border: "solid", borderColor: this.props.fontColor, borderWidth: "0 3px 3px 0"}}className="homeArrow down"></i>
-                        <i style={{border: "solid", borderColor: this.props.fontColor, borderWidth: "0 3px 3px 0"}}className="homeArrow2 down"></i>
+                        <i style={{border: "solid", borderColor: this.props.primaryColor, borderWidth: "0 3px 3px 0"}}className="homeArrow down"></i>
+                        <i style={{border: "solid", borderColor: this.props.primaryColor, borderWidth: "0 3px 3px 0"}}className="homeArrow2 down"></i>
                      </span>
 
                 {/* {console.log(this.props.homeRef.current)} */}

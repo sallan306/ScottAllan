@@ -20,31 +20,31 @@ isMobile = () => {
             <div className="servicesContainer">
                 <div className="serviceBox web">
                     <WebDesign 
-                        fillColor={this.props.fontColor}
-                        SVGSecondaryColor={this.props.SVGSecondaryColor}        />
+                        fillColor={this.props.primaryColor}
+                        secondaryColor={this.props.secondaryColor}        />
                     <Border1 
-                        fillColor={this.props.fontColor}
+                        fillColor={this.props.primaryColor}
                         borderWidth={this.props.width}
                     />
-                    <p style={{color: this.props.fontColor}} className="serviceBlurb">Fluid Front-End development with effective User Experience solutions that draws users back to your site</p>                       
+                    <p style={{color: this.props.primaryColor}} className="serviceBlurb">Fluid Front-End development with effective User Experience solutions that draws users back to your site</p>                       
                 </div>
                 <div className="serviceBox seo">
-                    <SEO fillColor={this.props.fontColor}
-                    SVGSecondaryColor={this.props.SVGSecondaryColor}/>
+                    <SEO fillColor={this.props.primaryColor}
+                    secondaryColor={this.props.secondaryColor}/>
                     <Border2 
-                        fillColor={this.props.fontColor}
+                        fillColor={this.props.primaryColor}
                         borderWidth={this.props.width}
                     />
-                    <p style={{color: this.props.fontColor}} className="serviceBlurb">Proper Search Engine Optimization and Indexing so your voice gets the attention that it deserves</p>  
+                    <p style={{color: this.props.primaryColor}} className="serviceBlurb">Proper Search Engine Optimization and Indexing so your voice gets the attention that it deserves</p>  
                 </div>
                 <div className="serviceBox responsive">
-                    <Responsive fillColor={this.props.fontColor}
-                    SVGSecondaryColor={this.props.SVGSecondaryColor}    />
+                    <Responsive fillColor={this.props.primaryColor}
+                    secondaryColor={this.props.secondaryColor}    />
                     <Border3 
-                        fillColor={this.props.fontColor}
+                        fillColor={this.props.primaryColor}
                         borderWidth={this.props.width}
                     />
-                    <p style={{color: this.props.fontColor}} className="serviceBlurb">Responsiveness across multiple platforms and devices. Your customers won't be limited by the shape of their screen</p>  
+                    <p style={{color: this.props.primaryColor}} className="serviceBlurb">Responsiveness across multiple platforms and devices. Your customers won't be limited by the shape of their screen</p>  
                 </div>
             </div>
         )
@@ -55,22 +55,22 @@ isMobile = () => {
             <div className="servicesContainer">
                 <div className="serviceBox web">
                     <WebDesign 
-                        fillColor={this.props.fontColor}
+                        fillColor={this.props.primaryColor}
                         SVGSecondaryColor={this.props.SVGSecondaryColor}        />
-                    <p style={{color: this.props.fontColor}} className="serviceBlurb">Fluid Front-End development with effective User Experience solutions that draws users back to your site</p>                       
-                    {/* <Border1 fillColor={this.props.fontColor}/> */}
+                    <p style={{color: this.props.primaryColor}} className="serviceBlurb">Fluid Front-End development with effective User Experience solutions that draws users back to your site</p>                       
+                    {/* <Border1 fillColor={this.props.primaryColor}/> */}
                 </div>
                 <div className="serviceBox seo">
-                    <SEO fillColor={this.props.fontColor}
+                    <SEO fillColor={this.props.primaryColor}
                     SVGSecondaryColor={this.props.SVGSecondaryColor}/>
-                    <p style={{color: this.props.fontColor}} className="serviceBlurb">Proper Search Engine Optimization and Indexing so your voice gets the attention that it deserves</p>  
-                    {/* <Border2 fillColor={this.props.fontColor}/> */}
+                    <p style={{color: this.props.primaryColor}} className="serviceBlurb">Proper Search Engine Optimization and Indexing so your voice gets the attention that it deserves</p>  
+                    {/* <Border2 fillColor={this.props.primaryColor}/> */}
                 </div>
                 <div className="serviceBox responsive">
-                    <Responsive fillColor={this.props.fontColor}
+                    <Responsive fillColor={this.props.primaryColor}
                     SVGSecondaryColor={this.props.SVGSecondaryColor}    />
-                    <p style={{color: this.props.fontColor}} className="serviceBlurb">Responsiveness across multiple platforms and devices. Your customers won't be limited by the shape of their screen</p>  
-                    {/* <Border3 fillColor={this.props.fontColor}/> */}
+                    <p style={{color: this.props.primaryColor}} className="serviceBlurb">Responsiveness across multiple platforms and devices. Your customers won't be limited by the shape of their screen</p>  
+                    {/* <Border3 fillColor={this.props.primaryColor}/> */}
                 </div>
             </div>
         )
@@ -91,13 +91,13 @@ isMobile = () => {
                     className="services" 
                     style={{ 
                         transition: "1s",
-                        borderColor: this.props.fontColor
+                        borderColor: this.props.primaryColor
                         }}>
 
                     <div className="backgroundPseudo backgroundServices" style={{
                             transition: this.props.changingBackground === true ? "1s" : "0s",
                             backgroundImage: "url("+this.props.backgroundBlur+")",
-                            backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
+                            backgroundPositionY: (this.props.backgroundScrollSpeed*(this.props.animalOffset+this.props.scrollPercent))
                     }}/>
                 {this.isMobile()}
                 </div>

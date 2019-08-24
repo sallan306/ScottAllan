@@ -49,33 +49,33 @@ class Contact extends Component {
                     className="contact" 
                     style={{ 
                         transition: "1s",
-                        borderColor: this.props.fontColor
+                        borderColor: this.props.primaryColor
                     }}
                 >
                     <div className="backgroundPseudo backgroundContact" style={{
                             transition: this.props.changingBackground === true ? "1s" : "0s",
                             backgroundImage: "url("+this.props.backgroundBlur+")",
-                            backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
+                            backgroundPositionY: (this.props.backgroundScrollSpeed*(this.props.animalOffset+this.props.scrollPercent))
                     }}/>
                     <span className="contactContent" style={{position: "relative", zIndex: 10}}>
-                        <p style={{color: this.props.fontColor, position: "relative", zIndex: 10}} className="contactParagraph" >
+                        <p style={{color: this.props.primaryColor, position: "relative", zIndex: 10}} className="contactParagraph" >
                             I am currently accepting freelance commissions and job offers in the Portland, OR area. Please contact me using the links below! 
                         </p>
 
                         <a  className="btn socialMediaButtons"  
                             onMouseEnter={() => this.spinOnce("githubHover")} 
                             href="https://github.com/sallan306">
-                            <FontAwesomeIcon spin={this.state.githubHover} style={{transition: "1s"}}color={this.props.fontColor} size="3x" icon={["fab","github"]}/>
+                            <FontAwesomeIcon spin={this.state.githubHover} style={{transition: "1s"}}color={this.props.secondaryColor} size="3x" icon={["fab","github"]}/>
                         </a>
                         <a className="btn socialMediaButtons" 
                             onMouseEnter={() => this.spinOnce("linkedinHover")} 
                             href="http://www.linkedin.com/in/ScottAllanWebDesign">
-                            <FontAwesomeIcon spin={this.state.linkedinHover} style={{transition: "1s"}}color={this.props.fontColor} size="3x" icon={["fab","linkedin"]}/>
+                            <FontAwesomeIcon spin={this.state.linkedinHover} style={{transition: "1s"}}color={this.props.secondaryColor} size="3x" icon={["fab","linkedin"]}/>
                         </a>
                         <a className="btn socialMediaButtons" 
                             onMouseEnter={() => this.spinOnce("emailHover")} 
                             href="mailto:sallan306@gmail.com">
-                            <FontAwesomeIcon spin={this.state.emailHover} style={{transition: "1s"}}color={this.props.fontColor} size="3x" icon={faEnvelope}/>
+                            <FontAwesomeIcon spin={this.state.emailHover} style={{transition: "1s"}}color={this.props.secondaryColor} size="3x" icon={faEnvelope}/>
                         </a>
                     </span>
                 </div>

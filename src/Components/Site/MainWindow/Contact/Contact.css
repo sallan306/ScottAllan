@@ -35,7 +35,9 @@
 @media only screen and (max-width: 420px) {
 
     .contactParagraph {
-        padding-top: 20vh;
+        padding-top: 30vh;
+        width: 85vw;
+        margin-left: 5vw;
         font-size: 16px;
     }
     .contactForm {
@@ -58,5 +60,9 @@
 
 @media only screen and (max-width: 330px) {
 
-
+    .contactParagraph {
+        padding-top: 30vh;
+        width: 90vw;
+        margin-left: 2.5vw;
+    }
 }

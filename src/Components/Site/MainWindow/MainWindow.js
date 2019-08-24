@@ -27,53 +27,60 @@ class MainWindow extends Component {
                 goToPage={this.props.goToPage}
                 navbarVisible={this.props.navbarVisible}
                 backgroundPicture={this.props.backgroundPicture}
-                fontColor={this.props.fontColor}
+                primaryColor={this.props.primaryColor}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
+                animalOffset={this.props.animalOffset}
                 
             />
             <About 
                 selectedNav={this.props.selectedNav}
                 aboutRef={this.props.aboutRef}
                 backgroundColor={this.props.backgroundColor}
-                fontColor={this.props.fontColor}
+                primaryColor={this.props.primaryColor}
                 scrollPercent={this.props.scrollPercent}
                 backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
                 changingBackground={this.props.changingBackground}
+                width={this.props.width}
+                animalOffset={this.props.animalOffset}
             />
             <Services 
                 servicesRef={this.props.servicesRef}
                 selectedNav={this.props.selectedNav}
                 backgroundColor={this.props.backgroundColor}
-                fontColor={this.props.fontColor}
+                primaryColor={this.props.primaryColor}
                 scrollPercent={this.props.scrollPercent}
                 backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
                 changingBackground={this.props.changingBackground}
-                SVGSecondaryColor={this.props.SVGSecondaryColor}
+                secondaryColor={this.props.secondaryColor}
                 width={this.props.width}
+                animalOffset={this.props.animalOffset}
             />
             <Portfolio 
                 selectedNav={this.props.selectedNav}
                 portfolioRef={this.props.portfolioRef}
                 backgroundColor={this.props.backgroundColor}
-                fontColor={this.props.fontColor}
+                primaryColor={this.props.primaryColor}
                 scrollPercent={this.props.scrollPercent}
                 backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
                 changingBackground={this.props.changingBackground}
-                SVGSecondaryColor={this.props.SVGSecondaryColor}
+                secondaryColor={this.props.secondaryColor}
                 width={this.props.width}
+                animalOffset={this.props.animalOffset}
             />
             <Contact
                 selectedNav={this.props.selectedNav}
                 contactRef={this.props.contactRef}
                 backgroundColor={this.props.backgroundColor}
-                fontColor={this.props.fontColor}
+                primaryColor={this.props.primaryColor}
                 scrollPercent={this.props.scrollPercent}
                 backgroundBlur={this.props.backgroundBlur}
                 backgroundScrollSpeed={this.props.backgroundScrollSpeed}
                 changingBackground={this.props.changingBackground}
+                secondaryColor={this.props.secondaryColor}
+                animalOffset={this.props.animalOffset}
             />
             {/* <Footer/> */}
         </div>

@@ -19,7 +19,7 @@ class SEO extends Component {
      >
         <path 
 
-            fill={this.props.SVGSecondaryColor}
+            fill={this.props.secondaryColor}
             stroke={this.props.fillColor === "black" ? "black" : "white"} 
             strokeWidth="20" 
             style={{transition: "1s"}}

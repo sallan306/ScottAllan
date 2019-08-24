@@ -66,7 +66,7 @@ class WebDesign extends Component {
                     <g id="Layer_19_33_" style={{transition: "1s"}}>
                     <path 
                     style={{transition: "1s"}}
-                        fill={this.props.SVGSecondaryColor} 
+                        fill={this.props.secondaryColor} 
                         stroke={this.props.fillColor === "black" ? "black" : "white"} 
                         strokeWidth="0.5"
                         d="M47.168,36.918V6.699H0v30.219h19.252v1.945H9.188v1.605h28.179v-1.605h-9.846v-1.945H47.168z M3.45,32.469V10.149

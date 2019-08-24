@@ -8,8 +8,8 @@ import elephantPic from "./MainWindow/Images/elephant.jpg"
 import elephantBlur from "./MainWindow/Images/elephant_blur.jpg"   
 import pugPic from "./MainWindow/Images/pug.jpg"   
 import pugBlur from "./MainWindow/Images/pug_blur.jpg"   
-import giraffePic from "./MainWindow/Images/giraffe.jpg"   
-import giraffeBlur from "./MainWindow/Images/giraffe_blur.jpg"   
+import catPic from "./MainWindow/Images/cat.jpg"   
+import catBlur from "./MainWindow/Images/cat_blur.jpg"   
 
 
 class Site extends Component {
@@ -26,18 +26,19 @@ class Site extends Component {
       scrollPercent: 0,
       backgroundColor: "rgb(105,105,105, 0.8)",
       navBackgroundColor: "transparent",
-      navFontColor: "black",
-      fontColor: "black",
-      SVGSecondaryColor: "darkred",
+      primaryColor: "white",
+      secondaryColor: "#cf0209",
       navbarVisible: false,
       sideNavVisible: false,
-      backgroundPicture: giraffePic,
-      backgroundBlur: giraffeBlur,
+      backgroundPicture: pugPic,
+      backgroundBlur: pugBlur,
       scrollThrottle: 1,
       backgroundScrollSpeed: -8,
       width: 0,
+      height: 0,
       changingBackground: false,
-      selectedAnimal: "giraffe"
+      selectedAnimal: "pug",
+      animalOffset: 50
   }
   componentDidMount() {
     window.addEventListener('resize', () => this.updateWindowDimensions())
@@ -58,7 +59,7 @@ class Site extends Component {
           this.setState({backgroundScrollSpeed: -3})
         }
         else if (this.state.width > 550) {
-          this.setState({backgroundScrollSpeed: -1})
+          this.setState({backgroundScrollSpeed: -2})
         }
         else if (this.state.width > 350) {
           this.setState({backgroundScrollSpeed: -1})
@@ -83,27 +84,27 @@ class Site extends Component {
         selectedAnimal: "elephant",
         backgroundPicture: elephantPic, 
         backgroundBlur: elephantBlur,
-        fontColor: "black", 
-        navFontColor: "black",
-        SVGSecondaryColor: "darkred"})
+        primaryColor: "black",
+        secondaryColor: "navy",
+        animalOffset: 80})
     }
-    else if (input === "giraffe") {
+    else if (input === "cat") {
       this.setState({
-        selectedAnimal: "giraffe",
-        backgroundPicture: giraffePic, 
-        backgroundBlur: giraffeBlur,
-        fontColor: "black", 
-        navFontColor: "black",
-        SVGSecondaryColor: "darkred"})
+        selectedAnimal: "cat",
+        backgroundPicture: catPic, 
+        backgroundBlur: catBlur,
+        primaryColor: "white",
+        secondaryColor: "#cb9d5e",
+        animalOffset: 130})
     }
     else if (input === "pug") {
       this.setState({        
         selectedAnimal: "pug",
         backgroundPicture: pugPic, 
         backgroundBlur: pugBlur,
-        fontColor: "white", 
-        navFontColor: "white",
-        SVGSecondaryColor: "navy"})
+        primaryColor: "white",
+        secondaryColor: "#cf0209",
+        animalOffset: 50})
     }
   }
   goToPage = value => {
@@ -202,13 +203,14 @@ class Site extends Component {
               selectedNav={this.state.selectedNav}
               changeColor={this.changeColor}
               navBackgroundColor={this.state.navBackgroundColor}
-              fontColor={this.state.navFontColor}
+              primaryColor={this.state.primaryColor}
               toggleSideNav={this.toggleSideNav}
               changeBackground={this.changeBackground}
               backgroundBlur={this.state.backgroundBlur}
               scrollPercent={this.state.scrollPercent}
               backgroundScrollSpeed={this.state.backgroundScrollSpeed}
               selectedAnimal={this.state.selectedAnimal}
+              width={this.state.width}
             />
             <MainWindow 
               closeSideNav={this.closeSideNav}
@@ -221,7 +223,8 @@ class Site extends Component {
               servicesRef={this.servicesRef}
               portfolioRef={this.portfolioRef}
               contactRef={this.contactRef}
-              fontColor={this.state.fontColor}
+              primaryColor={this.state.primaryColor}
+              secondaryColor={this.state.secondaryColor}
               backgroundColor={this.state.backgroundColor}
               goToPage={this.goToPage}
               sideNavVisible={this.state.sideNavVisible}
@@ -229,8 +232,8 @@ class Site extends Component {
               backgroundBlur={this.state.backgroundBlur}
               backgroundScrollSpeed={this.state.backgroundScrollSpeed}
               changingBackground={this.state.changingBackground}
-              SVGSecondaryColor={this.state.SVGSecondaryColor}
               width={this.state.width}
+              animalOffset={this.state.animalOffset}
             />
         </div>  
       )

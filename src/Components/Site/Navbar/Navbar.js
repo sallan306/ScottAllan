@@ -35,9 +35,9 @@ class Navbar extends Component {
                   transition: "0.5s"
           }}/> */}
           <button className="sideNavButton" onClick={()=> this.props.toggleSideNav()}>
-            <div className={this.props.sideNavVisible ? "menuItem menuItem1 open1" : "menuItem menuItem1"} style={{opacity: this.state.opacity, background: this.props.fontColor}}></div>
-            <div className={this.props.sideNavVisible ? "menuItem menuItem2 open2" : "menuItem menuItem2"} style={{background: this.props.fontColor}}></div>
-            <div className={this.props.sideNavVisible ? "menuItem menuItem3 open3" : "menuItem menuItem3"} style={{background: this.props.fontColor}}></div>
+            <div className={this.props.sideNavVisible ? "menuItem menuItem1 open1" : "menuItem menuItem1"} style={{opacity: this.state.opacity, background: this.props.primaryColor}}></div>
+            <div className={this.props.sideNavVisible ? "menuItem menuItem2 open2" : "menuItem menuItem2"} style={{background: this.props.primaryColor}}></div>
+            <div className={this.props.sideNavVisible ? "menuItem menuItem3 open3" : "menuItem menuItem3"} style={{background: this.props.primaryColor}}></div>
           </button>
           <span 
             className="sideNav" 
@@ -46,7 +46,7 @@ class Navbar extends Component {
               height: this.props.sideNavVisible ? "7.5vh" : "0vh",
               top: 0,
               background: this.props.navBackgroundColor,
-              borderColor: this.props.fontColor
+              borderColor: this.props.primaryColor
               }}
             >
             <span 
@@ -55,16 +55,16 @@ class Navbar extends Component {
                 visibility: this.props.sideNavVisible ? "visible" : "hidden", 
                 opacity: this.props.sideNavVisible ? 1 : 0, 
                 top: this.props.sideNavVisible ? "0vh" : "-10vh",
-                color: this.props.fontColor
+                color: this.props.primaryColor
                 }}
             >
               {/* <div className="resumeContainer">
                 Resume - 
-                <button style={{transition: "1s",color: this.props.fontColor}} onClick={()=> this.getFile("pdf")} className="resumeButton">PDF</button> / 
-                <button style={{transition: "1s",color: this.props.fontColor}} onClick={()=> this.getFile("google")} className="resumeButton">Google Doc</button>
+                <button style={{transition: "1s",color: this.props.primaryColor}} onClick={()=> this.getFile("pdf")} className="resumeButton">PDF</button> / 
+                <button style={{transition: "1s",color: this.props.primaryColor}} onClick={()=> this.getFile("google")} className="resumeButton">Google Doc</button>
               </div> */}
               <div className="animalContainer">
-                <button onClick={()=> this.props.changeBackground("giraffe")} style={{color: "yellow"}} className={this.props.selectedAnimal === "giraffe" ? "animalButton animalSelected" : "animalButton"}>
+                <button onClick={()=> this.props.changeBackground("cat")} style={{color: "yellow"}} className={this.props.selectedAnimal === "giraffe" ? "animalButton animalSelected" : "animalButton"}>
                   {<Giraffe/>}
                 </button> 
                 <button onClick={()=> this.props.changeBackground("pug")} style={{color: "brown"}} className={this.props.selectedAnimal === "pug" ? "animalButton animalSelected" : "animalButton"}>
@@ -77,26 +77,31 @@ class Navbar extends Component {
             </span>
 
           </span>
-          <span className="navButtonsContainer" style={{borderBottomColor: this.props.fontColor}}>
-          <span className="navButton navContactButton" onClick={() => {this.props.goToPage("contact")}}>
-              <div style={{color: this.props.fontColor}} className="navName navNameContact">Contact</div>
-              <div id="underlineContact"style={{background: this.props.fontColor}} className={this.props.selectedNav === "contact" ? "navUnderline navSelected" : "navUnderline"}></div>
+          <span className="navButtonsContainer" style={{borderBottomColor: this.props.primaryColor}}>
+          <span 
+            className="navButton navContactButton"
+            onClick={() => {this.props.goToPage("contact")}}
+            style={{width: (this.props.sideNavVisible && this.props.width < 420) ? "40px" : "" }}
+            
+          >
+              <div style={{color: this.props.primaryColor}} className="navName navNameContact">Contact</div>
+              <div id="underlineContact"style={{background: this.props.primaryColor}} className={this.props.selectedNav === "contact" ? "navUnderline navSelected" : "navUnderline"}></div>
           </span>
-          <span className="navButton navPortfolioButton" onClick={() => {this.props.goToPage("portfolio")}}>
-              <div style={{color: this.props.fontColor}} className="navName navNamePortfolio">Portfolio</div>
-              <div id="underlinePortfolio"style={{background: this.props.fontColor}} className={this.props.selectedNav === "portfolio" ? "navUnderline navSelected" : "navUnderline"}></div>
+          <span className="navButton navPortfolioButton" style={{width: (this.props.sideNavVisible && this.props.width < 420) ? "40px" : "" }} onClick={() => {this.props.goToPage("portfolio")}}>
+              <div style={{color: this.props.primaryColor}} className="navName navNamePortfolio">Portfolio</div>
+              <div id="underlinePortfolio"style={{background: this.props.primaryColor}} className={this.props.selectedNav === "portfolio" ? "navUnderline navSelected" : "navUnderline"}></div>
           </span>  
-          <span className="navButton navServicesButton" onClick={() => {this.props.goToPage("services")}}>
-              <div style={{color: this.props.fontColor}} className="navName navNameServices">Services</div>
-              <div id="underlineServices" style={{background: this.props.fontColor}} className={this.props.selectedNav === "services" ? "navUnderline navSelected" : "navUnderline"}></div>
+          <span className="navButton navServicesButton" style={{width: (this.props.sideNavVisible && this.props.width < 420) ? "40px" : "" }} onClick={() => {this.props.goToPage("services")}}>
+              <div style={{color: this.props.primaryColor}} className="navName navNameServices">Services</div>
+              <div id="underlineServices" style={{background: this.props.primaryColor}} className={this.props.selectedNav === "services" ? "navUnderline navSelected" : "navUnderline"}></div>
           </span>
-          <span className="navButton navAboutButton" onClick={() => {this.props.goToPage("about")}}>
-              <div style={{color: this.props.fontColor}} className="navName navNameAbout">About</div>
-              <div id="underlineAbout" style={{background: this.props.fontColor}} className={this.props.selectedNav === "about" ? "navUnderline navSelected" : "navUnderline"}></div>
+          <span className="navButton navAboutButton" style={{width: (this.props.sideNavVisible && this.props.width < 420) ? "40px" : "" }} onClick={() => {this.props.goToPage("about")}}>
+              <div style={{color: this.props.primaryColor}} className="navName navNameAbout">About</div>
+              <div id="underlineAbout" style={{background: this.props.primaryColor}} className={this.props.selectedNav === "about" ? "navUnderline navSelected" : "navUnderline"}></div>
           </span>
-            <span className="navButton navHomeButton" onClick={() => {this.props.goToPage("home")}}>
-              <div style={{color: this.props.fontColor}} className="navName navNameHome">Home</div>
-              <div id="underlineHome" style={{background: this.props.fontColor}} className={this.props.selectedNav === "home" ? "navUnderline navSelected" : "navUnderline"}></div>
+            <span className="navButton navHomeButton" style={{width: (this.props.sideNavVisible && this.props.width < 420) ? "40px" : this.props.width < 600 ? "60px" : "" }} onClick={() => {this.props.goToPage("home")}}>
+              <div style={{color: this.props.primaryColor}} className="navName navNameHome">Home</div>
+              <div id="underlineHome" style={{background: this.props.primaryColor}} className={this.props.selectedNav === "home" ? "navUnderline navSelected" : "navUnderline"}></div>
           </span>
 
 

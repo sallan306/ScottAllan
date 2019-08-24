@@ -19,17 +19,17 @@ class Portfolio extends Component {
                     className="portfolio" 
                     style={{ 
                         transition: "1s",
-                        borderColor: this.props.fontColor
+                        borderColor: this.props.primaryColor
                     }}
                 >
                     <div className="backgroundPseudo backgroundPortfolio" style={{
                             transition: this.props.changingBackground === true ? "1s" : "0s",
                             backgroundImage: "url("+this.props.backgroundBlur+")",
-                            backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent)
+                            backgroundPositionY: (this.props.backgroundScrollSpeed*(this.props.animalOffset+this.props.scrollPercent))
                     }}/>
                     <Slideshow 
-                        primaryColor={this.props.fontColor}
-                        secondaryColor={this.props.SVGSecondaryColor}
+                        primaryColor={this.props.primaryColor}
+                        secondaryColor={this.props.secondaryColor}
                         slideshowSize={this.props.width > 420 ? "large" : "medium"}
                     />
                 </div>

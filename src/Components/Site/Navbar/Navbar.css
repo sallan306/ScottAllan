@@ -22,7 +22,7 @@
     position: absolute;
 }
 .navButton {
-    width: 70px;
+    width: 7vw;
     height: 35px;
     float: right;
     margin-top: 10px;
@@ -30,6 +30,7 @@
     margin-right: 20px;
     text-align: center;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .animalButton {
@@ -167,6 +168,14 @@
     border: 0;
     opacity: 1;
 }
+@media only screen and (max-width: 600px) { 
+
+    .animalContainer {
+        position: relative;
+        left: -20px;
+    }
+}
+
 @media only screen and (max-width: 450px) {
 
     .navButton {
@@ -175,6 +184,9 @@
     }
     .sideNavButton {
         bottom: 2.6vh;
+    }
+    .animalButton {
+        width: 9vw;
     }
 
 }
@@ -206,7 +218,7 @@
         margin-right: 0px;
         width: 50px;
         height: 35px;
-        float: left;
+        float: right;
     }
     .sideNavButton {
         top: 1vh;
@@ -217,4 +229,5 @@
         position: fixed;
         right: 10px;
     }
+    
 }

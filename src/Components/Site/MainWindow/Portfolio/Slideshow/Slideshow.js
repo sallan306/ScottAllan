@@ -27,7 +27,7 @@ class Slideshow extends Component {
         selectedItem: [],
         currentSlideshow: 1,
         slideSize: 300,
-        dotColors: [ "darkred",'','','','',''],
+        dotColors: [ "navy",'','','','',''],
         result: 0,
         sizeMultiplier: 1
     }
@@ -69,6 +69,9 @@ class Slideshow extends Component {
             break
             case "small" : this.setState({ sizeMultiplier: 0.4})
             break
+            default : {
+                break
+            }
         }
 
         this.setState ({
@@ -209,10 +212,13 @@ class Slideshow extends Component {
                                 <div                             
                                     onMouseEnter={() => this.mouseEnter(item.id)}
                                     onMouseLeave={() => this.mouseLeave()} 
-                                    className={this.state.highlighted === item.id ? "highlighted hiddenContainer" : "hiddenContainer"} >
+                                    className={this.state.highlighted === item.id ? "highlighted hiddenContainer" : "hiddenContainer"} 
+                                    style={{color: this.props.primaryColor}}
+                                >
                                     <p  
                                         key={"title"+item.id}
-                                        className={"portfolioTitle"}>{item.name}            
+                                        className={"portfolioTitle"}
+                                        style={{color: this.props.primaryColor }}>{item.name}            
                                     </p>
                                     <div className="buttonBox">
                                         <AwesomeButtonSocial   size="icon" href={item.github} type="github" ></AwesomeButtonSocial>
@@ -221,7 +227,9 @@ class Slideshow extends Component {
                                     </div>
                                     <h6  
                                         key={"paragraph"+item.id}
-                                        className="portfolioTitle2">{item.shortDescription}
+                                        className="portfolioTitle2"
+                                        style={{color: this.props.primaryColor}}>{item.shortDescription}
+                                        
                                     </h6>
                                 </div>
                             </div>
@@ -249,9 +257,7 @@ class Slideshow extends Component {
                                     style={{
                                         backgroundColor: this.state.dotColors[item.id-1] === '' ? this.props.primaryColor : this.state.dotColors[item.id-1],
                                         width: (this.state.slideSize*0.1*this.state.sizeMultiplier),
-                                        height: (this.state.slideSize*0.1*this.state.sizeMultiplier),
-                                        marginLeft: (this.state.slideSize*this.state.sizeMultiplier*0.05),
-                                        marginRight: (this.state.slideSize*this.state.sizeMultiplier*0.05)
+                                        height: (this.state.slideSize*0.1*this.state.sizeMultiplier)
                                     
                                     }}
                                     onClick={() => this.goToPortfolioItem(item.id)}
