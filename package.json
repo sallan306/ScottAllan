@@ -20,7 +20,7 @@
     "react-scripts": "^3.0.0",
     "zenscroll": "^4.0.2"
   },
-  "homepage": "https://sallan306.github.io/ReactWebsite/",
+  "homepage": "https://sallan306.github.io/ScottAllan/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

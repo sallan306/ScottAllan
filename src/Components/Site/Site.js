@@ -111,11 +111,11 @@ class Site extends Component {
     var multiplier = 0
     switch(value) {
       case "about": 
-        multiplier = 1; break;
+        multiplier = 1.01; break;
       case "services": 
-        multiplier = 2; break;
+        multiplier = 1.94; break;
       case "portfolio": 
-        multiplier = 3; break;
+        multiplier = 2.865; break;
       case "contact": 
         multiplier = 4; break;
       default:
@@ -127,10 +127,10 @@ class Site extends Component {
         $("#mainWindow").animate({scrollTop: window.innerHeight*multiplier - 30}, 'fast');
         this.getPercentage()
       }
-      ,200)
+      ,100)
     }
     else {
-      $("#mainWindow").animate({scrollTop: window.innerHeight*multiplier - 30}, 'fast');
+      $("#mainWindow").animate({scrollTop: window.innerHeight*multiplier - 0}, 'fast');
       this.getPercentage()
     }
   }
@@ -195,7 +195,7 @@ class Site extends Component {
     render() {
       return (
           <div id="site">
-            {/* <div className="debugger">{this.state.changingBackground ? "true" : "false"}</div> */}
+            {/* <div className="debugger">{window.innerHeight}</div> */}
             <Navbar 
               sideNavVisible={this.state.sideNavVisible}
               navbarVisible={this.state.navbarVisible}
