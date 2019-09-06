@@ -1,226 +1,217 @@
 .navbar {
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    height: 6vh;
-    font-size: 10px;
-    padding-top:10px;
-    transition: 0.5s;
-    z-index: 9999;
-    -webkit-user-select: none; 
-    -moz-user-select: none;
-    -ms-user-select: none; 
-    user-select: none; 
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 6vh;
+  font-size: 10px;
+  padding-top: 10px;
+  transition: 0.5s;
+  z-index: 9999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .navButtonsContainer {
-    border-bottom: 1px solid;
-    width: 100vw;
-    right: 0vw;
-    height: 7.5vh;
-    top: 0px;
-    transition: 0.5s;
-    position: absolute;
+  border-bottom: 1px solid;
+  width: 100vw;
+  right: 0vw;
+  height: 7.5vh;
+  top: 0px;
+  transition: 0.5s;
+  position: absolute;
 }
 .navButton {
-    width: 7vw;
-    height: 35px;
-    float: right;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.5s;
+  width: 7vw;
+  height: 35px;
+  float: right;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
 .animalButton {
-    background: transparent;
-    border: 0;
-    opacity: 0.4;
-    transition: 1s
+  background: transparent;
+  border: 0;
+  opacity: 0.4;
+  transition: 1s;
 }
 .animalSelected {
-    opacity: 0.6;
-    animation-name: opacitySlider;
-    animation-duration: 0.5s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-delay: 0ms;
-    pointer-events: none;
-    outline: none;
+  opacity: 0.6;
+  animation-name: opacitySlider;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-delay: 0ms;
+  pointer-events: none;
+  outline: none;
 }
 .animalSelected:focus {
-    outline: none
+  outline: none;
 }
 
 @keyframes opacitySlider {
-    from {opacity: 1;}
-    to {opacity: 0.6;}
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
 }
 .navName {
-    color: #3fb0ac;
-    text-align: center;
-    margin: 0 auto;
-    opacity: 0.6;
-    transition: 0.5s
+  color: #3fb0ac;
+  text-align: center;
+  margin: 0 auto;
+  opacity: 0.6;
+  transition: 0.5s;
 }
 .navName:hover {
-    opacity: 1;
+  opacity: 1;
 }
-
 
 .navUnderline {
-    position: relative;
-    top: 10px;
-    height: 2px;
-    width: 40px;
-    background: #3fb0ac;
-    margin: 0 auto;
-    opacity: 0;
-    transition: 0.5s
+  position: relative;
+  top: 10px;
+  height: 2px;
+  width: 40px;
+  background: #3fb0ac;
+  margin: 0 auto;
+  opacity: 0;
+  transition: 0.5s;
 }
 .navbarReference {
-    visibility: "hidden";
-    width: 0;
-    opacity: 0;
-    height: 0;
-    margin: 0;
-    margin-Top: 0
+  visibility: "hidden";
+  width: 0;
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  margin-top: 0;
 }
 .navSelected {
-    top: 5px;
-    opacity: 1;
+  top: 5px;
+  opacity: 1;
 }
 .sideNavButton {
-    z-index: 999;
-    background: transparent;
-    border: none;
-    position: fixed;
-    top: 0vh;
-    left: 5px;
-    height: 0px;
-    outline: none;
-    opacity: 0.5;
-    transition: 0.5s
-
+  z-index: 999;
+  background: transparent;
+  border: none;
+  position: fixed;
+  top: 0vh;
+  left: 5px;
+  height: 0px;
+  outline: none;
+  opacity: 0.5;
+  transition: 0.5s;
 }
 
 .sideNavButton:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 .sideNavButton:focus {
-    border: none;
-    outline: none;
-
+  border: none;
+  outline: none;
 }
 .sideNav {
-    position: fixed;
-    z-index: 99;
-    left: 0;
-    width: 30%;
-    height: 15vh;
-    transition: 0.5s;
-    
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  width: 30%;
+  height: 15vh;
+  transition: 0.5s;
 }
 .sideNavLinks {
-    position: fixed;
-    transition: 0.5s;
-    left: 10vw;
-
+  position: fixed;
+  transition: 0.5s;
+  left: 10vw;
 }
 
 .menuItem {
-    width: 30px;
-    height: 4px;
-    background-color: #3fb0ac;
-    margin: 5px 0;
-    border-radius: 10px;
-    transition: 0.5s
+  width: 30px;
+  height: 4px;
+  background-color: #3fb0ac;
+  margin: 5px 0;
+  border-radius: 10px;
+  transition: 0.5s;
 }
 .open1 {
-    transform:  rotate(-45deg)
-                translate(-9px,8px);
+  transform: rotate(-45deg) translate(-9px, 8px);
 }
 .open2 {
-    opacity: 0;
+  opacity: 0;
 }
 
 .open3 {
-    transform:  rotate(45deg)
-                translate(-4px,-4px);
+  transform: rotate(45deg) translate(-4px, -4px);
 }
 
-.resumeContainer, .animalContainer {
-    text-align: left;
+.resumeContainer,
+.animalContainer {
+  text-align: left;
 }
 .resumeButton {
-    background: transparent;
-    border: 0;
-    opacity: 0.7;
-    transition: 0.5s
+  background: transparent;
+  border: 0;
+  opacity: 0.7;
+  transition: 0.5s;
 }
 
 .animalButton {
-    height: 7.5vh;
+  height: 7.5vh;
 }
-.resumeButton:hover, .animalButton:hover {
-    background: transparent;
-    border: 0;
-    opacity: 1;
+.resumeButton:hover,
+.animalButton:hover {
+  background: transparent;
+  border: 0;
+  opacity: 1;
 }
-@media only screen and (max-width: 600px) { 
-
-    .animalContainer {
-        position: relative;
-        left: -20px;
-    }
+@media only screen and (max-width: 600px) {
+  .animalContainer {
+    position: relative;
+    left: 0px;
+  }
 }
 
 @media only screen and (max-width: 450px) {
-
-    .navButton {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    .sideNavButton {
-        bottom: 2.6vh;
-    }
-    .animalButton {
-        width: 9vw;
-    }
-
+  .navButton {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .sideNavButton {
+    bottom: 2.6vh;
+  }
+  .animalButton {
+    width: 9vw;
+  }
 }
 
 @media only screen and (max-width: 420px) {
-
-    .navButton {
-        margin-left: 0px;
-        margin-right: 0px;
-        width: 58px;
-        height: 35px;
-        float: right;
-    }
-    .navButtonsContainer {
-
-        position: fixed;
-        right: 10px;
-    }
+  .navButton {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 58px;
+    height: 35px;
+    float: right;
+  }
+  .navButtonsContainer {
+    position: fixed;
+    right: 10px;
+  }
 }
 
 @media only screen and (max-width: 330px) {
-
-    .navButton {
-        margin-left: 0px;
-        margin-right: 0px;
-        width: 50px;
-        height: 35px;
-        float: right;
-    }
-    .navButtonsContainer {
-
-        position: fixed;
-        right: 10px;
-    }
-    
+  .navButton {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 50px;
+    height: 35px;
+    float: right;
+  }
+  .navButtonsContainer {
+    position: fixed;
+    right: 10px;
+  }
 }

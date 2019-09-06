@@ -1,21 +1,22 @@
 .mainWindow {
-    width: 100%;
-    height: 92.5vh;
-    font-family: "lato", sans-serif;
-    font-weight: 300;
-    font-size: 40px;
-    transition: 1s;
-    overflow-y: scroll;
-    position: relative;
-    z-index: 99;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    margin-top: 7.5vh;
-    
-  }
+  width: 100%;
+  height: 92.5vh;
+  font-family: "lato", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  transition: 1s;
+  overflow-y: scroll;
+  position: relative;
+  z-index: 99;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin-top: 7.5vh;
+}
 
-
-.about,.contact,.portfolio,.services {
+.about,
+.contact,
+.portfolio,
+.services {
   position: relative;
   width: 95vw;
   height: 91vh;
@@ -25,10 +26,12 @@
   border-style: solid;
   border-width: 1.5px;
   overflow: hidden;
-
 }
 
-.backgroundAbout, .backgroundServices, .backgroundPortfolio, .backgroundContact {
+.backgroundAbout,
+.backgroundServices,
+.backgroundPortfolio,
+.backgroundContact {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -46,8 +49,6 @@
   background-attachment: fixed;
   z-index: -10;
   transition: 1s;
-
-
 }
 
 #home {
@@ -56,20 +57,16 @@
 }
 #about {
   z-index: 14;
-
 }
 #services {
   z-index: 13;
-
 }
 #portfolio {
   z-index: 22;
-
 }
 #contact {
   z-index: 11;
   overflow-y: hidden;
-
 }
 
 .dummyBox {
@@ -87,11 +84,10 @@
   z-index: 999;
 }
 .windowRef {
-    width: 100%;
-    height: 100%;
-    padding-top: 0.1vh;
+  width: 100%;
+  height: 100%;
+  padding-top: 0.1vh;
 }
-
 
 /* #mainWindow::-webkit-scrollbar { width: 0 !important } */
 #mainWindow {
@@ -99,15 +95,14 @@
   -ms-overflow-style: none;
 }
 
-@media only screen and (max-width: 420px) { 
+@media only screen and (max-width: 420px) {
   .backgroundSidenav {
-
     background-size: 100vw 120vh;
-  
   }
-  .backgroundAbout, .backgroundServices, .backgroundPortfolio, .backgroundContact {
-
+  .backgroundAbout,
+  .backgroundServices,
+  .backgroundPortfolio,
+  .backgroundContact {
     background-size: 100vw 120vh;
-
   }
 }
