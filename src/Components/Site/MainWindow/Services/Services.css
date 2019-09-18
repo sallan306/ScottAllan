@@ -4,13 +4,12 @@
 }
 
 .servicesContainer {
-    margin-top: 15vh
+    margin-top: 2.5vh
 }
 .serviceBlurb {
     font-size: 16px;
     padding-right: 20px;
     padding-left: 20px;
-    padding-top: 30px;
     transition: 1s;
 }
 .serviceBox {
@@ -26,6 +25,12 @@
 .serviceSVG {
     width: 125px;
     height: 125px;
+}
+.awesomeIcon {
+    margin: 0 50px 0 0;
+}
+.awesomeIconSmall {
+    margin: 0 20px 0 0;
 }
 
 @media only screen and (max-width: 800px) { 
@@ -54,7 +59,7 @@
         width: 75%;
     }
     .servicesContainer {
-        margin-top: 5vh;
+        margin-top: 10vh;
     }
     .serviceBlurb {
         padding-top: 0;

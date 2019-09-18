@@ -10,7 +10,7 @@
   z-index: 99;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  margin-top: 7.5vh;
+  margin-top: 40px;
 }
 
 .about,
@@ -19,7 +19,7 @@
 .services {
   position: relative;
   width: 95vw;
-  height: 91vh;
+  height: 90vh;
   margin-top: 7vh;
   margin-left: 2.5vw;
   margin-right: 2.5vw;

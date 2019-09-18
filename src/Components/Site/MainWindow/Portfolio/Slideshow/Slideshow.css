@@ -1,217 +1,220 @@
 .navArrowActive {
-    display: inline-block;
-    cursor: pointer;
-    transition: 0.5s;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    border: solid #bbb;
-    border-width: 0 4px 4px 0;
-    display: inline-block;
-    padding: 3px;
-    width: 30px;
-    height: 30px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border: solid #bbb;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 30px;
+  height: 30px;
 }
 .navArrowInactive {
-    display: inline-block;
-    cursor: default;
-    transition: 0.5s;
-    margin-left: 1vw;
-    margin-right: 1vw;
-    opacity: 0.4;
-    border: solid #bbb;
-    border-width: 0 4px 4px 0;
-    display: inline-block;
-    padding: 3px;
-    width: 30px;
-    height: 30px;
+  display: inline-block;
+  cursor: default;
+  transition: 0.5s;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  opacity: 0.4;
+  border: solid #bbb;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 30px;
+  height: 30px;
 }
 
 .navArrowActive:hover {
-    border: solid;
-    border-width: 0 6px 6px 0;
-    transition: 0.5s
+  border: solid;
+  border-width: 0 6px 6px 0;
+  transition: 0.5s;
 }
 .navArrowActive:active {
-    border: solid;
-    border-width: 0 9px 9px 0;
+  border: solid;
+  border-width: 0 9px 9px 0;
 }
 .navArrowRight {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 .navArrowLeft {
-    transform: rotate(135deg);
+  transform: rotate(135deg);
 }
 .slideshow {
-    height: 90%;
-    margin-bottom: 5%;
+  height: 90%;
+  margin-bottom: 5%;
 }
-
-
 
 .dot {
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-    transition: 0.5s;
-    opacity: 0.6;
-    width: 30px;
-    height: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.6;
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .dot:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .dotSelected {
-    border-radius: 5px;
-    opacity: 1;
+  border-radius: 5px;
+  opacity: 1;
 }
 
 .debugger {
-    position: fixed;
-    top: 100px;
-    left: 100px;
-    color: navy;
-    z-index: 9999;
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  color: navy;
+  z-index: 9999;
 }
 
-
-
 .portfolioNavigation {
-    width: 100%;
-    float: left;
-    position: relative;
-    z-index: 100;
+  width: 100%;
+  float: left;
+  margin-top: 25px;
+  position: relative;
+  z-index: 100;
 }
 
 .opaqueCard {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 .unselected {
-    opacity: 0.4;
-    display: none;
-    /* top: 5vh; */
-    transform: translateY(5vh);
-    transition: 0.5s;
-    transition-duration: 0.5s;
-    pointer-events: none;
+  opacity: 0.4;
+  display: none;
+  /* top: 5vh; */
+  transform: translateY(5vh);
+  transition: 0.5s;
+  transition-duration: 0.5s;
+  pointer-events: none;
 }
-
 
 /* ----------------------------------------------------------------------------------------------------------------------------------- */
 .PortfolioItemsCenteringBox {
-    width: 100%;
-    height: 90%;
-    margin-left: 50%;    
-}.portfolioTrack {
-    text-align: center;
-    position: relative;
-    margin-top: 0vh;
-    transition: 0.5s
+  width: 100%;
+  height: 90%;
+  margin-left: 50%;
+}
+.portfolioTrack {
+  text-align: center;
+  position: relative;
+  margin-top: -25px;
+  transition: 0.5s;
 }
 .portfolioContainer {
-    border-style: solid;
-    border-width: 1vw;
-    background: white;
-    margin-top: 0;
-    margin-bottom: 0;
-    display: inline-block;
-    transition: 0.5s;
-    position: relative;
+  border-style: solid;
+  border-width: 1vw;
+  background: white;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: inline-block;
+  transition: 0.5s;
+  position: relative;
 }
 .portfolioImage {
-    transition: 0.5s;
-    margin: 2.5%;
-    width: 95%;
-    height: 95%;
-
+  transition: 0.5s;
+  margin: 2.5%;
+  width: 95%;
+  height: 90%;
 }
 .hiddenContainer {
-    position: relative;
-    display: inline-grid;
-    top: -95%;
-    left: 0;
-    width: 95%;
-    height: 95%;
-    opacity: 0;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+  position: relative;
+  display: inline-grid;
+  top: -95%;
+  left: 0;
+  width: 95%;
+  height: 95%;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-
 
 .portfolioTitle {
-    transition: 0.5s;
-    color: black;
-    position: relative;
-    top: 10px;
-    margin: 0;
-
+  transition: 0.5s;
+  color: black;
+  position: relative;
+  top: 10px;
+  margin: 0;
 }
 .portfolioTitle2 {
-    transition: 0.5s;
-    color: black;
-    pointer-events: none;
-    margin-bottom: 0;
+  transition: 0.5s;
+  color: black;
+  pointer-events: none;
+  margin-bottom: 0;
 }
 
 .highlighted {
-    opacity: 1;
+  opacity: 1;
 }
 .imgHighlighted {
-    filter: saturate(10%);
-    opacity: 0.2;
+  filter: saturate(10%);
+  opacity: 0.2;
 }
 .aws-btn {
-    --button-default-font-size: 8px;
-    margin: 10px;
+  --button-default-font-size: 8px;
+  margin: 10px;
 }
 
 .infoPanel {
-    visibility: visible;
-    opacity: 0;
-    z-index: 999;
-    height: 70vh;
-    position: fixed;
-    top: 12.5vh;
-    width: 60vw;
-    transition: 0.5s;
-    background: black;
-    left: 20vw;
-    font-size: 20px;
-    border-style: solid;
-    border-width: 5px;
-    border-color: gray;
+  visibility: visible;
+  opacity: 0;
+  z-index: 999;
+  height: 70vh;
+  position: fixed;
+  top: 12.5vh;
+  width: 60vw;
+  transition: 0.5s;
+  background: black;
+  left: 20vw;
+  font-size: 20px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: gray;
 }
 /* .infoPanelDescription {
 
 } */
 .infoPanelListItem {
-    font-size: 20px;
-    text-align: left;
+  font-size: 20px;
+  text-align: left;
 }
 /* -------------------------------------------------------------------------------------------------------------------------------- */
 
-
-
-@media only screen and (max-width: 420px) { 
-
-    /* .portfolioContainer {
+@media only screen and (max-width: 420px) {
+  /* .portfolioContainer {
 
     } */
-    .portfolioItemsContainer {
-        height: 65vh;
-        top: 5vh;
+    #slideshow {
+        margin-top: 12.5vh;
     }
-    .infoPanel {
-        width: 90vw;
-        left: 5vw;
-        font-size: 17px;
+    .portfolioTrack {
+        margin-top: 25px;
     }
-    .dot {
-        width: 15px;
-        height: 15px;
-        margin-left: 5px;
-        margin-right: 5px;
+    .portfolioNavigation {
+        margin-top: 0px;
     }
+  .portfolioItemsContainer {
+    height: 65vh;
+    top: 5vh;
+  }
+  .infoPanel {
+    width: 90vw;
+    left: 5vw;
+    font-size: 17px;
+  }
+  .dot {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .PortfolioItemsCenteringBox {
+      height: 350px;
+  }
 }

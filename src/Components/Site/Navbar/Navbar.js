@@ -25,7 +25,7 @@ class Navbar extends Component {
         className="navbar"
         style={{
           background: this.props.navBackgroundColor,
-          top: this.props.navbarVisible ? "0vh" : "-7.5vh"
+          top: this.props.navbarVisible ? "0vh" : -40
         }}
       >
         {/* <div className="backgroundPseudo backgroundSidenav" style={{
@@ -70,7 +70,7 @@ class Navbar extends Component {
           className="sideNav"
           style={{
             visibility: this.props.sideNavVisible ? "visible" : "visible",
-            height: this.props.sideNavVisible ? "7.5vh" : "0vh",
+            height: this.props.sideNavVisible ? 40 : 0,
             top: 0,
             background: this.props.navBackgroundColor,
             borderColor: this.props.primaryColor
@@ -81,7 +81,7 @@ class Navbar extends Component {
             style={{
               visibility: this.props.sideNavVisible ? "visible" : "hidden",
               opacity: this.props.sideNavVisible ? 1 : 0,
-              top: this.props.sideNavVisible ? "0vh" : "-10vh",
+              top: this.props.sideNavVisible ? -5 : -20,
               color: this.props.primaryColor
             }}
           >
@@ -139,8 +139,9 @@ class Navbar extends Component {
             style={{
               width:
                 this.props.sideNavVisible && this.props.width < 420
-                  ? "40px"
-                  : ""
+                  ? 25
+                  : 40,
+                  opacity: this.props.sideNavVisible && this.props.width < 420 ? 0 : 1
             }}
           >
             <div
@@ -164,8 +165,9 @@ class Navbar extends Component {
             style={{
               width:
                 this.props.sideNavVisible && this.props.width < 420
-                  ? "40px"
-                  : ""
+                  ? 25
+                  : 40,
+                  opacity: this.props.sideNavVisible && this.props.width < 420 ? 0 : 1
             }}
             onClick={() => {
               this.props.goToPage("portfolio");
@@ -192,8 +194,9 @@ class Navbar extends Component {
             style={{
               width:
                 this.props.sideNavVisible && this.props.width < 420
-                  ? "40px"
-                  : ""
+                  ? 25
+                  : 40,
+                  opacity: this.props.sideNavVisible && this.props.width < 420 ? 0 : 1
             }}
             onClick={() => {
               this.props.goToPage("services");
@@ -220,8 +223,9 @@ class Navbar extends Component {
             style={{
               width:
                 this.props.sideNavVisible && this.props.width < 420
-                  ? "40px"
-                  : ""
+                  ? 25
+                  : 40,
+                  opacity: this.props.sideNavVisible && this.props.width < 420 ? 0 : 1
             }}
             onClick={() => {
               this.props.goToPage("about");
@@ -248,10 +252,9 @@ class Navbar extends Component {
             style={{
               width:
                 this.props.sideNavVisible && this.props.width < 420
-                  ? "40px"
-                  : this.props.width < 600
-                  ? "60px"
-                  : ""
+                  ? 25
+                  : 40,
+                  opacity: this.props.sideNavVisible && this.props.width < 420 ? 0 : 1
             }}
             onClick={() => {
               this.props.goToPage("home");
