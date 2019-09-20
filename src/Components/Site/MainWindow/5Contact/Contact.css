@@ -13,7 +13,9 @@
     width: 200%;
     transition: 1s
 }
-
+.socialMediaDescription {
+    font-weight: 600
+}
 .contactParagraph {
     padding-top: 25vh;
     width: 50vw;

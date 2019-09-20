@@ -223,7 +223,7 @@ class Slideshow extends Component {
           <p className="infoPanelDescription">
             {this.state.selectedItem.description}
           </p>
-          <ul>
+          <ul className="infoPanelUnorderedList">
             {this.state.selectedItem.technologies
               ? this.state.selectedItem.technologies.map(function(item, i) {
                   return (
@@ -254,7 +254,7 @@ class Slideshow extends Component {
                   ref={this.portfolioRefs[item.id - 1]}
                   key={"container" + item.id}
                   style={{
-                    borderColor: this.props.primaryColor,
+                    borderColor: this.props.secondaryColor,
                     background:
                       this.props.primaryColor === "black" ? "white" : "black",
                     width: this.state.slideSize,

@@ -11,11 +11,15 @@ import pugBlur from "./MainWindow/Images/pug_blur.jpg";
 import catPic from "./MainWindow/Images/cat.jpg";
 import catBlur from "./MainWindow/Images/cat_blur.jpg";
 var pugPMColor = "white",
-  pug2NDColor = "#cf0209",
+  pug2NDColor = "#a31010",
+  pugIMGOffset = 50,
   catPMColor = "white",
-  cat2NDColor = "#cb9d5e",
+  cat2NDColor = "#91611f",
+  catIMGOffset = 130,
   elephantPMColor = "white",
-  elephant2NDColor = "rgb(121, 89, 64)";
+  elephant2NDColor = "rgb(121, 89, 64)",
+  elephantIMGOffset = 80
+
 
 class Site extends Component {
   constructor(props) {
@@ -43,7 +47,7 @@ class Site extends Component {
     height: 0,
     changingBackground: false,
     selectedAnimal: "cat",
-    animalOffset: 50
+    animalOffset: 130
   };
   componentDidMount() {
     window.addEventListener("resize", () => this.updateWindowDimensions());
@@ -90,7 +94,7 @@ class Site extends Component {
         backgroundBlur: elephantBlur,
         primaryColor: elephantPMColor,
         secondaryColor: elephant2NDColor,
-        animalOffset: 80
+        animalOffset: elephantIMGOffset
       });
     } else if (input === "cat") {
       this.setState({
@@ -99,7 +103,7 @@ class Site extends Component {
         backgroundBlur: catBlur,
         primaryColor: catPMColor,
         secondaryColor: cat2NDColor,
-        animalOffset: 130
+        animalOffset: catIMGOffset
       });
     } else if (input === "pug") {
       this.setState({
@@ -108,7 +112,7 @@ class Site extends Component {
         backgroundBlur: pugBlur,
         primaryColor: pugPMColor,
         secondaryColor: pug2NDColor,
-        animalOffset: 50
+        animalOffset: pugIMGOffset
       });
     }
   };

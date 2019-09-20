@@ -7,6 +7,7 @@
 .centerImage {
     width: 30%;
     height: 100%;
+
 }
 .aboutMeCard {
     height: 80%;
@@ -15,6 +16,8 @@
     float: left;
     padding: 0;
     margin-left: 5%;
+    border-radius: 10px;
+    border-width: 5px;
 }
 .centerParagraph {
     width: 70%;

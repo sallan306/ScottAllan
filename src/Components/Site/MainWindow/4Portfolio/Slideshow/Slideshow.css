@@ -118,6 +118,7 @@
   display: inline-block;
   transition: 0.5s;
   position: relative;
+  border-radius: 15px;
 }
 .portfolioImage {
   transition: 0.5s;
@@ -178,10 +179,14 @@
   border-style: solid;
   border-width: 5px;
   border-color: gray;
+  padding: 15px;
 }
-/* .infoPanelDescription {
-
-} */
+.infoPanelUnorderedList {
+  margin-left: 40px;
+}
+.infoPanelDescription {
+  text-align: left
+}
 .infoPanelListItem {
   font-size: 20px;
   text-align: left;
@@ -218,5 +223,8 @@
   }
   .PortfolioItemsCenteringBox {
       height: 350px;
+  }
+  .infoPanelUnorderedList {
+    margin-left: 10px;
   }
 }

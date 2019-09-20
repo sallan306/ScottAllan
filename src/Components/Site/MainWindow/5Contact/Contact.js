@@ -82,7 +82,7 @@ class Contact extends Component {
                 size="3x"
                 icon={["fab", "github"]}
               />
-              <p>Github</p>
+              <p className="socialMediaDescription">Github</p>
             </a>
             <a
               className="btn socialMediaButtons"
@@ -97,7 +97,7 @@ class Contact extends Component {
                 size="3x"
                 icon={["fab", "linkedin"]}
               />
-              <p>linkedin</p>
+              <p className="socialMediaDescription">linkedin</p>
             </a>
             <a
               className="btn socialMediaButtons"
@@ -112,7 +112,7 @@ class Contact extends Component {
                 size="3x"
                 icon={faEnvelope}
               />
-              <p>Email</p>
+              <p className="socialMediaDescription">Email</p>
             </a>
             <a
               className="btn socialMediaButtons"
@@ -127,7 +127,7 @@ class Contact extends Component {
                 size="3x"
                 icon={faFileAlt}
               />
-              <p>Resume</p>
+              <p className="socialMediaDescription">Resume</p>
             </a>
           </span>
         </div>

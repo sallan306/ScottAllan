@@ -12,7 +12,7 @@ class Home extends Component {
       "100 Percent Geek"
     ],
     selected: "A Web Designer",
-    jobRandomColor: ["#000080", "maroon", "orange", "teal"],
+    jobRandomColor: ["#7474d4", "#e33033", "#f09648", "#73ebe7"],
     jobText: "",
     oldWord: "A Web Designer",
     jobColor: "#000080",
@@ -82,7 +82,27 @@ class Home extends Component {
       this.setState({ hueRotate: this.state.hueRotate + 0.1 });
     }, 2000);
   }
-
+  jobDescription = displayType => {
+    if (displayType === "desktop") {
+      return (
+        <span className="jobDescriptionContainer">
+          <span id="myJob" style={{ color: this.state.jobColor }}>
+            {" " + this.state.jobText}
+          </span>
+          <span className={this.state.cursorStatus}>|</span>
+        </span>
+      );
+    } else if (displayType === "mobile") {
+      return (
+        <div className="jobDescriptionContainer">
+          <span id="myJob" style={{ color: this.state.jobColor }}>
+            {" " + this.state.jobText}
+          </span>
+          <span className={this.state.cursorStatus}>|</span>
+        </div>
+      );
+    }
+  };
   render() {
     return (
       <div ref={this.props.homeRef} id="home">
@@ -103,10 +123,9 @@ class Home extends Component {
           style={{ color: this.props.primaryColor }}
         >
           Hello, I'm Scott.
-          <span id="myJob" style={{ color: this.state.jobColor }}>
-            {" " + this.state.jobText}
-          </span>
-          <span className={this.state.cursorStatus}>|</span>
+          {this.props.width > 670
+            ? this.jobDescription("desktop")
+            : this.jobDescription("mobile")}
         </span>
         <span
           className="homeArrowContainer"
