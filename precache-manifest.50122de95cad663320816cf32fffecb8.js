@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6e9ba8126557ed61ecd1ab83aec502f5",
+    "revision": "173375e34ee4676e70a1aaa89b07a801",
     "url": "/ScottAllan/index.html"
   },
   {
-    "revision": "cc7268b0a77306dc15c8",
+    "revision": "f30d7bb070d4bbc53b7d",
     "url": "/ScottAllan/static/css/2.411e88dd.chunk.css"
   },
   {
-    "revision": "32900fb06ec5b7d2d78c",
-    "url": "/ScottAllan/static/css/main.969bca8b.chunk.css"
+    "revision": "8dfc48254e6b483b89bb",
+    "url": "/ScottAllan/static/css/main.41db48a8.chunk.css"
   },
   {
-    "revision": "cc7268b0a77306dc15c8",
-    "url": "/ScottAllan/static/js/2.a3ced9cd.chunk.js"
+    "revision": "f30d7bb070d4bbc53b7d",
+    "url": "/ScottAllan/static/js/2.3e57e640.chunk.js"
   },
   {
-    "revision": "32900fb06ec5b7d2d78c",
-    "url": "/ScottAllan/static/js/main.0232db9c.chunk.js"
+    "revision": "8dfc48254e6b483b89bb",
+    "url": "/ScottAllan/static/js/main.c6fe9eaa.chunk.js"
   },
   {
     "revision": "d48e92594148aee1f8a6",
@@ -70,10 +70,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "31da0c82c5f5aaa0b3e98c0d6b659e37",
     "url": "/ScottAllan/static/media/OldSiteWide.31da0c82.png"
-  },
-  {
-    "revision": "2e22cd22762af62e24f2e48ae1cba56b",
-    "url": "/ScottAllan/static/media/Resume.2e22cd22.pdf"
   },
   {
     "revision": "f29039fd062b50cd213f2edf7e9a40f4",
