@@ -1,8 +1,13 @@
-.middle {
+.contact {
+    transition: 1s
+}.middle {
     height: 200px;
     transition: 1s
 }
-
+.contactContent {
+    position: relative;
+    z-index: 10;
+}
 .fab {
     height: 200%;
     width: 200%;
@@ -14,7 +19,9 @@
     width: 50vw;
     margin-left: 22.5vw;
     font-size: 22px;
-    transition: 1s
+    transition: 1s;
+    position: relative;
+    z-index: 10;
 }
 .socialMediaButtons {
     transition: 1s

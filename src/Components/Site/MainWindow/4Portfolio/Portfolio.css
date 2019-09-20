@@ -1,3 +1,4 @@
 .portfolio {
     overflow: hidden;
+    transition: 1s;
 }

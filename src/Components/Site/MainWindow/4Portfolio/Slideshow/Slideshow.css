@@ -44,6 +44,8 @@
 .slideshow {
   height: 90%;
   margin-bottom: 5%;
+  position: relative;
+  z-index: 10;
 }
 
 .dot {

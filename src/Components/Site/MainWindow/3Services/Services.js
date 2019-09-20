@@ -11,7 +11,7 @@ import {
   faReact,
   faCss3,
   faHtml5,
-  faNodeJs,
+  faNode,
   faJsSquare,
   faGithub
 } from "@fortawesome/free-brands-svg-icons";
@@ -51,15 +51,7 @@ class Services extends Component {
             this.props.width > 800 ? "awesomeIcon" : "awesomeIconSmall"
           }
           size={this.props.width > 920 ? "2x" : "1x"}
-          icon={faNodeJs}
-          color={this.props.secondaryColor}
-        />
-        <FontAwesomeIcon
-          className={
-            this.props.width > 800 ? "awesomeIcon" : "awesomeIconSmall"
-          }
-          size={this.props.width > 920 ? "2x" : "1x"}
-          icon={faReact}
+          icon={faNode}
           color={this.props.secondaryColor}
         />
         <FontAwesomeIcon
@@ -91,7 +83,7 @@ class Services extends Component {
               secondaryColor={this.props.secondaryColor}
             />
             <Border1
-              fillColor={this.props.primaryColor}
+              fillColor={this.props.secondaryColor}
               borderWidth={this.props.width}
             />
             <p
@@ -108,7 +100,7 @@ class Services extends Component {
               secondaryColor={this.props.secondaryColor}
             />
             <Border2
-              fillColor={this.props.primaryColor}
+              fillColor={this.props.secondaryColor}
               borderWidth={this.props.width}
             />
             <p
@@ -125,7 +117,7 @@ class Services extends Component {
               secondaryColor={this.props.secondaryColor}
             />
             <Border3
-              fillColor={this.props.primaryColor}
+              fillColor={this.props.secondaryColor}
               borderWidth={this.props.width}
             />
             <p
@@ -200,7 +192,6 @@ class Services extends Component {
           id="services"
           className="services"
           style={{
-            transition: "1s",
             borderColor: this.props.primaryColor
           }}
         >

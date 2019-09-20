@@ -2,6 +2,7 @@
 
 .centerImage, .centerParagraph {
     float: left;
+    transition: 1s
 }
 .centerImage {
     width: 30%;

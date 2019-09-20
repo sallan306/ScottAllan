@@ -122,6 +122,8 @@
   width: 30%;
   height: 15vh;
   transition: 0.5s;
+  top: 0;
+  
 }
 .sideNavLinks {
   position: fixed;

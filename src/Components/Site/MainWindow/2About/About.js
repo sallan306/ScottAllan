@@ -11,7 +11,6 @@ isMobile = () => {
 
           <div className="centerImage">
                     <img    style={{
-                                transition: "1s",
                                 borderColor: this.props.secondaryColor
                             }}
                             className="aboutMeCard" 

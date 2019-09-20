@@ -10,6 +10,12 @@ import pugPic from "./MainWindow/Images/pug.jpg";
 import pugBlur from "./MainWindow/Images/pug_blur.jpg";
 import catPic from "./MainWindow/Images/cat.jpg";
 import catBlur from "./MainWindow/Images/cat_blur.jpg";
+var pugPMColor = "white",
+  pug2NDColor = "#cf0209",
+  catPMColor = "white",
+  cat2NDColor = "#cb9d5e",
+  elephantPMColor = "white",
+  elephant2NDColor = "rgb(121, 89, 64)";
 
 class Site extends Component {
   constructor(props) {
@@ -25,18 +31,18 @@ class Site extends Component {
     scrollPercent: 0,
     backgroundColor: "rgb(105,105,105, 0.8)",
     navBackgroundColor: "transparent",
-    primaryColor: "white",
-    secondaryColor: "#cf0209",
+    primaryColor: catPMColor,
+    secondaryColor: cat2NDColor,
     navbarVisible: false,
     sideNavVisible: false,
-    backgroundPicture: pugPic,
-    backgroundBlur: pugBlur,
+    backgroundPicture: catPic,
+    backgroundBlur: catBlur,
     scrollThrottle: 1,
     backgroundScrollSpeed: -8,
     width: 0,
     height: 0,
     changingBackground: false,
-    selectedAnimal: "pug",
+    selectedAnimal: "cat",
     animalOffset: 50
   };
   componentDidMount() {
@@ -82,8 +88,8 @@ class Site extends Component {
         selectedAnimal: "elephant",
         backgroundPicture: elephantPic,
         backgroundBlur: elephantBlur,
-        primaryColor: "black",
-        secondaryColor: "rgb(121, 89, 64)",
+        primaryColor: elephantPMColor,
+        secondaryColor: elephant2NDColor,
         animalOffset: 80
       });
     } else if (input === "cat") {
@@ -91,8 +97,8 @@ class Site extends Component {
         selectedAnimal: "cat",
         backgroundPicture: catPic,
         backgroundBlur: catBlur,
-        primaryColor: "white",
-        secondaryColor: "#cb9d5e",
+        primaryColor: catPMColor,
+        secondaryColor: cat2NDColor,
         animalOffset: 130
       });
     } else if (input === "pug") {
@@ -100,8 +106,8 @@ class Site extends Component {
         selectedAnimal: "pug",
         backgroundPicture: pugPic,
         backgroundBlur: pugBlur,
-        primaryColor: "white",
-        secondaryColor: "#cf0209",
+        primaryColor: pugPMColor,
+        secondaryColor: pug2NDColor,
         animalOffset: 50
       });
     }
@@ -198,43 +204,22 @@ class Site extends Component {
       <div id="site">
         {/* <div className="debugger">{window.innerHeight}</div> */}
         <Navbar
-          sideNavVisible={this.state.sideNavVisible}
-          navbarVisible={this.state.navbarVisible}
+          {...this.state}
           goToPage={this.goToPage}
-          selectedNav={this.state.selectedNav}
           changeColor={this.changeColor}
-          navBackgroundColor={this.state.navBackgroundColor}
-          primaryColor={this.state.primaryColor}
           toggleSideNav={this.toggleSideNav}
           changeBackground={this.changeBackground}
-          backgroundBlur={this.state.backgroundBlur}
-          scrollPercent={this.state.scrollPercent}
-          backgroundScrollSpeed={this.state.backgroundScrollSpeed}
-          selectedAnimal={this.state.selectedAnimal}
-          width={this.state.width}
         />
         <MainWindow
+          {...this.state}
           closeSideNav={this.closeSideNav}
-          navbarVisible={this.state.navbarVisible}
-          scrollPercent={this.state.scrollPercent}
           getPercentage={this.getPercentage}
-          selectedNav={this.state.selectedNav}
           homeRef={this.homeRef}
           aboutRef={this.aboutRef}
           servicesRef={this.servicesRef}
           portfolioRef={this.portfolioRef}
           contactRef={this.contactRef}
-          primaryColor={this.state.primaryColor}
-          secondaryColor={this.state.secondaryColor}
-          backgroundColor={this.state.backgroundColor}
           goToPage={this.goToPage}
-          sideNavVisible={this.state.sideNavVisible}
-          backgroundPicture={this.state.backgroundPicture}
-          backgroundBlur={this.state.backgroundBlur}
-          backgroundScrollSpeed={this.state.backgroundScrollSpeed}
-          changingBackground={this.state.changingBackground}
-          width={this.state.width}
-          animalOffset={this.state.animalOffset}
         />
       </div>
     );

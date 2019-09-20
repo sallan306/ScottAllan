@@ -1,23 +1,14 @@
 import React, { Component } from "react";
 import "./Navbar.css";
-import Resume from "../MainWindow/Files/Resume.pdf";
 import Pug from "./SVG/Pug";
 import Elephant from "./SVG/Elephant";
 import Cat from "./SVG/Cat";
-const googleLink =
-  "https://docs.google.com/document/d/15yJT9t423c4WiMPlCgdmDld2Lw-szrcb59tT_2JN7Zg/edit?usp=sharing";
 
 class Navbar extends Component {
   state = {
     opacity: 1
   };
-  getFile = type => {
-    if (type === "pdf") {
-      window.location.href = Resume;
-    } else if (type === "google") {
-      window.location.href = googleLink;
-    }
-  };
+
 
   render() {
     return (
@@ -28,12 +19,6 @@ class Navbar extends Component {
           top: this.props.navbarVisible ? "0vh" : -40
         }}
       >
-        {/* <div className="backgroundPseudo backgroundSidenav" style={{
-                  backgroundImage: "url("+this.props.backgroundBlur+")",
-                  backgroundPositionY: (this.props.backgroundScrollSpeed*this.props.scrollPercent),
-                  height: this.props.sideNavVisible ? "7.5vh" : "0vh",
-                  transition: "0.5s"
-          }}/> */}
         <button
           className="sideNavButton"
           onClick={() => this.props.toggleSideNav()}
@@ -71,7 +56,6 @@ class Navbar extends Component {
           style={{
             visibility: this.props.sideNavVisible ? "visible" : "visible",
             height: this.props.sideNavVisible ? 40 : 0,
-            top: 0,
             background: this.props.navBackgroundColor,
             borderColor: this.props.primaryColor
           }}
@@ -85,17 +69,12 @@ class Navbar extends Component {
               color: this.props.primaryColor
             }}
           >
-            {/* <div className="resumeContainer">
-                Resume - 
-                <button style={{transition: "1s",color: this.props.primaryColor}} onClick={()=> this.getFile("pdf")} className="resumeButton">PDF</button> / 
-                <button style={{transition: "1s",color: this.props.primaryColor}} onClick={()=> this.getFile("google")} className="resumeButton">Google Doc</button>
-              </div> */}
             <div className="animalContainer">
               <button
                 onClick={() => this.props.changeBackground("cat")}
                 style={{ color: "yellow" }}
                 className={
-                  this.props.selectedAnimal === "giraffe"
+                  this.props.selectedAnimal === "cat"
                     ? "animalButton animalSelected"
                     : "animalButton"
                 }

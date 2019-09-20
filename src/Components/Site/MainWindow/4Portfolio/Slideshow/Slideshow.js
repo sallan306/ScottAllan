@@ -209,7 +209,6 @@ class Slideshow extends Component {
       <div
         id="slideshow"
         className="slideshow"
-        style={{ position: "relative", zIndex: 10 }}
       >
         <div
           className="infoPanel"
