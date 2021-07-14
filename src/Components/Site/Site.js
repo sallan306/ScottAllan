@@ -174,9 +174,10 @@ class Site extends Component {
       this.setState({ selectedNav: "home" });
     }
 
-    if (this.state.scrollPercent >= 22) {
+      if (this.state.scrollPercent >= 2      ) {
       this.setState({
-        navbarVisible: true
+          navbarVisible: true,
+          sideNavVisible: true
       });
       console.log(this.state.navbarVisible);
     } else {

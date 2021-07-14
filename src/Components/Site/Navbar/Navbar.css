@@ -33,6 +33,10 @@
   transition: 0.5s;
 }
 
+.animalContainer {
+    position: relative;
+    bottom: 10px;
+}
 .animalButton {
   background: transparent;
   border: 0;
